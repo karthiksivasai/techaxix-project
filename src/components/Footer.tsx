@@ -2,8 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
 
 const Footer = () => {
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer id="contact" className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -40,11 +47,21 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "About Us", "Services", "Industries", "Careers", "Contact"].map((link) => (
-                <li key={link}>
-                  <Button variant="ghost" className="p-0 h-auto text-primary-foreground/80 hover:text-accent justify-start">
-                    {link}
-                  </Button>
+              {[
+                { name: "Home", href: "#home" },
+                { name: "About Us", href: "#about" },
+                { name: "Services", href: "#services" },
+                { name: "Industries", href: "#industries" },
+                { name: "Careers", href: "#careers" },
+                { name: "Contact", href: "#contact" }
+              ].map((link) => (
+                <li key={link.name}>
+                  <button 
+                    onClick={() => handleNavClick(link.href)}
+                    className="p-0 h-auto text-primary-foreground/80 hover:text-accent text-left transition-colors duration-200"
+                  >
+                    {link.name}
+                  </button>
                 </li>
               ))}
             </ul>

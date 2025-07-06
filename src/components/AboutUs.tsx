@@ -63,8 +63,18 @@ const AboutUs = () => {
               ))}
             </div>
 
-            <Button variant="default" size="lg" className="mt-8">
-              About us
+            <Button 
+              variant="default" 
+              size="lg" 
+              className="mt-8"
+              onClick={() => {
+                const element = document.querySelector('#services');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Our Services
             </Button>
           </div>
         </div>

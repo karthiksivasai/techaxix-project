@@ -4,7 +4,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-hero-bg to-hero-overlay">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-hero-bg to-hero-overlay">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -28,6 +28,12 @@ const Hero = () => {
               variant="cta" 
               size="lg"
               className="px-8 py-4 text-lg font-semibold rounded-full"
+              onClick={() => {
+                const element = document.querySelector('#contact');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               GET IN TOUCH
               <ArrowRight className="ml-2 h-5 w-5" />

@@ -13,6 +13,14 @@ const Header = () => {
     { name: "CAREERS", href: "#careers" },
   ];
 
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3">
@@ -33,21 +41,25 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Button
+              <button
                 key={item.name}
-                variant="nav"
-                className={`text-sm font-medium ${
-                  item.active ? "text-accent" : ""
+                onClick={() => handleNavClick(item.href)}
+                className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
+                  item.active ? "text-accent" : "text-foreground"
                 }`}
               >
                 {item.name}
-              </Button>
+              </button>
             ))}
           </nav>
 
           {/* Contact Button */}
           <div className="hidden md:block">
-            <Button variant="cta" size="lg">
+            <Button 
+              variant="cta" 
+              size="lg"
+              onClick={() => handleNavClick('#contact')}
+            >
               CONTACT US
             </Button>
           </div>
@@ -68,17 +80,21 @@ const Header = () => {
           <nav className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-3 pt-4">
               {navItems.map((item) => (
-                <Button
+                <button
                   key={item.name}
-                  variant="nav"
-                  className={`justify-start text-sm font-medium ${
-                    item.active ? "text-accent" : ""
+                  onClick={() => handleNavClick(item.href)}
+                  className={`text-left justify-start text-sm font-medium transition-colors duration-200 hover:text-primary p-2 ${
+                    item.active ? "text-accent" : "text-foreground"
                   }`}
                 >
                   {item.name}
-                </Button>
+                </button>
               ))}
-              <Button variant="cta" className="mt-4">
+              <Button 
+                variant="cta" 
+                className="mt-4"
+                onClick={() => handleNavClick('#contact')}
+              >
                 CONTACT US
               </Button>
             </div>
