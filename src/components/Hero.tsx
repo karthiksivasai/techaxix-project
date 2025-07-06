@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
@@ -24,20 +25,16 @@ const Hero = () => {
           </h1>
           
           <div className="mt-12">
-            <Button 
-              variant="cta" 
-              size="lg"
-              className="px-8 py-4 text-lg font-semibold rounded-full"
-              onClick={() => {
-                const element = document.querySelector('#contact');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              GET IN TOUCH
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/contact">
+              <Button 
+                variant="cta" 
+                size="lg"
+                className="px-8 py-4 text-lg font-semibold rounded-full"
+              >
+                GET IN TOUCH
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

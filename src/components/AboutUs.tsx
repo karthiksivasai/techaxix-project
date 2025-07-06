@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import teamImage from "@/assets/team-image.jpg";
 
 const AboutUs = () => {
@@ -63,19 +64,15 @@ const AboutUs = () => {
               ))}
             </div>
 
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="mt-8"
-              onClick={() => {
-                const element = document.querySelector('#services');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Our Services
-            </Button>
+            <Link to="/services">
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="mt-8"
+              >
+                Our Services
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

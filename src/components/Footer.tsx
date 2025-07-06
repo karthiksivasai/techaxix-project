@@ -1,14 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const handleNavClick = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer id="contact" className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
@@ -48,20 +42,20 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-3">
               {[
-                { name: "Home", href: "#home" },
-                { name: "About Us", href: "#about" },
-                { name: "Services", href: "#services" },
-                { name: "Industries", href: "#industries" },
-                { name: "Careers", href: "#careers" },
-                { name: "Contact", href: "#contact" }
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "/about" },
+                { name: "Services", href: "/services" },
+                { name: "Industries", href: "/industries" },
+                { name: "Careers", href: "/careers" },
+                { name: "Contact", href: "/contact" }
               ].map((link) => (
                 <li key={link.name}>
-                  <button 
-                    onClick={() => handleNavClick(link.href)}
-                    className="p-0 h-auto text-primary-foreground/80 hover:text-accent text-left transition-colors duration-200"
+                  <Link 
+                    to={link.href}
+                    className="p-0 h-auto text-primary-foreground/80 hover:text-accent text-left transition-colors duration-200 block"
                   >
                     {link.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

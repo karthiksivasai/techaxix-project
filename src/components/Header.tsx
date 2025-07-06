@@ -1,25 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: "HOME", href: "#home", active: true },
-    { name: "ABOUT US", href: "#about" },
-    { name: "SERVICES", href: "#services" },
-    { name: "INDUSTRIES", href: "#industries" },
-    { name: "CAREERS", href: "#careers" },
+    { name: "HOME", href: "/", active: location.pathname === "/" },
+    { name: "ABOUT US", href: "/about", active: location.pathname === "/about" },
+    { name: "SERVICES", href: "/services", active: location.pathname === "/services" },
+    { name: "INDUSTRIES", href: "/industries", active: location.pathname === "/industries" },
+    { name: "CAREERS", href: "/careers", active: location.pathname === "/careers" },
   ];
-
-  const handleNavClick = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
-  };
 
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
@@ -41,27 +35,25 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.name}
-                onClick={() => handleNavClick(item.href)}
+                to={item.href}
                 className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
                   item.active ? "text-accent" : "text-foreground"
                 }`}
               >
                 {item.name}
-              </button>
+              </Link>
             ))}
           </nav>
 
           {/* Contact Button */}
           <div className="hidden md:block">
-            <Button 
-              variant="cta" 
-              size="lg"
-              onClick={() => handleNavClick('#contact')}
-            >
-              CONTACT US
-            </Button>
+            <Link to="/contact">
+              <Button variant="cta" size="lg">
+                CONTACT US
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,23 +72,22 @@ const Header = () => {
           <nav className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-3 pt-4">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.name}
-                  onClick={() => handleNavClick(item.href)}
+                  to={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className={`text-left justify-start text-sm font-medium transition-colors duration-200 hover:text-primary p-2 ${
                     item.active ? "text-accent" : "text-foreground"
                   }`}
                 >
                   {item.name}
-                </button>
+                </Link>
               ))}
-              <Button 
-                variant="cta" 
-                className="mt-4"
-                onClick={() => handleNavClick('#contact')}
-              >
-                CONTACT US
-              </Button>
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="cta" className="mt-4 w-full">
+                  CONTACT US
+                </Button>
+              </Link>
             </div>
           </nav>
         )}
