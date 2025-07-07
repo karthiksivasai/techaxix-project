@@ -9,6 +9,11 @@ import Services from "./pages/Services";
 import Industries from "./pages/Industries";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import WebTechnology from "./pages/WebTechnology";
+import ApplicationDevelopment from "./pages/ApplicationDevelopment";
+import TestingServices from "./pages/TestingServices";
+import ConsultingServices from "./pages/ConsultingServices";
+import CloudComputing from "./pages/CloudComputing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +28,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/web-technology" element={<WebTechnology />} />
+          <Route path="/services/application-development" element={<ApplicationDevelopment />} />
+          <Route path="/services/testing" element={<TestingServices />} />
+          <Route path="/services/consulting" element={<ConsultingServices />} />
+          <Route path="/services/cloud-computing" element={<CloudComputing />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />

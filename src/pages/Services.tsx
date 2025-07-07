@@ -96,9 +96,11 @@ const Services = () => {
                         </div>
                       </div>
 
-                      <Button variant="cta">
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                      <Button variant="cta" asChild>
+                        <a href={`/services/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}>
+                          Learn More
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
                       </Button>
                     </div>
                     
