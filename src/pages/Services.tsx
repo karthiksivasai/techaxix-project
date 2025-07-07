@@ -5,6 +5,17 @@ import Footer from "@/components/Footer";
 import { ArrowRight, Code, Cloud, TestTube, Users, Smartphone } from "lucide-react";
 
 const Services = () => {
+  const getServiceUrl = (title: string) => {
+    const urlMap: { [key: string]: string } = {
+      "Web Technology Solutions": "/services/web-technology",
+      "Application Development & Maintenance": "/services/application-development", 
+      "Testing Services": "/services/testing",
+      "Consulting Services": "/services/consulting",
+      "Cloud Computing": "/services/cloud-computing"
+    };
+    return urlMap[title] || "/services";
+  };
+
   const mainServices = [
     {
       title: "Web Technology Solutions",
@@ -97,7 +108,7 @@ const Services = () => {
                       </div>
 
                       <Button variant="cta" asChild>
-                        <a href={`/services/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}>
+                        <a href={getServiceUrl(service.title)}>
                           Learn More
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
