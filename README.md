@@ -1,15 +1,17 @@
-# Quantum Innovative Solutions
+# TECHAXIS CONSULTING
 
-A modern, responsive website for Quantum Innovative Solutions (QIS), a technology solutions provider with over 25 years of experience in enterprise technology consulting.
+A modern, responsive website for **TECHAXIS CONSULTING**, a leading IT solutions and consulting company specializing in Oracle ERP, digital transformation, and cloud solutions with over 25 years of experience in enterprise technology consulting.
 
 ## 🚀 Features
 
 - **Modern React Architecture**: Built with React 18, TypeScript, and Vite
 - **Professional UI Components**: Comprehensive component library using shadcn/ui
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Performance Optimized**: Fast loading and smooth user experience
-- **SEO Ready**: Proper meta tags and structured content
+- **Performance Optimized**: Fast loading and smooth user experience with Core Web Vitals optimization
+- **SEO Ready**: Comprehensive SEO optimization with meta tags, structured data, and XML sitemap
+- **PWA Support**: Progressive Web App with offline functionality and service worker
 - **Accessibility**: WCAG compliant components and navigation
+- **Oracle ERP Expertise**: Specialized solutions for Oracle Fusion Cloud and Oracle EBS
 
 ## 🛠️ Technology Stack
 
@@ -80,11 +82,12 @@ npm run preview
 ## 📱 Pages & Features
 
 - **Home**: Hero section, services overview, company highlights
-- **Services**: Detailed service offerings and capabilities
+- **Services**: Oracle ERP, Digital Transformation, Cloud Computing, Application Development, Testing Services
 - **About Us**: Company history, mission, and team information
-- **Industries**: Industry-specific solutions and case studies
+- **Industries**: Manufacturing, Financial Services, Healthcare, Retail & E-commerce, Government, Education
 - **Careers**: Job opportunities and company culture
 - **Contact**: Contact forms and company information
+- **Oracle Solutions**: Oracle Fusion Cloud, Oracle EBS, Custom Cloud implementations
 
 ## 🎨 Design System
 
@@ -112,8 +115,19 @@ The project uses a consistent design system built on:
 
 ## 📄 License
 
-This project is proprietary software developed for Quantum Innovative Solutions.
+This project is proprietary software developed for **TECHAXIS CONSULTING**.
 
 ## 🤝 Support
 
-For technical support or questions about this project, please contact the development team.
+For technical support or questions about this project, please contact the TECHAXIS CONSULTING development team.
+
+## 🏢 About TECHAXIS CONSULTING
+
+**TECHAXIS CONSULTING** is a next-generation IT solutions and consulting company committed to driving innovation, efficiency, and growth. With deep expertise across industries, we help organizations embrace digital transformation and achieve business excellence through:
+
+- **Oracle ERP Solutions**: Oracle Fusion Cloud and Oracle EBS implementation
+- **Digital Transformation**: End-to-end digital transformation consulting
+- **Cloud Computing**: Cloud migration, optimization, and managed services
+- **Industry Expertise**: Manufacturing, Financial Services, Healthcare, Retail, Government, Education
+
+**"Axis of Possibilities"** - Transforming businesses through technology innovation.
