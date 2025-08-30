@@ -1,58 +1,65 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4">
+    <footer
+      id="contact"
+      className="bg-primary text-primary-foreground border-t border-border"
+    >
+      <div className="container-responsive">
         {/* Main Footer Content */}
-        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-8 sm:py-12 md:py-16 footer-grid-responsive">
           {/* Company Info */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-primary-foreground rounded-full"></div>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">QIS</h3>
-                <p className="text-xs text-primary-foreground/80 leading-none">
-                  QUANTUM INNOVATIVE SOLUTIONS
-                </p>
-              </div>
-            </div>
-            <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Delivering exceptional enterprise solutions to help businesses adapt to constantly changing market dynamics.
+          <div className="space-y-4 sm:space-y-6">
+            <Logo variant="footer" />
+            <p className="text-fluid-sm sm:text-fluid-base text-primary-foreground/80 leading-relaxed">
+              Leading IT solutions and consulting company specializing in
+              digital transformation, Oracle services, and cloud solutions. We
+              drive innovation and business excellence across industries.
             </p>
-            <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
-                <Linkedin className="h-4 w-4" />
+            <div className="flex space-x-4 sm:space-x-6 pt-2 sm:pt-4">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+              >
+                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
-                <Twitter className="h-4 w-4" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+              >
+                <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
-                <Facebook className="h-4 w-4" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+              >
+                <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Quick Links</h4>
-            <ul className="space-y-3">
+          <div className="space-y-4 sm:space-y-6">
+            <h4 className="text-fluid-lg sm:text-fluid-xl font-semibold text-white">Quick Links</h4>
+            <ul className="space-y-2 sm:space-y-3 md:space-y-4">
               {[
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about" },
                 { name: "Services", href: "/services" },
                 { name: "Industries", href: "/industries" },
-                { name: "Careers", href: "/careers" },
-                { name: "Contact", href: "/contact" }
+                { name: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     to={link.href}
-                    className="p-0 h-auto text-primary-foreground/80 hover:text-accent text-left transition-colors duration-200 block"
+                    className="p-0 h-auto text-primary-foreground/80 hover:text-red-500 text-left transition-colors duration-200 block text-fluid-sm sm:text-fluid-base"
                   >
                     {link.name}
                   </Link>
@@ -62,62 +69,87 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Services</h4>
-            <ul className="space-y-3">
+          <div className="space-y-4 sm:space-y-6">
+            <h4 className="text-fluid-lg sm:text-fluid-xl font-semibold text-white">Services</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {[
-                "Web Technology Solutions",
-                "Application Development",
-                "Software Testing",
-                "Consulting Services",
-                "Cloud Computing"
+                {
+                  name: "Digital Transformation",
+                  href: "/services/digital-transformation",
+                },
+                {
+                  name: "Oracle Fusion Cloud",
+                  href: "/services/oracle-fusion-cloud",
+                },
+                { name: "Oracle EBS", href: "/services/oracle-ebs" },
+                {
+                  name: "Custom Cloud Solutions",
+                  href: "/services/custom-cloud",
+                },
+                {
+                  name: "Mobile Development",
+                  href: "/services/mobile-development",
+                },
+                {
+                  name: "Staff Augmentation",
+                  href: "/services/staff-augmentation",
+                },
+                {
+                  name: "Project Management",
+                  href: "/services/project-management",
+                },
               ].map((service) => (
-                <li key={service}>
-                  <Button variant="ghost" className="p-0 h-auto text-primary-foreground/80 hover:text-accent justify-start text-left">
-                    {service}
-                  </Button>
+                <li key={service.name}>
+                  <Link
+                    to={service.href}
+                    className="p-0 h-auto text-primary-foreground/80 hover:text-red-500 justify-start text-left block transition-colors duration-200 text-fluid-sm sm:text-fluid-base"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Get In Touch</h4>
-            <div className="space-y-4">
+          <div className="space-y-4 sm:space-y-6">
+            <h4 className="text-fluid-lg sm:text-fluid-xl font-semibold text-white">Get In Touch</h4>
+            <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                <p className="text-sm text-primary-foreground/80">
-                  123 Innovation Drive<br />
-                  Tech District, TD 12345<br />
-                  United States
+                <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <p className="text-fluid-sm sm:text-fluid-base text-primary-foreground/80 leading-relaxed">
+                  admin@techaxisconsulting.com
                 </p>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
-                <p className="text-sm text-primary-foreground/80">+1 (555) 123-4567</p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-accent flex-shrink-0" />
-                <p className="text-sm text-primary-foreground/80">info@quantuminnovativesolutions.com</p>
+              <div className="flex items-start space-x-3">
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <p className="text-fluid-sm sm:text-fluid-base text-primary-foreground/80 leading-relaxed">
+                  +91 9937033526
+                </p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-primary-foreground/60">
-              © 2024 Quantum Innovative Solutions. All rights reserved.
+        <div className="border-t border-primary-foreground/20 py-4 sm:py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-fluid-sm sm:text-fluid-base text-primary-foreground/60 text-center sm:text-left">
+              © 2024 Techaxis Consulting Private Limited. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <Button variant="ghost" className="p-0 h-auto text-primary-foreground/60 hover:text-accent text-sm">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
+              <Link
+                to="/privacy-policy"
+                className="p-0 h-auto text-primary-foreground/60 hover:text-red-500 text-fluid-sm sm:text-fluid-base transition-colors duration-200"
+              >
                 Privacy Policy
-              </Button>
-              <Button variant="ghost" className="p-0 h-auto text-primary-foreground/60 hover:text-accent text-sm">
+              </Link>
+              <Link
+                to="/terms-and-conditions"
+                className="p-0 h-auto text-primary-foreground/60 hover:text-red-500 text-fluid-sm sm:text-fluid-base transition-colors duration-200"
+              >
                 Terms of Service
-              </Button>
+              </Link>
             </div>
           </div>
         </div>

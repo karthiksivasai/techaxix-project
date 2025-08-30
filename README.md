@@ -1,73 +1,119 @@
-# Welcome to your Lovable project
+# Quantum Innovative Solutions
 
-## Project info
+A modern, responsive website for Quantum Innovative Solutions (QIS), a technology solutions provider with over 25 years of experience in enterprise technology consulting.
 
-**URL**: https://lovable.dev/projects/5cbd4bbe-bccc-4b30-87f0-4299fc7a7b06
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern React Architecture**: Built with React 18, TypeScript, and Vite
+- **Professional UI Components**: Comprehensive component library using shadcn/ui
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Performance Optimized**: Fast loading and smooth user experience
+- **SEO Ready**: Proper meta tags and structured content
+- **Accessibility**: WCAG compliant components and navigation
 
-There are several ways of editing your application.
+## 🛠️ Technology Stack
 
-**Use Lovable**
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Routing**: React Router DOM
+- **Forms**: React Hook Form + Zod validation
+- **Icons**: Lucide React
+- **Charts**: Recharts
+- **Notifications**: Sonner toast system
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5cbd4bbe-bccc-4b30-87f0-4299fc7a7b06) and start prompting.
+## 📁 Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/            # shadcn/ui components
+│   └── ...            # Custom components
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── assets/             # Images and static files
+```
 
-**Use your preferred IDE**
+## 🚀 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js 18+
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+git clone <repository-url>
+cd techaxix-project
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
+```
+
+3. Start development server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Preview Production Build
 
-## What technologies are used for this project?
+```bash
+npm run preview
+```
 
-This project is built with:
+## 📱 Pages & Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Home**: Hero section, services overview, company highlights
+- **Services**: Detailed service offerings and capabilities
+- **About Us**: Company history, mission, and team information
+- **Industries**: Industry-specific solutions and case studies
+- **Careers**: Job opportunities and company culture
+- **Contact**: Contact forms and company information
 
-## How can I deploy this project?
+## 🎨 Design System
 
-Simply open [Lovable](https://lovable.dev/projects/5cbd4bbe-bccc-4b30-87f0-4299fc7a7b06) and click on Share -> Publish.
+The project uses a consistent design system built on:
 
-## Can I connect a custom domain to my Lovable project?
+- **Color Palette**: Professional blues and grays
+- **Typography**: Clean, readable fonts
+- **Spacing**: Consistent 8px grid system
+- **Components**: Reusable, accessible UI components
 
-Yes, you can!
+## 🔧 Development
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Code Quality
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- ESLint configuration for code quality
+- TypeScript for type safety
+- Prettier for code formatting
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+
+## 📄 License
+
+This project is proprietary software developed for Quantum Innovative Solutions.
+
+## 🤝 Support
+
+For technical support or questions about this project, please contact the development team.

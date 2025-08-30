@@ -13,7 +13,7 @@ const CloudComputing = () => {
     "Platform as a Service (PaaS)",
     "Software as a Service (SaaS)",
     "Cloud Security & Compliance",
-    "DevOps & CI/CD Pipeline"
+    "DevOps & CI/CD Pipeline",
   ];
 
   const platforms = [
@@ -24,13 +24,13 @@ const CloudComputing = () => {
     "Oracle Cloud",
     "Private Cloud Solutions",
     "Hybrid Cloud Architecture",
-    "Container Orchestration (Kubernetes)"
+    "Container Orchestration (Kubernetes)",
   ];
 
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4">
@@ -45,8 +45,9 @@ const CloudComputing = () => {
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Cloud Computing would definitely redefine the prevailing business trends & processes 
-                by providing scalable, flexible and cost-effective solutions.
+                Cloud Computing would definitely redefine the prevailing
+                business trends & processes by providing scalable, flexible and
+                cost-effective solutions.
               </p>
             </div>
             <div className="bg-gradient-primary opacity-20 rounded-2xl h-80"></div>
@@ -60,25 +61,31 @@ const CloudComputing = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-primary mb-6">Transform Your Business with Cloud</h2>
+                <h2 className="text-3xl font-bold text-primary mb-6">
+                  Transform Your Business with Cloud
+                </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our cloud services include cloud migration, cloud-native development, and multi-cloud 
-                  management. We help businesses leverage the power of cloud computing to reduce costs 
-                  and increase agility.
+                  Our cloud services include cloud migration, cloud-native
+                  development, and multi-cloud management. We help businesses
+                  leverage the power of cloud computing to reduce costs and
+                  increase agility.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Whether you're looking to migrate existing applications to the cloud or build new 
-                  cloud-native solutions, our team provides comprehensive cloud services that align 
-                  with your business objectives.
+                  Whether you're looking to migrate existing applications to the
+                  cloud or build new cloud-native solutions, our team provides
+                  comprehensive cloud services that align with your business
+                  objectives.
                 </p>
               </CardContent>
             </Card>
 
             {/* Services Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
               <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6">Cloud Services</h3>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold text-primary mb-6">
+                    Cloud Services
+                  </h3>
                   <div className="space-y-4">
                     {services.map((service, index) => (
                       <div key={index} className="flex items-center space-x-3">
@@ -91,13 +98,17 @@ const CloudComputing = () => {
               </Card>
 
               <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6">Cloud Platforms</h3>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold text-primary mb-6">
+                    Cloud Platforms
+                  </h3>
                   <div className="space-y-4">
                     {platforms.map((platform, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-muted-foreground">{platform}</span>
+                        <span className="text-muted-foreground">
+                          {platform}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -107,29 +118,41 @@ const CloudComputing = () => {
 
             {/* Benefits Section */}
             <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">Cloud Computing Benefits</h3>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-primary mb-6">
+                  Cloud Computing Benefits
+                </h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl font-bold text-accent">💰</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Cost Efficiency</h4>
-                    <p className="text-sm text-muted-foreground">Reduce infrastructure costs and operational expenses</p>
+                    <h4 className="font-semibold text-primary mb-2">
+                      Cost Efficiency
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Reduce infrastructure costs and operational expenses
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl font-bold text-accent">📈</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Scalability</h4>
-                    <p className="text-sm text-muted-foreground">Scale resources up or down based on demand</p>
+                    <h4 className="font-semibold text-primary mb-2">
+                      Scalability
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Scale resources up or down based on demand
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl font-bold text-accent">⚡</span>
                     </div>
                     <h4 className="font-semibold text-primary mb-2">Agility</h4>
-                    <p className="text-sm text-muted-foreground">Faster deployment and time-to-market</p>
+                    <p className="text-sm text-muted-foreground">
+                      Faster deployment and time-to-market
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -137,43 +160,63 @@ const CloudComputing = () => {
 
             {/* Migration Process */}
             <Card>
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">Cloud Migration Process</h3>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-primary mb-6">
+                  Cloud Migration Process
+                </h3>
                 <div className="grid md:grid-cols-5 gap-4">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-accent font-bold">1</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Assessment</h4>
-                    <p className="text-xs text-muted-foreground">Evaluate current infrastructure</p>
+                    <h4 className="font-semibold text-primary mb-2">
+                      Assessment
+                    </h4>
+                    <p className="text-xs text-muted-foreground">
+                      Evaluate current infrastructure
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-accent font-bold">2</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Planning</h4>
-                    <p className="text-xs text-muted-foreground">Design migration strategy</p>
+                    <h4 className="font-semibold text-primary mb-2">
+                      Planning
+                    </h4>
+                    <p className="text-xs text-muted-foreground">
+                      Design migration strategy
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-accent font-bold">3</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Migration</h4>
-                    <p className="text-xs text-muted-foreground">Execute migration plan</p>
+                    <h4 className="font-semibold text-primary mb-2">
+                      Migration
+                    </h4>
+                    <p className="text-xs text-muted-foreground">
+                      Execute migration plan
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-accent font-bold">4</span>
                     </div>
                     <h4 className="font-semibold text-primary mb-2">Testing</h4>
-                    <p className="text-xs text-muted-foreground">Validate and test systems</p>
+                    <p className="text-xs text-muted-foreground">
+                      Validate and test systems
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-accent font-bold">5</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Optimization</h4>
-                    <p className="text-xs text-muted-foreground">Optimize performance</p>
+                    <h4 className="font-semibold text-primary mb-2">
+                      Optimization
+                    </h4>
+                    <p className="text-xs text-muted-foreground">
+                      Optimize performance
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -185,9 +228,12 @@ const CloudComputing = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Move to the Cloud?</h2>
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Move to the Cloud?
+          </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Let us help you harness the power of cloud computing to transform your business operations and drive growth.
+            Let us help you harness the power of cloud computing to transform
+            your business operations and drive growth.
           </p>
           <Button variant="secondary" size="lg">
             Start Cloud Journey

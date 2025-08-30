@@ -8,6 +8,65 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Dark theme - Primary navy blue from logo */
+    --background: 220 85% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 85% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 85% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Professional navy blue primary */
+    --primary: 220 85% 16%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Lighter navy for secondary */
+    --secondary: 220 32% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 32% 17%;
+    --muted-foreground: 220 20% 65%;
+
+    /* Red accent color for CTAs */
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 32% 17%;
+    --input: 220 32% 17%;
+    --ring: 220 85% 16%;
+    
+    /* Custom design tokens for dark theme */
+    --hero-bg: 220 85% 4%;
+    --hero-overlay: 220 85% 2%;
+    --gradient-primary: linear-gradient(135deg, hsl(220 85% 4%), hsl(220 85% 2%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 85% 4% / 0.9), hsl(220 85% 2% / 0.95));
+    --shadow-elegant: 0 10px 30px -10px hsl(220 85% 4% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(220 85% 4% / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 85% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 220 85% 16%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 32% 17%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 32% 17%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Logo brand colors */
+    --brand-blue-light: 217 91% 60%;
+    --brand-blue-dark: 217 91% 40%;
+    --brand-gradient: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 40%));
+  }
+
+  .light {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -17,18 +76,15 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Professional navy blue primary */
     --primary: 220 85% 16%;
     --primary-foreground: 0 0% 98%;
     
-    /* Lighter navy for secondary */
     --secondary: 220 20% 94%;
     --secondary-foreground: 220 85% 16%;
 
     --muted: 220 13% 96%;
     --muted-foreground: 220 9% 46%;
 
-    /* Red accent color */
     --accent: 0 84% 60%;
     --accent-foreground: 0 0% 98%;
 
@@ -39,69 +95,20 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 220 85% 16%;
     
-    /* Custom design tokens */
     --hero-bg: 220 85% 16%;
     --hero-overlay: 220 85% 10%;
     --gradient-primary: linear-gradient(135deg, hsl(220 85% 16%), hsl(220 85% 10%));
     --gradient-hero: linear-gradient(135deg, hsl(220 85% 16% / 0.9), hsl(220 85% 10% / 0.95));
     --shadow-elegant: 0 10px 30px -10px hsl(220 85% 16% / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(220 85% 16% / 0.1);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 220 85% 4%;
-    --foreground: 0 0% 98%;
-
-    --card: 220 85% 4%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 220 85% 4%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 220 85% 16%;
-
-    --secondary: 220 32% 17%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 220 32% 17%;
-    --muted-foreground: 220 20% 65%;
-
-    --accent: 0 84% 60%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -113,5 +120,557 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    /* Ensure smooth scrolling on all devices */
+    scroll-behavior: smooth;
+    /* Prevent horizontal overflow */
+    overflow-x: hidden;
+  }
+
+  /* Responsive typography base */
+  html {
+    font-size: clamp(14px, 1vw + 14px, 16px);
+  }
+
+  /* Responsive headings */
+  h1 {
+    @apply text-fluid-5xl font-bold leading-tight;
+  }
+
+  h2 {
+    @apply text-fluid-4xl font-bold leading-tight;
+  }
+
+  h3 {
+    @apply text-fluid-3xl font-semibold leading-tight;
+  }
+
+  h4 {
+    @apply text-fluid-2xl font-semibold leading-tight;
+  }
+
+  h5 {
+    @apply text-fluid-xl font-medium leading-tight;
+  }
+
+  h6 {
+    @apply text-fluid-lg font-medium leading-tight;
+  }
+
+  /* Responsive paragraph text */
+  p {
+    @apply text-fluid-base leading-relaxed;
+  }
+
+  /* Responsive list text */
+  li {
+    @apply text-fluid-base leading-relaxed;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+  /* Responsive image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Responsive table handling */
+  table {
+    @apply w-full overflow-x-auto;
+  }
+
+  /* Responsive form elements */
+  input, textarea, select {
+    @apply w-full;
+  }
+
+  /* Responsive button base */
+  button {
+    @apply transition-all duration-300;
+  }
+}
+
+@layer components {
+  /* Responsive container utilities */
+  .container-responsive {
+    @apply w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20;
+    max-width: min(100%, 1400px);
+  }
+
+  .container-fluid {
+    @apply w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 3xl:px-24;
+    max-width: min(100%, 1920px);
+  }
+
+  /* Responsive grid utilities */
+  .grid-responsive {
+    @apply grid gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12;
+  }
+
+  .grid-cards-responsive {
+    @apply grid gap-4 sm:gap-6 md:gap-8;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  }
+
+  .grid-cards-2-responsive {
+    @apply grid gap-4 sm:gap-6 md:gap-8;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  }
+
+  /* Responsive spacing utilities */
+  .section-responsive {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 2xl:py-32;
+  }
+
+  .section-sm-responsive {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24;
+  }
+
+  /* Responsive text utilities */
+  .text-responsive {
+    @apply text-fluid-base;
+  }
+
+  .text-responsive-lg {
+    @apply text-fluid-lg;
+  }
+
+  .text-responsive-xl {
+    @apply text-fluid-xl;
+  }
+
+  .text-responsive-2xl {
+    @apply text-fluid-2xl;
+  }
+
+  .text-responsive-3xl {
+    @apply text-fluid-3xl;
+  }
+
+  .text-responsive-4xl {
+    @apply text-fluid-4xl;
+  }
+
+  .text-responsive-5xl {
+    @apply text-fluid-5xl;
+  }
+
+  /* Responsive button utilities */
+  .btn-responsive {
+    @apply px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-fluid-sm sm:text-fluid-base md:text-fluid-lg;
+  }
+
+  .btn-responsive-lg {
+    @apply px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-fluid-base sm:text-fluid-lg md:text-fluid-xl;
+  }
+
+  /* Responsive card utilities */
+  .card-responsive {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+
+  .card-responsive-sm {
+    @apply p-3 sm:p-4 md:p-6;
+  }
+
+  /* Service card specific utilities */
+  .service-card {
+    @apply p-6 sm:p-8 md:p-10;
+  }
+
+  .service-card-icon {
+    @apply w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20;
+  }
+
+  .service-card-icon img {
+    @apply w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14;
+  }
+
+  /* Responsive navigation utilities */
+  .nav-responsive {
+    @apply hidden md:flex;
+  }
+
+  .nav-mobile {
+    @apply md:hidden;
+  }
+
+  /* Responsive image utilities */
+  .img-responsive {
+    @apply w-full h-auto object-cover;
+  }
+
+  .img-responsive-cover {
+    @apply w-full h-full object-cover;
+  }
+
+  /* Responsive form utilities */
+  .form-responsive {
+    @apply space-y-4 sm:space-y-6 md:space-y-8;
+  }
+
+  .input-responsive {
+    @apply w-full px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 text-fluid-sm sm:text-fluid-base;
+  }
+
+  /* Custom form input styles for dark theme */
+  .form-input-dark {
+    @apply bg-card border-border text-foreground placeholder:text-muted-foreground;
+  }
+
+  /* Custom button hover effects */
+  .btn-hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-accent/20;
+  }
+
+  /* Text gradient for brand elements */
+  .text-gradient-brand {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Responsive hero utilities */
+  .hero-responsive {
+    @apply min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] lg:min-h-[85vh];
+  }
+
+  .hero-content-responsive {
+    @apply max-w-3xl sm:max-w-4xl md:max-w-5xl lg:max-w-6xl xl:max-w-7xl;
+  }
+
+  /* Responsive footer utilities */
+  .footer-grid-responsive {
+    @apply grid gap-6 sm:gap-8 md:gap-10;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  }
+
+  /* Responsive spacing for mobile-first design */
+  .mobile-first-spacing {
+    @apply space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 xl:space-y-12;
+  }
+
+  .mobile-first-margin {
+    @apply mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12;
+  }
+
+  .mobile-first-padding {
+    @apply p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12;
+  }
+}
+
+@layer utilities {
+  /* Responsive visibility utilities */
+  .xs\:block { 
+    @media (min-width: 320px) { 
+      display: block; 
+    } 
+  }
+  .xs\:hidden { 
+    @media (min-width: 320px) { 
+      display: none; 
+    } 
+  }
+  
+  .sm\:block { 
+    @media (min-width: 640px) { 
+      display: block; 
+    } 
+  }
+  .sm\:hidden { 
+    @media (min-width: 640px) { 
+      display: none; 
+    } 
+  }
+  
+  .md\:block { 
+    @media (min-width: 768px) { 
+      display: block; 
+    } 
+  }
+  .md\:hidden { 
+    @media (min-width: 768px) { 
+      display: none; 
+    } 
+  }
+  
+  .lg\:block { 
+    @media (min-width: 1024px) { 
+      display: block; 
+    } 
+  }
+  .lg\:hidden { 
+    @media (min-width: 1024px) { 
+      display: none; 
+    } 
+  }
+  
+  .xl\:block { 
+    @media (min-width: 1280px) { 
+      display: block; 
+    } 
+  }
+  .xl\:hidden { 
+    @media (min-width: 1280px) { 
+      display: none; 
+    } 
+  }
+  
+  .\2xl\:block { 
+    @media (min-width: 1536px) { 
+      display: block; 
+    } 
+  }
+  .\2xl\:hidden { 
+    @media (min-width: 1536px) { 
+      display: none; 
+    } 
+  }
+  
+  .\3xl\:block { 
+    @media (min-width: 1920px) { 
+      display: block; 
+    } 
+  }
+  .\3xl\:hidden { 
+    @media (min-width: 1920px) { 
+      display: none; 
+    } 
+  }
+
+  /* Responsive text alignment */
+  .xs\:text-left { 
+    @media (min-width: 320px) { 
+      text-align: left; 
+    } 
+  }
+  .xs\:text-center { 
+    @media (min-width: 320px) { 
+      text-align: center; 
+    } 
+  }
+  .xs\:text-right { 
+    @media (min-width: 320px) { 
+      text-align: right; 
+    } 
+  }
+  
+  .sm\:text-left { 
+    @media (min-width: 640px) { 
+      text-align: left; 
+    } 
+  }
+  .sm\:text-center { 
+    @media (min-width: 640px) { 
+      text-align: center; 
+    } 
+  }
+  .sm\:text-right { 
+    @media (min-width: 640px) { 
+      text-align: right; 
+    } 
+  }
+  
+  .md\:text-left { 
+    @media (min-width: 768px) { 
+      text-align: left; 
+    } 
+  }
+  .md\:text-center { 
+    @media (min-width: 768px) { 
+      text-align: center; 
+    } 
+  }
+  .md\:text-right { 
+    @media (min-width: 768px) { 
+      text-align: right; 
+    } 
+  }
+  
+  .lg\:text-left { 
+    @media (min-width: 1024px) { 
+      text-align: left; 
+    } 
+  }
+  .lg\:text-center { 
+    @media (min-width: 1024px) { 
+      text-align: center; 
+    } 
+  }
+  .lg\:text-right { 
+    @media (min-width: 1024px) { 
+      text-align: right; 
+    } 
+  }
+  
+  .xl\:text-left { 
+    @media (min-width: 1280px) { 
+      text-align: left; 
+    } 
+  }
+  .xl\:text-center { 
+    @media (min-width: 1280px) { 
+      text-align: center; 
+    } 
+  }
+  .xl\:text-right { 
+    @media (min-width: 1280px) { 
+      text-align: right; 
+    } 
+  }
+
+  /* Responsive flex direction */
+  .xs\:flex-row { 
+    @media (min-width: 320px) { 
+      flex-direction: row; 
+    } 
+  }
+  .xs\:flex-col { 
+    @media (min-width: 320px) { 
+      flex-direction: column; 
+    } 
+  }
+  
+  .sm\:flex-row { 
+    @media (min-width: 640px) { 
+      flex-direction: row; 
+    } 
+  }
+  .sm\:flex-col { 
+    @media (min-width: 640px) { 
+      flex-direction: column; 
+    } 
+  }
+  
+  .md\:flex-row { 
+    @media (min-width: 768px) { 
+      flex-direction: row; 
+    } 
+  }
+  .md\:flex-col { 
+    @media (min-width: 768px) { 
+      flex-direction: column; 
+    } 
+  }
+  
+  .lg\:flex-row { 
+    @media (min-width: 1024px) { 
+      flex-direction: row; 
+    } 
+  }
+  .lg\:flex-col { 
+    @media (min-width: 1024px) { 
+      flex-direction: column; 
+    } 
+  }
+  
+  .xl\:flex-row { 
+    @media (min-width: 1280px) { 
+      flex-direction: row; 
+    } 
+  }
+  .xl\:flex-col { 
+    @media (min-width: 1280px) { 
+      flex-direction: column; 
+    } 
+  }
+
+  /* Responsive justify content */
+  .xs\:justify-start { 
+    @media (min-width: 320px) { 
+      justify-content: flex-start; 
+    } 
+  }
+  .xs\:justify-center { 
+    @media (min-width: 320px) { 
+      justify-content: center; 
+    } 
+  }
+  .xs\:justify-end { 
+    @media (min-width: 320px) { 
+      justify-content: flex-end; 
+    } 
+  }
+  
+  .sm\:justify-start { 
+    @media (min-width: 640px) { 
+      justify-content: flex-start; 
+    } 
+  }
+  .sm\:justify-center { 
+    @media (min-width: 640px) { 
+      justify-content: center; 
+    } 
+  }
+  .sm\:justify-end { 
+    @media (min-width: 640px) { 
+      justify-content: flex-end; 
+    } 
+  }
+  
+  .md\:justify-start { 
+    @media (min-width: 768px) { 
+      justify-content: flex-start; 
+    } 
+  }
+  .md\:justify-center { 
+    @media (min-width: 768px) { 
+      justify-content: center; 
+    } 
+  }
+  .md\:justify-end { 
+    @media (min-width: 768px) { 
+      justify-content: flex-end; 
+    } 
+  }
+  
+  .lg\:justify-start { 
+    @media (min-width: 1024px) { 
+      justify-content: flex-start; 
+    } 
+  }
+  .lg\:justify-center { 
+    @media (min-width: 1024px) { 
+      justify-content: center; 
+    } 
+  }
+  .lg\:justify-end { 
+    @media (min-width: 1024px) { 
+      justify-content: flex-end; 
+    } 
+  }
+  
+  .xl\:justify-start { 
+    @media (min-width: 1280px) { 
+      justify-content: flex-start; 
+    } 
+  }
+  .xl\:justify-center { 
+    @media (min-width: 1280px) { 
+      justify-content: center; 
+    } 
+  }
+  .xl\:justify-end { 
+    @media (min-width: 1280px) { 
+      justify-content: flex-end; 
+    } 
   }
 }

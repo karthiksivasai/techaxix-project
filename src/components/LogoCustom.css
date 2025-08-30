@@ -1,0 +1,71 @@
+/* Custom Logo Styling for High Resolution and Smooth Scaling */
+
+.techaxis-logo img {
+  /* Ensure smooth scaling and sharp rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  
+  /* High DPI support for retina displays */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  /* Smooth transitions */
+  transition: all 0.3s ease-in-out;
+  
+  /* Ensure logo is sharp on all devices */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive logo sizing - compact and professional */
+@media (min-width: 768px) {
+  .techaxis-logo img {
+    min-width: 96px;  /* 24 * 4 = 96px */
+    min-height: 96px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .techaxis-logo img {
+    min-width: 112px; /* 28 * 4 = 112px */
+    min-height: 112px;
+  }
+}
+
+/* Mobile optimization - slightly larger for readability */
+@media (max-width: 767px) {
+  .techaxis-logo img {
+    min-width: 80px;  /* 20 * 4 = 80px */
+    min-height: 80px;
+  }
+}
+
+/* Logo container spacing */
+.techaxis-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Text scaling for better balance */
+.techaxis-logo .company-name {
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.techaxis-logo .company-tagline {
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+/* Hover effects for interactive elements */
+.techaxis-logo:hover img {
+  transform: scale(1.02);
+}
+
+/* Focus states for accessibility */
+.techaxis-logo:focus-within img {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Techaxis Consulting - Oracle ERP & Digital Transformation Solutions",
+  "short_name": "Techaxis",
+  "description": "Leading IT solutions and consulting company specializing in Oracle ERP, digital transformation, and cloud solutions with 25+ years of experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f1419",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/src/assets/techAxix_logo-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/src/assets/techAxix_logo-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/src/assets/hero-background.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/src/assets/techAxix_logo-removebg-preview.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "Explore our IT services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/src/assets/techAxix_logo-removebg-preview.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
