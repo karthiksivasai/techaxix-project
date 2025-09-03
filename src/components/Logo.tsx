@@ -21,7 +21,7 @@ const Logo = ({
       {/* Logo Image */}
       <div className="flex-shrink-0">
         <img
-          src="/src/assets/techAxix_logo-removebg-preview.png"
+          src="/logo.png"
           alt="Techaxis Consulting Logo"
           className={
             isHeader

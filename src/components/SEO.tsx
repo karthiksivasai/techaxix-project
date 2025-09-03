@@ -17,7 +17,7 @@ const SEO = ({
   description,
   keywords,
   canonical,
-  ogImage = '/src/assets/techAxix_logo-removebg-preview.png',
+  ogImage = '/logo.png',
   ogType = 'website',
   schema,
   noindex = false
@@ -32,7 +32,7 @@ const SEO = ({
     "@type": "Organization",
     "name": "Techaxis Consulting Private Limited",
     "url": baseUrl,
-    "logo": `${baseUrl}/src/assets/techAxix_logo-removebg-preview.png`,
+    "logo": `${baseUrl}/logo.png`,
     "description": "Leading IT solutions and consulting company specializing in Oracle ERP, digital transformation, and cloud solutions with 25+ years of experience.",
     "foundingDate": "1999",
     "address": {

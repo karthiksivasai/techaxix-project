@@ -16,7 +16,7 @@ const Index = () => {
       "@type": "Organization",
       "name": "Techaxis Consulting Private Limited",
       "url": "https://techaxisconsulting.com",
-      "logo": "https://techaxisconsulting.com/src/assets/techAxix_logo-removebg-preview.png",
+      "logo": "https://techaxisconsulting.com/logo.png",
       "description": "Next-generation IT solutions and consulting company committed to driving innovation, efficiency, and growth with Oracle ERP expertise.",
       "foundingDate": "1999",
       "address": {
