@@ -1,0 +1,24 @@
+# Netlify redirects for Vite React SPA
+# Serve static assets directly
+/assets/*   /assets/:splat   200
+/static/*   /static/:splat   200
+/vite/*     /vite/:splat     200
+
+# Serve JS and CSS files directly
+/*.js       /:splat          200
+/*.css      /:splat          200
+/*.map      /:splat          200
+
+# Serve other static files
+/*.ico      /:splat          200
+/*.png      /:splat          200
+/*.jpg      /:splat          200
+/*.jpeg     /:splat          200
+/*.svg      /:splat          200
+/*.woff     /:splat          200
+/*.woff2    /:splat          200
+/*.ttf      /:splat          200
+/*.eot      /:splat          200
+
+# SPA fallback - all other routes go to index.html
+/*          /index.html      200
