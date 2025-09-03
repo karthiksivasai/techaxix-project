@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import {
   Users,
   CheckCircle,
@@ -37,7 +36,6 @@ const StaffAugmentation = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-accent/20 via-brand-blue-light/20 to-accent/20">
@@ -228,17 +226,16 @@ const StaffAugmentation = () => {
             {/* CTA Section */}
             <div className="text-center">
               <Button variant="cta" size="lg" asChild>
-                <a href="/contact">
+                <Link to="/contact">
                   Get Started with Staff Augmentation
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

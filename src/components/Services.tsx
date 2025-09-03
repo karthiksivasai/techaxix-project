@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import webTechIcon from "@/assets/web-tech-icon.png";
 import appDevIcon from "@/assets/app-dev-icon.png";
 import testingIcon from "@/assets/testing-icon.png";
@@ -107,10 +108,10 @@ const Services = () => {
                     className="group-hover:bg-brand-blue-light group-hover:text-white transition-all duration-300 btn-responsive w-full"
                     asChild
                   >
-                    <a href={service.link}>
+                    <Link to={service.link}>
                       Read More
                       <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -131,10 +132,10 @@ const Services = () => {
             className="btn-responsive-lg px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/30 transform hover:scale-105 transition-all duration-300"
             asChild
           >
-            <a href="/services">
+            <Link to="/services">
               View All Services
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

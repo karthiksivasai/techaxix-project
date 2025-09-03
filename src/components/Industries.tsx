@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Building2,
   HeartHandshake,
@@ -117,9 +118,9 @@ const Industries = () => {
             className="btn-responsive-lg px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/30 transform hover:scale-105 transition-all duration-300"
             asChild
           >
-            <a href="/industries" aria-label="Learn more about industries we serve">
+            <Link to="/industries" aria-label="Learn more about industries we serve">
               KNOW MORE
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

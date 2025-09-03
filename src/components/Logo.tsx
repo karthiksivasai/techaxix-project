@@ -5,20 +5,19 @@ interface LogoProps {
   variant?: "header" | "footer";
   showTagline?: boolean;
   className?: string;
+  useRouter?: boolean;
 }
 
 const Logo = ({
   variant = "header",
   showTagline = true,
   className = "",
+  useRouter = true,
 }: LogoProps) => {
   const isHeader = variant === "header";
 
-  return (
-    <Link
-      to="/"
-      className={`techaxis-logo ${isHeader ? "flex items-center space-x-2" : "flex flex-col items-center"} ${className}`}
-    >
+  const logoContent = (
+    <>
       {/* Logo Image */}
       <div className="flex-shrink-0">
         <img
@@ -72,7 +71,26 @@ const Logo = ({
           </p>
         )}
       </div>
-    </Link>
+    </>
+  );
+
+  if (useRouter) {
+    return (
+      <Link
+        to="/"
+        className={`techaxis-logo ${isHeader ? "flex items-center space-x-2" : "flex flex-col items-center"} ${className}`}
+      >
+        {logoContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      className={`techaxis-logo ${isHeader ? "flex items-center space-x-2" : "flex flex-col items-center"} ${className}`}
+    >
+      {logoContent}
+    </div>
   );
 };
 

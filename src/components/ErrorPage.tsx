@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 interface ActionType {
@@ -51,9 +50,9 @@ const ErrorPage = ({
 
     if (action.href) {
       return (
-        <Link to={action.href} className={classes}>
+        <a href={action.href} className={classes}>
           {action.text}
-        </Link>
+        </a>
       );
     }
 
@@ -80,7 +79,7 @@ const ErrorPage = ({
         {/* Logo */}
         {showLogo && (
           <div className="mb-8">
-            <Logo variant="header" showTagline={false} />
+            <Logo variant="header" showTagline={false} useRouter={false} />
           </div>
         )}
 
@@ -123,12 +122,12 @@ const ErrorPage = ({
         <div className="mt-8 text-gray-500 text-sm">
           <p>
             Need help?{" "}
-            <Link
-              to="/contact"
+            <a
+              href="/contact"
               className="text-[#2E86FF] hover:text-[#5AB1FF] transition-colors"
             >
               Contact our support team
-            </Link>
+            </a>
           </p>
         </div>
       </div>

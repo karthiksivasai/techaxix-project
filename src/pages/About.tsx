@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import teamImage from "@/assets/team-image.jpg";
 import { Users, Target, Award, Globe, CheckCircle } from "lucide-react";
@@ -96,7 +95,6 @@ const About = () => {
         schema={aboutSchema}
       />
       <div className="min-h-screen">
-        <Header />
 
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5" aria-label="About Us Hero Section">
@@ -150,7 +148,7 @@ const About = () => {
                 </div>
 
                 <Button variant="cta" size="lg" className="mt-8" asChild>
-                  <a href="/contact" aria-label="Contact Techaxis Consulting team">Get In Touch</a>
+                  <Link to="/contact" aria-label="Contact Techaxis Consulting team">Get In Touch</Link>
                 </Button>
               </div>
 
@@ -277,7 +275,6 @@ const About = () => {
           </div>
         </section>
 
-        <Footer />
       </div>
     </>
   );

@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 import {
   Smartphone,
   CheckCircle,
@@ -36,8 +35,6 @@ const MobileDevelopment = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-accent/20 via-brand-blue-light/20 to-accent/20">
         <div className="container mx-auto px-4">
@@ -227,17 +224,15 @@ const MobileDevelopment = () => {
             {/* CTA Section */}
             <div className="text-center">
               <Button variant="cta" size="lg" asChild>
-                <a href="/contact">
+                <Link to="/contact">
                   Start Your Mobile App Project
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

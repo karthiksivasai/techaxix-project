@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Users, CheckCircle, ArrowRight } from "lucide-react";
 
 const ConsultingServices = () => {
@@ -29,7 +28,6 @@ const ConsultingServices = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
@@ -232,7 +230,6 @@ const ConsultingServices = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import ScrollToTop from "./components/ScrollToTop";
+import Layout from "./components/Layout";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -43,78 +43,79 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <ErrorBoundary>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route
-                path="/services/web-technology"
-                element={<WebTechnology />}
-              />
-              <Route
-                path="/services/application-development"
-                element={<ApplicationDevelopment />}
-              />
-              <Route path="/services/testing" element={<TestingServices />} />
-              <Route
-                path="/services/consulting"
-                element={<ConsultingServices />}
-              />
-              <Route
-                path="/services/cloud-computing"
-                element={<CloudComputing />}
-              />
-              <Route
-                path="/services/digital-transformation"
-                element={<DigitalTransformation />}
-              />
-              <Route
-                path="/services/oracle-fusion-cloud"
-                element={<OracleFusionCloud />}
-              />
-              <Route path="/services/oracle-ebs" element={<OracleEBS />} />
-              <Route path="/services/custom-cloud" element={<CustomCloud />} />
-              <Route
-                path="/services/mobile-development"
-                element={<MobileDevelopment />}
-              />
-              <Route
-                path="/services/staff-augmentation"
-                element={<StaffAugmentation />}
-              />
-              <Route
-                path="/services/project-management"
-                element={<ProjectManagement />}
-              />
-              <Route path="/industries" element={<Industries />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route
-                path="/terms-and-conditions"
-                element={<TermsAndConditions />}
-              />
+        <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>
+          <ErrorBoundary>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route
+                  path="/services/web-technology"
+                  element={<WebTechnology />}
+                />
+                <Route
+                  path="/services/application-development"
+                  element={<ApplicationDevelopment />}
+                />
+                <Route path="/services/testing" element={<TestingServices />} />
+                <Route
+                  path="/services/consulting"
+                  element={<ConsultingServices />}
+                />
+                <Route
+                  path="/services/cloud-computing"
+                  element={<CloudComputing />}
+                />
+                <Route
+                  path="/services/digital-transformation"
+                  element={<DigitalTransformation />}
+                />
+                <Route
+                  path="/services/oracle-fusion-cloud"
+                  element={<OracleFusionCloud />}
+                />
+                <Route path="/services/oracle-ebs" element={<OracleEBS />} />
+                <Route path="/services/custom-cloud" element={<CustomCloud />} />
+                <Route
+                  path="/services/mobile-development"
+                  element={<MobileDevelopment />}
+                />
+                <Route
+                  path="/services/staff-augmentation"
+                  element={<StaffAugmentation />}
+                />
+                <Route
+                  path="/services/project-management"
+                  element={<ProjectManagement />}
+                />
+                <Route path="/industries" element={<Industries />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route
+                  path="/terms-and-conditions"
+                  element={<TermsAndConditions />}
+                />
 
-              {/* Error Pages Demo */}
-              <Route path="/error-demo" element={<ErrorDemo />} />
+                {/* Error Pages Demo */}
+                <Route path="/error-demo" element={<ErrorDemo />} />
 
-              {/* Error Page Routes */}
-              <Route path="/error/404" element={<NotFound />} />
-              <Route path="/error/500" element={<InternalServerError />} />
-              <Route path="/error/403" element={<Forbidden />} />
-              <Route path="/error/offline" element={<Offline />} />
-              <Route path="/error/timeout" element={<Timeout />} />
-              <Route path="/error/maintenance" element={<Maintenance />} />
-              <Route path="/error/security" element={<Security />} />
+                {/* Error Page Routes */}
+                <Route path="/error/404" element={<NotFound />} />
+                <Route path="/error/500" element={<InternalServerError />} />
+                <Route path="/error/403" element={<Forbidden />} />
+                <Route path="/error/offline" element={<Offline />} />
+                <Route path="/error/timeout" element={<Timeout />} />
+                <Route path="/error/maintenance" element={<Maintenance />} />
+                <Route path="/error/security" element={<Security />} />
 
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            <ScrollToTop />
-          </BrowserRouter>
-        </ErrorBoundary>
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Layout>
+          </ErrorBoundary>
+        </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>

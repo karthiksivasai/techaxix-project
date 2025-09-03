@@ -6,64 +6,75 @@ import { compression } from 'vite-plugin-compression2';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/',
   server: {
-    host: "127.0.0.1",
-    port: 8080,
+    host: "localhost",
+    port: 5173,
     strictPort: false,
+    open: true,
     hmr: {
-      port: 8081,
+      port: 5174,
       protocol: "ws",
-      host: "127.0.0.1",
+      host: "localhost",
     },
   },
   plugins: [
     react(),
     compression({
-      algorithm: 'gzip',
+      algorithms: ['gzip'],
       exclude: [/\.(br)$/, /\.(gz)$/],
     }),
     compression({
-      algorithm: 'brotliCompress',
+      algorithms: ['brotliCompress'],
       exclude: [/\.(br)$/, /\.(gz)$/],
     }),
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
-      manifest: {
-        name: 'Techaxis Consulting',
-        short_name: 'Techaxis',
-        description: 'Oracle ERP & Digital Transformation Solutions',
-        theme_color: '#0f1419',
-        background_color: '#ffffff',
-        display: 'standalone',
-        orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
-        icons: [
-          {
-            src: '/src/assets/techAxix_logo-removebg-preview.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/src/assets/techAxix_logo-removebg-preview.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
-    })
+    // VitePWA disabled for development to avoid service worker issues
+    // VitePWA({
+    //   registerType: 'autoUpdate',
+    //   includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+    //   manifest: {
+    //     name: 'Techaxis Consulting',
+    //     short_name: 'Techaxis',
+    //     description: 'Oracle ERP & Digital Transformation Solutions',
+    //     theme_color: '#0f1419',
+    //     background_color: '#ffffff',
+    //     display: 'standalone',
+    //     orientation: 'portrait',
+    //     scope: '/',
+    //     start_url: '/',
+    //     icons: [
+    //       {
+    //         src: '/src/assets/techAxix_logo-removebg-preview.png',
+    //         sizes: '192x192',
+    //         type: 'image/png'
+    //       },
+    //       {
+    //         src: '/src/assets/techAxix_logo-removebg-preview.png',
+    //         sizes: '512x512',
+    //         type: 'image/png'
+    //       }
+    //     ]
+    //   }
+    // })
   ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    dedupe: [
+      "react",
+      "react-dom",
+      "react-dom/client",
+      "react/jsx-runtime",
+      "react/jsx-dev-runtime"
+    ],
   },
   clearScreen: false,
   logLevel: "info",
   build: {
     target: 'es2015',
     minify: 'terser',
+    sourcemap: true,
     terserOptions: {
       compress: {
         drop_console: true,
@@ -83,6 +94,15 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom',
+      'react/jsx-runtime',
+      'react/jsx-dev-runtime'
+    ]
+  },
+  define: {
+    global: 'globalThis',
   },
 });

@@ -25,22 +25,31 @@ const Footer = () => {
                 variant="ghost"
                 size="icon"
                 className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+                asChild
               >
-                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
+                <a href="https://www.linkedin.com/company/techaxis-consulting" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
+                </a>
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+                asChild
               >
-                <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
+                <a href="https://twitter.com/techaxis_consult" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                  <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
+                </a>
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+                asChild
               >
-                <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
+                <a href="https://facebook.com/techaxisconsulting" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
+                </a>
               </Button>
             </div>
           </div>

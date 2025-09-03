@@ -12,8 +12,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import {
   MapPin,
   Phone,
@@ -292,8 +290,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
         {/* Background Pattern */}
@@ -620,8 +616,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
