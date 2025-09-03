@@ -28,7 +28,11 @@ const Logo = ({
               ? "w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 object-contain"
               : "w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
           }
+          onLoad={() => {
+            console.log("Logo loaded successfully");
+          }}
           onError={(e) => {
+            console.error("Logo failed to load:", e);
             // Fallback to text logo if image fails to load
             const target = e.target as HTMLImageElement;
             target.style.display = "none";
