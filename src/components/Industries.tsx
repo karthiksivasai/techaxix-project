@@ -63,10 +63,10 @@ const Industries = () => {
           <p className="text-red-500 font-semibold mb-2 sm:mb-3 tracking-wider text-fluid-base sm:text-fluid-lg">
             INDUSTRIES WE SERVE
           </p>
-          <h2 className="text-fluid-2xl sm:text-fluid-3xl md:text-fluid-4xl lg:text-fluid-4xl xl:text-fluid-5xl font-bold text-text-primary mb-4 sm:mb-6">
+          <h2 className="text-fluid-2xl sm:text-fluid-3xl md:text-fluid-4xl lg:text-fluid-4xl xl:text-fluid-5xl font-bold mb-4 sm:mb-6" style={{ color: '#0B2545' }}>
             Specialized Solutions
           </h2>
-          <p className="text-text-body text-fluid-base sm:text-fluid-lg max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-fluid-base sm:text-fluid-lg max-w-3xl mx-auto px-4 sm:px-0" style={{ color: '#2E3A59' }}>
             We deliver tailored Oracle ERP solutions and digital transformation
             across diverse industries, understanding unique challenges and
             regulatory requirements with our deep domain expertise.
@@ -92,12 +92,12 @@ const Industries = () => {
                 </div>
 
                 {/* Title with reduced size */}
-                <h3 className="text-fluid-lg sm:text-fluid-xl md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors duration-300">
+                <h3 className="text-fluid-lg sm:text-fluid-xl md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl font-bold mb-4 group-hover:text-accent transition-colors duration-300" style={{ color: '#0B2545' }}>
                   {industry.title}
                 </h3>
 
                 {/* Description with proper spacing */}
-                <p className="text-gray-300 text-fluid-sm sm:text-fluid-base leading-relaxed text-left">
+                <p className="text-fluid-sm sm:text-fluid-base leading-relaxed text-left" style={{ color: '#6C7A91' }}>
                   {industry.description}
                 </p>
               </CardContent>
