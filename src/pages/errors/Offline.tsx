@@ -64,11 +64,11 @@ const Offline = () => {
 
       {/* Network Icons */}
       <div className="absolute top-2 left-2 w-6 h-6 bg-[#2E86FF] rounded-full flex items-center justify-center opacity-60">
-        <span className="text-white text-xs">📶</span>
+        <span className="text-text-primary text-xs">📶</span>
       </div>
 
       <div className="absolute top-2 right-2 w-6 h-6 bg-[#5AB1FF] rounded-full flex items-center justify-center opacity-60">
-        <span className="text-white text-xs">🌐</span>
+        <span className="text-text-primary text-xs">🌐</span>
       </div>
     </div>
   );

@@ -91,16 +91,16 @@ const ErrorPage = ({
         </div>
 
         {/* Error Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
           {title}
         </h2>
 
         {/* Error Message */}
-        <p className="text-xl text-gray-300 mb-4 leading-relaxed">{message}</p>
+        <p className="text-xl text-text-body mb-4 leading-relaxed">{message}</p>
 
         {/* Optional Description */}
         {description && (
-          <p className="text-gray-400 mb-8 leading-relaxed">{description}</p>
+          <p className="text-text-muted mb-8 leading-relaxed">{description}</p>
         )}
 
         {/* Illustration */}
@@ -119,7 +119,7 @@ const ErrorPage = ({
         </div>
 
         {/* Additional Help */}
-        <div className="mt-8 text-gray-500 text-sm">
+        <div className="mt-8 text-text-disabled text-sm">
           <p>
             Need help?{" "}
             <a

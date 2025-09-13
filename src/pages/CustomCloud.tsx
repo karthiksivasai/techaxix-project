@@ -43,7 +43,7 @@ const CustomCloud = () => {
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
                   <Cloud className="w-8 h-8 text-accent" />
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-white">
+                <h1 className="text-4xl lg:text-5xl font-bold text-text-primary">
                   Custom Cloud Solutions
                 </h1>
               </div>
@@ -72,7 +72,7 @@ const CustomCloud = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-text-primary mb-6">
                   Our Cloud Expertise
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -94,7 +94,7 @@ const CustomCloud = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6">
                     Cloud Platforms
                   </h3>
                   <div className="space-y-4">
@@ -112,7 +112,7 @@ const CustomCloud = () => {
 
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6">
                     Our Services
                   </h3>
                   <div className="space-y-4">
@@ -130,7 +130,7 @@ const CustomCloud = () => {
             {/* Implementation Process */}
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
+                <h3 className="text-2xl font-bold text-text-primary mb-6">
                   Cloud Implementation Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -138,7 +138,7 @@ const CustomCloud = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Database className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Assessment
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -149,7 +149,7 @@ const CustomCloud = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Settings className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">Design</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">Design</h4>
                     <p className="text-sm text-muted-foreground">
                       Cloud architecture and solution design
                     </p>
@@ -158,7 +158,7 @@ const CustomCloud = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Implementation
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -169,7 +169,7 @@ const CustomCloud = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Optimization
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -183,7 +183,7 @@ const CustomCloud = () => {
             {/* Benefits Section */}
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold text-white mb-6">
+                <h3 className="text-3xl font-bold text-text-primary mb-6">
                   Benefits of Custom Cloud Solutions
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -191,7 +191,7 @@ const CustomCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Cloud className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Scalability
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -202,7 +202,7 @@ const CustomCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Cost Efficiency
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -213,7 +213,7 @@ const CustomCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">Security</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">Security</h4>
                     <p className="text-sm text-muted-foreground">
                       Enterprise-grade security and compliance
                     </p>

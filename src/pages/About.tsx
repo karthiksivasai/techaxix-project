@@ -99,10 +99,10 @@ const About = () => {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5" aria-label="About Us Hero Section">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-text-primary mb-6">
               About Us
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-text-body max-w-3xl mx-auto">
               Techaxis Consulting Private Limited is a next-generation IT
               solutions and consulting company committed to driving innovation,
               efficiency, and growth.
@@ -119,10 +119,10 @@ const About = () => {
                   <p className="text-accent font-semibold mb-2 tracking-wider">
                     WHO WE ARE
                   </p>
-                  <h2 className="text-4xl font-bold text-white mb-6">
+                  <h2 className="text-4xl font-bold text-text-primary mb-6">
                     Techaxis Consulting Private Limited
                   </h2>
-                  <p className="text-xl text-brand-blue-light font-semibold mb-6">
+                  <p className="text-xl text-primary font-semibold mb-6">
                     Axis of Possibilities
                   </p>
                 </div>
@@ -175,7 +175,7 @@ const About = () => {
         <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10" aria-label="Why Choose Techaxis Consulting">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bold text-text-primary mb-6">
                 Why Choose Techaxis Consulting?
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -203,7 +203,7 @@ const About = () => {
         <section className="py-20 bg-background" aria-label="Our Service Offerings">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bold text-text-primary mb-6">
                 Our Service Offerings
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -231,7 +231,7 @@ const About = () => {
         <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10" aria-label="Our Core Values">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bold text-text-primary mb-6">
                 Our Core Values
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -243,7 +243,7 @@ const About = () => {
               <Card className="bg-background/50 border-border/50 text-center hover:border-accent/50 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6">
                   <Users className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">Collaboration</h3>
+                  <h3 className="text-xl font-semibold text-text-primary mb-2">Collaboration</h3>
                   <p className="text-muted-foreground">Working together to achieve exceptional results</p>
                 </CardContent>
               </Card>
@@ -251,7 +251,7 @@ const About = () => {
               <Card className="bg-background/50 border-border/50 text-center hover:border-accent/50 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6">
                   <Target className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>
+                  <h3 className="text-xl font-semibold text-text-primary mb-2">Excellence</h3>
                   <p className="text-muted-foreground">Striving for the highest quality in everything we do</p>
                 </CardContent>
               </Card>
@@ -259,7 +259,7 @@ const About = () => {
               <Card className="bg-background/50 border-border/50 text-center hover:border-accent/50 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6">
                   <Award className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">Innovation</h3>
+                  <h3 className="text-xl font-semibold text-text-primary mb-2">Innovation</h3>
                   <p className="text-muted-foreground">Embracing new technologies and creative solutions</p>
                 </CardContent>
               </Card>
@@ -267,7 +267,7 @@ const About = () => {
               <Card className="bg-background/50 border-border/50 text-center hover:border-accent/50 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6">
                   <Globe className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">Global Reach</h3>
+                  <h3 className="text-xl font-semibold text-text-primary mb-2">Global Reach</h3>
                   <p className="text-muted-foreground">Delivering solutions worldwide with local expertise</p>
                 </CardContent>
               </Card>

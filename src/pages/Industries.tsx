@@ -139,10 +139,10 @@ const Industries = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl lg:text-6xl font-bold text-text-primary mb-6">
             Industries We Serve
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-text-body max-w-3xl mx-auto">
             Our expertise spans across various industries, delivering tailored
             technology solutions that address unique challenges and regulatory
             requirements.
@@ -168,22 +168,22 @@ const Industries = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-accent transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-text-primary mb-4 text-center group-hover:text-accent transition-colors duration-300">
                     {industry.title}
                   </h3>
 
-                  <p className="text-gray-300 text-sm leading-relaxed mb-6 text-center">
+                  <p className="text-text-body text-sm leading-relaxed mb-6 text-center">
                     {industry.description}
                   </p>
 
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-white text-sm">
+                    <h4 className="font-semibold text-text-primary text-sm">
                       Key Solutions:
                     </h4>
                     {industry.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                        <span className="text-xs text-gray-300">{feature}</span>
+                        <span className="text-xs text-text-body">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -198,7 +198,7 @@ const Industries = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">
+            <h2 className="text-3xl font-bold text-text-primary mb-8">
               Why Choose Techaxis Consulting for Your Industry?
             </h2>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -206,8 +206,8 @@ const Industries = () => {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
                   <Shield className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-semibold text-white">Industry Expertise</h3>
-                <p className="text-sm text-gray-300">
+                <h3 className="font-semibold text-text-primary">Industry Expertise</h3>
+                <p className="text-sm text-text-body">
                   Deep understanding of industry-specific challenges and
                   regulations
                 </p>
@@ -216,10 +216,10 @@ const Industries = () => {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
                   <Building2 className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-semibold text-white">
+                <h3 className="font-semibold text-text-primary">
                   Proven Track Record
                 </h3>
-                <p className="text-sm text-gray-300">
+                <p className="text-sm text-text-body">
                   25+ years of successful project delivery across multiple
                   sectors
                 </p>
@@ -228,10 +228,10 @@ const Industries = () => {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
                   <HeartHandshake className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-semibold text-white">
+                <h3 className="font-semibold text-text-primary">
                   Partnership Approach
                 </h3>
-                <p className="text-sm text-gray-300">
+                <p className="text-sm text-text-body">
                   We work as your technology partner, not just a vendor
                 </p>
               </div>

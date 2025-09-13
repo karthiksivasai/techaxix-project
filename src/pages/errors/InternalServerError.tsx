@@ -34,7 +34,7 @@ const InternalServerError = () => {
 
       {/* Error Indicator */}
       <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#FF4D4D] rounded-full flex items-center justify-center animate-pulse">
-        <span className="text-white text-xs font-bold">!</span>
+        <span className="text-text-primary text-xs font-bold">!</span>
       </div>
     </div>
   );

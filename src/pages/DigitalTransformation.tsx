@@ -46,7 +46,7 @@ const DigitalTransformation = () => {
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
                   <Users className="w-8 h-8 text-accent" />
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-white">
+                <h1 className="text-4xl lg:text-5xl font-bold text-text-primary">
                   Digital Transformation Projects
                 </h1>
               </div>
@@ -76,7 +76,7 @@ const DigitalTransformation = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-text-primary mb-6">
                   Our Approach
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -98,7 +98,7 @@ const DigitalTransformation = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6">
                     Our Services Include
                   </h3>
                   <div className="space-y-4">
@@ -114,7 +114,7 @@ const DigitalTransformation = () => {
 
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6">
                     Key Benefits
                   </h3>
                   <div className="space-y-4">
@@ -132,7 +132,7 @@ const DigitalTransformation = () => {
             {/* Process Section */}
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
+                <h3 className="text-2xl font-bold text-text-primary mb-6">
                   Our Digital Transformation Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -140,7 +140,7 @@ const DigitalTransformation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Target className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Assessment
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -152,7 +152,7 @@ const DigitalTransformation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <TrendingUp className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">Strategy</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">Strategy</h4>
                     <p className="text-sm text-muted-foreground">
                       Develop comprehensive digital transformation roadmap
                     </p>
@@ -161,7 +161,7 @@ const DigitalTransformation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Zap className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Implementation
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -172,7 +172,7 @@ const DigitalTransformation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Optimization
                     </h4>
                     <p className="text-sm text-muted-foreground">

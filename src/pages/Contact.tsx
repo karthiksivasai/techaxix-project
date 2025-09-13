@@ -328,7 +328,7 @@ const Contact = () => {
                 variant="brand-outline"
                 size="lg"
                 onClick={action.action}
-                className="flex items-center gap-3 px-6 py-3 hover:bg-brand-blue-light hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="flex items-center gap-3 px-6 py-3 hover:bg-brand-blue-light hover:text-text-primary transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <action.icon className="h-5 w-5" />
                 <span className="font-semibold">{action.label}</span>

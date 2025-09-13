@@ -1,6 +1,6 @@
-# TECHAXIS CONSULTING
+# Techaxis consulting private limited
 
-A modern, responsive website for **TECHAXIS CONSULTING**, a leading IT solutions and consulting company specializing in Oracle ERP, digital transformation, and cloud solutions with over 25 years of experience in enterprise technology consulting.
+A modern, responsive website for **Techaxis consulting private limited**, a leading IT solutions and consulting company specializing in Oracle ERP, digital transformation, and cloud solutions with over 25 years of experience in enterprise technology consulting.
 
 ## 🚀 Features
 
@@ -115,15 +115,15 @@ The project uses a consistent design system built on:
 
 ## 📄 License
 
-This project is proprietary software developed for **TECHAXIS CONSULTING**.
+This project is proprietary software developed for **Techaxis consulting private limited**.
 
 ## 🤝 Support
 
-For technical support or questions about this project, please contact the TECHAXIS CONSULTING development team.
+For technical support or questions about this project, please contact the Techaxis consulting private limited development team.
 
-## 🏢 About TECHAXIS CONSULTING
+## 🏢 About Techaxis consulting private limited
 
-**TECHAXIS CONSULTING** is a next-generation IT solutions and consulting company committed to driving innovation, efficiency, and growth. With deep expertise across industries, we help organizations embrace digital transformation and achieve business excellence through:
+**Techaxis consulting private limited** is a next-generation IT solutions and consulting company committed to driving innovation, efficiency, and growth. With deep expertise across industries, we help organizations embrace digital transformation and achieve business excellence through:
 
 - **Oracle ERP Solutions**: Oracle Fusion Cloud and Oracle EBS implementation
 - **Digital Transformation**: End-to-end digital transformation consulting

@@ -46,11 +46,11 @@ const OracleEBS = () => {
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
                   <Code className="w-8 h-8 text-accent" />
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-white">
+                <h1 className="text-4xl lg:text-5xl font-bold text-text-primary">
                   Oracle E-Business Suite (EBS) Implementation & Support
                 </h1>
               </div>
-              <p className="text-xl text-gray-300 leading-relaxed">
+              <p className="text-xl text-text-body leading-relaxed">
                 Our expertise extends to Oracle EBS Suite, where we deliver
                 implementation, customization, and managed support services for
                 HCM, SCM, Finance, Maintenance, Manufacturing & Hyperion
@@ -76,7 +76,7 @@ const OracleEBS = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-text-primary mb-6">
                   Our Oracle EBS Expertise
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -98,7 +98,7 @@ const OracleEBS = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
                 <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-white mb-6">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Core Modules
                   </h3>
                   <div className="space-y-4">
@@ -121,7 +121,7 @@ const OracleEBS = () => {
 
               <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
                 <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-white mb-6">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Our Services
                   </h3>
                   <div className="space-y-4">
@@ -146,7 +146,7 @@ const OracleEBS = () => {
             {/* Implementation Process */}
             <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
               <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-white mb-6">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Implementation Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -154,10 +154,10 @@ const OracleEBS = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Database className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-gray-200 mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Analysis
                     </h4>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-text-body">
                       Business requirements and system analysis
                     </p>
                   </div>
@@ -165,8 +165,8 @@ const OracleEBS = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Settings className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-gray-200 mb-2">Design</h4>
-                    <p className="text-sm text-gray-300">
+                    <h4 className="font-semibold text-text-muted mb-2">Design</h4>
+                    <p className="text-sm text-text-body">
                       System design and configuration
                     </p>
                   </div>
@@ -174,10 +174,10 @@ const OracleEBS = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-gray-200 mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Development
                     </h4>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-text-body">
                       Customization and development
                     </p>
                   </div>
@@ -185,10 +185,10 @@ const OracleEBS = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-gray-200 mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Deployment
                     </h4>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-text-body">
                       Testing and production deployment
                     </p>
                   </div>
@@ -204,7 +204,7 @@ const OracleEBS = () => {
             {/* Benefits Section */}
             <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
               <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-white mb-6">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Why Oracle E-Business Suite?
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -212,10 +212,10 @@ const OracleEBS = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Code className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-gray-200 mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Proven Platform
                     </h4>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-text-body">
                       Mature, stable, and feature-rich ERP solution
                     </p>
                   </div>
@@ -223,10 +223,10 @@ const OracleEBS = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-gray-200 mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Comprehensive
                     </h4>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-text-body">
                       End-to-end business process coverage
                     </p>
                   </div>
@@ -234,10 +234,10 @@ const OracleEBS = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-gray-200 mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Enterprise Ready
                     </h4>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-text-body">
                       Scalable and secure for large organizations
                     </p>
                   </div>

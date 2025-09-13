@@ -57,16 +57,16 @@ const Industries = () => {
   ];
 
   return (
-    <section className="section-responsive bg-secondary/20" id="industries">
+    <section className="section alt section-responsive" id="industries">
       <div className="container-responsive">
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <p className="text-red-500 font-semibold mb-2 sm:mb-3 tracking-wider text-fluid-base sm:text-fluid-lg">
             INDUSTRIES WE SERVE
           </p>
-          <h2 className="text-fluid-2xl sm:text-fluid-3xl md:text-fluid-4xl lg:text-fluid-4xl xl:text-fluid-5xl font-bold text-white mb-4 sm:mb-6">
+          <h2 className="text-fluid-2xl sm:text-fluid-3xl md:text-fluid-4xl lg:text-fluid-4xl xl:text-fluid-5xl font-bold text-text-primary mb-4 sm:mb-6">
             Specialized Solutions
           </h2>
-          <p className="text-gray-300 text-fluid-base sm:text-fluid-lg max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-text-body text-fluid-base sm:text-fluid-lg max-w-3xl mx-auto px-4 sm:px-0">
             We deliver tailored Oracle ERP solutions and digital transformation
             across diverse industries, understanding unique challenges and
             regulatory requirements with our deep domain expertise.

@@ -38,7 +38,7 @@ The logo will automatically appear in:
 
 The logo component includes:
 
-- Company name: "TECHAXIS CONSULTING"
+- Company name: "Techaxis consulting private limited"
 - Tagline: "Techaxis Consulting Private Limited"
 - Motto: "...AXIS OF POSSIBILITIES"
 - Proper color scheme integration

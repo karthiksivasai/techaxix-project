@@ -71,10 +71,10 @@ const Services = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl lg:text-6xl font-bold text-text-primary mb-6">
             Our Service Offerings
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-text-body max-w-3xl mx-auto">
             With a blend of domain expertise, technology excellence, and a
             client-first approach, we partner with organizations to drive
             sustainable business success.
@@ -100,12 +100,12 @@ const Services = () => {
                           <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
                             <service.icon className="w-8 h-8 text-accent" />
                           </div>
-                          <h2 className="text-3xl font-bold text-white">
+                          <h2 className="text-3xl font-bold text-text-primary">
                             {service.title}
                           </h2>
                         </div>
 
-                        <p className="text-gray-300 leading-relaxed mb-6">
+                        <p className="text-text-body leading-relaxed mb-6">
                           {service.description}
                         </p>
 
@@ -164,10 +164,10 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-text-primary mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-text-body mb-8 max-w-2xl mx-auto">
             Let's discuss how our services can help transform your business and
             drive growth.
           </p>

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="bg-primary text-primary-foreground border-t border-border"
+      className="text-white border-t border-primary/20"
     >
       <div className="container-responsive">
         {/* Main Footer Content */}
@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4 sm:space-y-6">
             <Logo variant="footer" />
-            <p className="text-fluid-sm sm:text-fluid-base text-primary-foreground/80 leading-relaxed">
+            <p className="text-fluid-sm sm:text-fluid-base text-white/80 leading-relaxed">
               Leading IT solutions and consulting company specializing in
               digital transformation, Oracle services, and cloud solutions. We
               drive innovation and business excellence across industries.
@@ -24,7 +24,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+                className="text-white hover:text-accent hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
                 asChild
               >
                 <a href="https://www.linkedin.com/company/techaxis-consulting" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -34,7 +34,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+                className="text-white hover:text-accent hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
                 asChild
               >
                 <a href="https://twitter.com/techaxis_consult" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -44,7 +44,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-primary-foreground hover:text-red-500 hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
+                className="text-white hover:text-accent hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
                 asChild
               >
                 <a href="https://facebook.com/techaxisconsulting" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -68,7 +68,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="p-0 h-auto text-primary-foreground/80 hover:text-red-500 text-left transition-colors duration-200 block text-fluid-sm sm:text-fluid-base"
+                    className="p-0 h-auto text-white/80 hover:text-accent text-left transition-colors duration-200 block text-fluid-sm sm:text-fluid-base"
                   >
                     {link.name}
                   </Link>
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li key={service.name}>
                   <Link
                     to={service.href}
-                    className="p-0 h-auto text-primary-foreground/80 hover:text-red-500 justify-start text-left block transition-colors duration-200 text-fluid-sm sm:text-fluid-base"
+                    className="p-0 h-auto text-white/80 hover:text-accent justify-start text-left block transition-colors duration-200 text-fluid-sm sm:text-fluid-base"
                   >
                     {service.name}
                   </Link>
@@ -126,13 +126,13 @@ const Footer = () => {
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start space-x-3">
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-red-500 flex-shrink-0 mt-0.5" />
-                <p className="text-fluid-sm sm:text-fluid-base text-primary-foreground/80 leading-relaxed">
+                <p className="text-fluid-sm sm:text-fluid-base text-white/80 leading-relaxed">
                   admin@techaxisconsulting.com
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-red-500 flex-shrink-0 mt-0.5" />
-                <p className="text-fluid-sm sm:text-fluid-base text-primary-foreground/80 leading-relaxed">
+                <p className="text-fluid-sm sm:text-fluid-base text-white/80 leading-relaxed">
                   +91 9937033526
                 </p>
               </div>
@@ -143,19 +143,19 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 py-4 sm:py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p className="text-fluid-sm sm:text-fluid-base text-primary-foreground/60 text-center sm:text-left">
+            <p className="text-fluid-sm sm:text-fluid-base text-white/60 text-center sm:text-left">
               © 2024 Techaxis Consulting Private Limited. All rights reserved.
             </p>
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
               <Link
                 to="/privacy-policy"
-                className="p-0 h-auto text-primary-foreground/60 hover:text-red-500 text-fluid-sm sm:text-fluid-base transition-colors duration-200"
+                className="p-0 h-auto text-white/60 hover:text-accent text-fluid-sm sm:text-fluid-base transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link
                 to="/terms-and-conditions"
-                className="p-0 h-auto text-primary-foreground/60 hover:text-red-500 text-fluid-sm sm:text-fluid-base transition-colors duration-200"
+                className="p-0 h-auto text-white/60 hover:text-accent text-fluid-sm sm:text-fluid-base transition-colors duration-200"
               >
                 Terms of Service
               </Link>

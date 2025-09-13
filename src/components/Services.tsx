@@ -68,7 +68,7 @@ const Services = () => {
           <p className="text-accent font-semibold mb-2 sm:mb-3 tracking-wider text-fluid-base sm:text-fluid-lg">
             WHAT WE PROVIDE
           </p>
-          <h2 className="text-fluid-2xl sm:text-fluid-3xl md:text-fluid-4xl lg:text-fluid-4xl xl:text-fluid-5xl font-bold text-white">
+          <h2 className="text-fluid-2xl sm:text-fluid-3xl md:text-fluid-4xl lg:text-fluid-4xl xl:text-fluid-5xl font-bold text-text-primary">
             Our Service Offerings
           </h2>
         </div>
@@ -77,7 +77,7 @@ const Services = () => {
           {services.slice(0, 6).map((service, index) => (
             <Card
               key={index}
-              className="group relative overflow-hidden hover:shadow-elegant transition-all duration-500 ease-out hover:scale-105 cursor-pointer rounded-2xl border border-gradient-to-r from-accent via-brand-blue-light to-accent"
+              className="card group relative overflow-hidden hover:shadow-elegant transition-all duration-500 ease-out hover:scale-105 cursor-pointer"
             >
               <CardContent className="relative p-6 sm:p-8 text-center">
                 {/* Icon with proper spacing and reduced size */}
@@ -92,12 +92,12 @@ const Services = () => {
                 </div>
 
                 {/* Title with reduced size */}
-                <h3 className="text-fluid-lg sm:text-fluid-xl md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors duration-300">
+                <h3 className="text-fluid-lg sm:text-fluid-xl md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl font-bold text-text-primary mb-4 group-hover:text-accent transition-colors duration-300">
                   {service.title}
                 </h3>
 
                 {/* Description with proper spacing */}
-                <p className="text-gray-300 text-fluid-sm sm:text-fluid-base leading-relaxed mb-6 text-left">
+                <p className="text-text-body text-fluid-sm sm:text-fluid-base leading-relaxed mb-6 text-left">
                   {service.description}
                 </p>
 
@@ -105,7 +105,7 @@ const Services = () => {
                 <div className="pt-2">
                   <Button
                     variant="brand-outline"
-                    className="group-hover:bg-brand-blue-light group-hover:text-white transition-all duration-300 btn-responsive w-full"
+                    className="group-hover:bg-brand-blue-light group-hover:text-primary-foreground transition-all duration-300 btn-responsive w-full"
                     asChild
                   >
                     <Link to={service.link}>

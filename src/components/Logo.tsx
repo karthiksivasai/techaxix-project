@@ -44,8 +44,8 @@ const Logo = ({
         <div
           className={
             isHeader
-              ? "w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 bg-gradient-brand rounded-lg flex items-center justify-center text-white font-bold text-xs md:text-sm lg:text-base xl:text-lg"
-              : "w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 bg-gradient-brand rounded-lg flex items-center justify-center text-white font-bold text-sm md:text-base lg:text-lg xl:text-xl"
+              ? "w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 bg-gradient-brand rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xs md:text-sm lg:text-base xl:text-lg"
+              : "w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 bg-gradient-brand rounded-lg flex items-center justify-center text-primary-foreground font-bold text-sm md:text-base lg:text-lg xl:text-xl"
           }
           style={{ display: "none" }}
         >
@@ -58,21 +58,16 @@ const Logo = ({
         <h1
           className={`company-name font-bold ${isHeader ? "text-lg md:text-xl lg:text-2xl xl:text-3xl text-foreground" : "text-base md:text-lg lg:text-xl text-primary-foreground"}`}
         >
-          TECHAXIS CONSULTING
+          Techaxis Consulting Private Limited
         </h1>
         {showTagline && (
-          <p
-            className={`company-tagline text-xs md:text-sm lg:text-base leading-tight ${isHeader ? "text-muted-foreground" : "text-primary-foreground/80"}`}
-          >
-            Techaxis Consulting Private Limited
-          </p>
-        )}
-        {showTagline && (
-          <p
-            className={`company-tagline text-xs md:text-sm lg:text-base leading-tight mt-1 ${isHeader ? "text-gradient-brand font-semibold" : "text-accent"}`}
-          >
-            ...AXIS OF POSSIBILITIES
-          </p>
+          <div className="flex justify-end mt-1">
+            <p
+              className={`company-tagline text-xs md:text-sm lg:text-base leading-tight ${isHeader ? "text-gradient-brand font-semibold" : "text-accent"}`}
+            >
+              ...AXIS OF POSSIBILITIES
+            </p>
+          </div>
         )}
       </div>
     </>

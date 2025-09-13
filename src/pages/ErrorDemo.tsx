@@ -56,7 +56,7 @@ const ErrorDemo = () => {
             <Logo variant="header" showTagline={false} />
             <Link
               to="/"
-              className="text-white hover:text-[#5AB1FF] transition-colors font-semibold"
+              className="text-text-primary hover:text-[#5AB1FF] transition-colors font-semibold"
             >
               ← Back to Home
             </Link>
@@ -67,10 +67,10 @@ const ErrorDemo = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
             Error Pages Demo
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-text-body max-w-3xl mx-auto">
             Explore our comprehensive collection of professional error pages
             designed with the Techaxis Consulting brand aesthetic. Each page
             features unique illustrations, clear messaging, and helpful
@@ -87,20 +87,20 @@ const ErrorDemo = () => {
             >
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl font-bold">
+                  <span className="text-text-primary text-xl font-bold">
                     {error.code}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-xl font-semibold text-text-primary mb-2">
                   {error.title}
                 </h3>
 
-                <p className="text-gray-400 mb-4">{error.description}</p>
+                <p className="text-text-muted mb-4">{error.description}</p>
 
                 <Link
                   to={error.path}
-                  className="inline-block bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] text-white px-6 py-2 rounded-lg font-semibold hover:from-[#1E76EF] hover:to-[#4AA1EF] transition-all duration-300 hover:shadow-lg hover:shadow-[#2E86FF]/25"
+                  className="inline-block bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] text-text-primary px-6 py-2 rounded-lg font-semibold hover:from-[#1E76EF] hover:to-[#4AA1EF] transition-all duration-300 hover:shadow-lg hover:shadow-[#2E86FF]/25"
                 >
                   View Page
                 </Link>
@@ -111,19 +111,19 @@ const ErrorDemo = () => {
 
         {/* Features Section */}
         <div className="mt-16 text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="text-3xl font-bold text-text-primary mb-8">
             Design Features
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">🎨</span>
+                <span className="text-text-primary text-2xl">🎨</span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-text-primary mb-2">
                 Brand Consistent
               </h3>
-              <p className="text-gray-400">
+              <p className="text-text-muted">
                 Matches Techaxis Consulting's dark navy theme with blue
                 gradients and red accents
               </p>
@@ -131,12 +131,12 @@ const ErrorDemo = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-[#FF4D4D] to-[#FF6B6B] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">✨</span>
+                <span className="text-text-primary text-2xl">✨</span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-text-primary mb-2">
                 Interactive Elements
               </h3>
-              <p className="text-gray-400">
+              <p className="text-text-muted">
                 Animated illustrations, floating elements, and smooth
                 transitions
               </p>
@@ -144,12 +144,12 @@ const ErrorDemo = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-[#5AB1FF] to-[#2E86FF] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">🧭</span>
+                <span className="text-text-primary text-2xl">🧭</span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-text-primary mb-2">
                 User Navigation
               </h3>
-              <p className="text-gray-400">
+              <p className="text-text-muted">
                 Clear action buttons and multiple navigation options to prevent
                 users from feeling stuck
               </p>
@@ -159,7 +159,7 @@ const ErrorDemo = () => {
 
         {/* Technical Details */}
         <div className="mt-16 bg-[#1a2a40] border border-[#2E86FF]/20 rounded-lg p-8 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">
+          <h2 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Technical Implementation
           </h2>
 
@@ -168,7 +168,7 @@ const ErrorDemo = () => {
               <h3 className="text-lg font-semibold text-[#5AB1FF] mb-3">
                 Components
               </h3>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-text-body space-y-2">
                 <li>• Base ErrorPage component with consistent styling</li>
                 <li>• Individual error page implementations</li>
                 <li>• ErrorBoundary for React error catching</li>
@@ -181,7 +181,7 @@ const ErrorDemo = () => {
               <h3 className="text-lg font-semibold text-[#5AB1FF] mb-3">
                 Features
               </h3>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-text-body space-y-2">
                 <li>• Responsive design for all devices</li>
                 <li>• Offline detection and handling</li>
                 <li>• Custom tech-themed illustrations</li>

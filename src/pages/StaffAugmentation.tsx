@@ -46,7 +46,7 @@ const StaffAugmentation = () => {
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
                   <Users className="w-8 h-8 text-accent" />
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-white">
+                <h1 className="text-4xl lg:text-5xl font-bold text-text-primary">
                   Staff Augmentation
                 </h1>
               </div>
@@ -75,7 +75,7 @@ const StaffAugmentation = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-text-primary mb-6">
                   Our Staff Augmentation Services
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -97,7 +97,7 @@ const StaffAugmentation = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6">
                     Available Roles
                   </h3>
                   <div className="space-y-4">
@@ -113,7 +113,7 @@ const StaffAugmentation = () => {
 
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6">
                     Key Benefits
                   </h3>
                   <div className="space-y-4">
@@ -131,7 +131,7 @@ const StaffAugmentation = () => {
             {/* Process Section */}
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
+                <h3 className="text-2xl font-bold text-text-primary mb-6">
                   Staff Augmentation Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -139,7 +139,7 @@ const StaffAugmentation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Database className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Assessment
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -150,7 +150,7 @@ const StaffAugmentation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users2 className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">Matching</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">Matching</h4>
                     <p className="text-sm text-muted-foreground">
                       Find the right professionals for your team
                     </p>
@@ -159,7 +159,7 @@ const StaffAugmentation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Settings className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Integration
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -170,7 +170,7 @@ const StaffAugmentation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">Support</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">Support</h4>
                     <p className="text-sm text-muted-foreground">
                       Ongoing support and performance monitoring
                     </p>
@@ -182,7 +182,7 @@ const StaffAugmentation = () => {
             {/* Why Choose Us Section */}
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
+                <h3 className="text-2xl font-bold text-text-primary mb-6">
                   Why Choose Our Staff Augmentation?
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -190,7 +190,7 @@ const StaffAugmentation = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Expert Team
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -201,7 +201,7 @@ const StaffAugmentation = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Flexible Scaling
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -212,7 +212,7 @@ const StaffAugmentation = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Quality Assurance
                     </h4>
                     <p className="text-sm text-muted-foreground">

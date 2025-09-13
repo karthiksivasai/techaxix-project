@@ -1,35 +1,62 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
     { name: "HOME", href: "/", active: location.pathname === "/" },
-    {
-      name: "ABOUT US",
-      href: "/about",
-      active: location.pathname === "/about",
-    },
-    {
-      name: "SERVICES",
-      href: "/services",
-      active: location.pathname === "/services",
-    },
-    {
-      name: "INDUSTRIES",
-      href: "/industries",
-      active: location.pathname === "/industries",
-    },
+    { name: "SERVICES", href: "/services", active: location.pathname === "/services" },
+    { name: "INDUSTRIES", href: "/industries", active: location.pathname === "/industries" },
   ];
+
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+
+  // Focus trap for mobile menu
+  useEffect(() => {
+    if (isMobileMenuOpen && mobileMenuRef.current) {
+      const focusableElements = mobileMenuRef.current.querySelectorAll(
+        'a, button, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+      const handleTabKey = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
+              lastElement?.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastElement) {
+              firstElement?.focus();
+              e.preventDefault();
+            }
+          }
+        }
+        if (e.key === 'Escape') {
+          closeMobileMenu();
+        }
+      };
+
+      firstElement?.focus();
+      document.addEventListener('keydown', handleTabKey);
+
+      return () => {
+        document.removeEventListener('keydown', handleTabKey);
+      };
+    }
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-lg">
@@ -58,7 +85,11 @@ const Header = () => {
           {/* Contact Button */}
           <div className="hidden lg:block">
             <Link to="/contact">
-              <Button variant="brand" size="lg" className="btn-responsive-lg font-semibold">
+              <Button 
+                variant="brand" 
+                size="lg" 
+                className="btn-responsive-lg font-semibold"
+              >
                 CONTACT US
               </Button>
             </Link>
@@ -71,6 +102,8 @@ const Header = () => {
             className="lg:hidden text-foreground hover:text-brand-blue-light hover:bg-secondary/20 h-10 w-10 sm:h-12 sm:w-12"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
               <X className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -83,7 +116,11 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
-            <div className="absolute top-full left-0 right-0 bg-card/95 backdrop-blur-sm border-t border-border shadow-xl">
+            <div 
+              ref={mobileMenuRef}
+              id="mobile-menu"
+              className="absolute top-full left-0 right-0 bg-card/95 backdrop-blur-sm border-t border-border shadow-xl"
+            >
               <nav className="py-4 px-4 sm:px-6 md:px-8">
                 <div className="flex flex-col space-y-2 sm:space-y-3 md:space-y-4">
                   {navItems.map((item) => (
@@ -102,7 +139,10 @@ const Header = () => {
                   ))}
                   <div className="pt-2 sm:pt-4 md:pt-6 border-t border-border/50">
                     <Link to="/contact" onClick={closeMobileMenu}>
-                      <Button variant="brand" className="w-full btn-responsive font-semibold">
+                      <Button 
+                        variant="brand" 
+                        className="w-full btn-responsive font-semibold"
+                      >
                         CONTACT US
                       </Button>
                     </Link>

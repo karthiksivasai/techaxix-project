@@ -44,7 +44,7 @@ const MobileDevelopment = () => {
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
                   <Smartphone className="w-8 h-8 text-accent" />
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-white">
+                <h1 className="text-4xl lg:text-5xl font-bold text-text-primary">
                   Mobile Application Development
                 </h1>
               </div>
@@ -73,7 +73,7 @@ const MobileDevelopment = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-text-primary mb-6">
                   Our Mobile Development Expertise
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -95,7 +95,7 @@ const MobileDevelopment = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6">
                     Development Platforms
                   </h3>
                   <div className="space-y-4">
@@ -113,7 +113,7 @@ const MobileDevelopment = () => {
 
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6">
                     Our Services
                   </h3>
                   <div className="space-y-4">
@@ -131,7 +131,7 @@ const MobileDevelopment = () => {
             {/* Development Process */}
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
+                <h3 className="text-2xl font-bold text-text-primary mb-6">
                   Mobile Development Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -139,7 +139,7 @@ const MobileDevelopment = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">Discovery</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">Discovery</h4>
                     <p className="text-sm text-muted-foreground">
                       Requirements gathering and user research
                     </p>
@@ -148,7 +148,7 @@ const MobileDevelopment = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Settings className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">Design</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">Design</h4>
                     <p className="text-sm text-muted-foreground">
                       UI/UX design and prototyping
                     </p>
@@ -157,7 +157,7 @@ const MobileDevelopment = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Code className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Development
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -168,7 +168,7 @@ const MobileDevelopment = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">Testing</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">Testing</h4>
                     <p className="text-sm text-muted-foreground">
                       Quality assurance and testing
                     </p>
@@ -180,7 +180,7 @@ const MobileDevelopment = () => {
             {/* Benefits Section */}
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
+                <h3 className="text-2xl font-bold text-text-primary mb-6">
                   Benefits of Mobile Applications
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -188,7 +188,7 @@ const MobileDevelopment = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Smartphone className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       User Engagement
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -199,7 +199,7 @@ const MobileDevelopment = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Business Growth
                     </h4>
                     <p className="text-sm text-muted-foreground">
@@ -210,7 +210,7 @@ const MobileDevelopment = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">
+                    <h4 className="font-semibold text-text-primary mb-2">
                       Brand Presence
                     </h4>
                     <p className="text-sm text-muted-foreground">
