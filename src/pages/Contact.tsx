@@ -26,7 +26,6 @@ import emailjs from "@emailjs/browser";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "../components/PhoneInputCustom.css";
-import Logo from "@/components/Logo";
 
 // Country interface for phone input
 interface Country {
@@ -302,11 +301,6 @@ const Contact = () => {
           />
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          {/* Logo */}
-          <div className="flex justify-center mb-8">
-            <Logo variant="header" showTagline={false} />
-          </div>
-
           <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
             Contact Us
           </h1>
