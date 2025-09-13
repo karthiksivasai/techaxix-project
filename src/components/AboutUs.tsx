@@ -104,140 +104,6 @@ const AboutUs = () => {
               </p>
             </div>
 
-            {/* Mission & Values Buttons */}
-            <TooltipProvider>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                {isMobile ? (
-                  // Mobile: Accordion implementation
-                  <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="mission" className="border border-accent/20 rounded-lg">
-                      <AccordionTrigger 
-                        className="px-4 py-3 text-left hover:no-underline"
-                        role="button"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <div className="flex items-center gap-2">
-                          <Target className="w-5 h-5 text-accent" />
-                          <span className="font-semibold text-text-primary">Mission</span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-4 pb-4">
-                        <p className="text-text-body leading-relaxed">{missionText}</p>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="values" className="border border-accent/20 rounded-lg">
-                      <AccordionTrigger 
-                        className="px-4 py-3 text-left hover:no-underline"
-                        role="button"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <div className="flex items-center gap-2">
-                          <Heart className="w-5 h-5 text-accent" />
-                          <span className="font-semibold text-text-primary">Values</span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-4 pb-4">
-                        <p className="text-text-body leading-relaxed">{valuesText}</p>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                ) : (
-                  // Desktop: Hover popover implementation
-                  <>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Popover>
-                          <PopoverTrigger asChild>
-                            <Button
-                              variant="outline"
-                              className="flex items-center gap-2 px-6 py-3 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300"
-                              role="button"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <Target className="w-5 h-5 text-accent" />
-                              Mission
-                            </Button>
-                          </PopoverTrigger>
-                          <PopoverContent className="w-80 p-4 bg-background border-accent/20 shadow-lg">
-                            <p className="text-text-body leading-relaxed text-sm">{missionText}</p>
-                          </PopoverContent>
-                        </Popover>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Hover to view our mission</p>
-                      </TooltipContent>
-                    </Tooltip>
-
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Popover>
-                          <PopoverTrigger asChild>
-                            <Button
-                              variant="outline"
-                              className="flex items-center gap-2 px-6 py-3 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300"
-                              role="button"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <Heart className="w-5 h-5 text-accent" />
-                              Values
-                            </Button>
-                          </PopoverTrigger>
-                          <PopoverContent className="w-80 p-4 bg-background border-accent/20 shadow-lg">
-                            <p className="text-text-body leading-relaxed text-sm">{valuesText}</p>
-                          </PopoverContent>
-                        </Popover>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Hover to view our values</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </>
-                )}
-              </div>
-            </TooltipProvider>
-
-            {/* Meet Our Leadership Section */}
-            <div className="mt-8 sm:mt-10">
-              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4 sm:mb-6">
-                Meet Our Leadership
-              </h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <div className="text-center group">
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
-                    <Users className="w-10 h-10 sm:w-12 sm:h-12 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
-                  </div>
-                  <h4 className="font-semibold text-text-primary mb-2">Experienced Leadership</h4>
-                  <p className="text-text-body text-sm leading-relaxed">
-                    Our leadership team brings decades of combined experience in Oracle ERP, digital transformation, and enterprise solutions.
-                  </p>
-                </div>
-                
-                <div className="text-center group">
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
-                    <Globe className="w-10 h-10 sm:w-12 sm:h-12 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
-                  </div>
-                  <h4 className="font-semibold text-text-primary mb-2">Global Perspective</h4>
-                  <p className="text-text-body text-sm leading-relaxed">
-                    With international experience and local expertise, our leaders understand diverse business needs and cultural contexts.
-                  </p>
-                </div>
-                
-                <div className="text-center group sm:col-span-2 lg:col-span-1">
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
-                    <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
-                  </div>
-                  <h4 className="font-semibold text-text-primary mb-2">Innovation Focus</h4>
-                  <p className="text-text-body text-sm leading-relaxed">
-                    Committed to staying at the forefront of technology trends and delivering cutting-edge solutions to our clients.
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Our Services Button with proper spacing to avoid overlap */}
             <div className="pt-4 sm:pt-6">
               <Link to="/services">
@@ -249,6 +115,159 @@ const AboutUs = () => {
                   Our Services
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Mission & Values Section */}
+        <div className="mt-16 sm:mt-20">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
+              Our Mission & Values
+            </h3>
+            <p className="text-text-body text-lg max-w-2xl mx-auto">
+              Discover what drives us and the principles that guide our work
+            </p>
+          </div>
+          
+          <TooltipProvider>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-4xl mx-auto">
+              {isMobile ? (
+                // Mobile: Accordion implementation
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="mission" className="border border-accent/20 rounded-lg">
+                    <AccordionTrigger 
+                      className="px-6 py-4 text-left hover:no-underline"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <div className="flex items-center gap-3">
+                        <Target className="w-6 h-6 text-accent" />
+                        <span className="font-semibold text-text-primary text-lg">Mission</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <p className="text-text-body leading-relaxed">{missionText}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="values" className="border border-accent/20 rounded-lg">
+                    <AccordionTrigger 
+                      className="px-6 py-4 text-left hover:no-underline"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <div className="flex items-center gap-3">
+                        <Heart className="w-6 h-6 text-accent" />
+                        <span className="font-semibold text-text-primary text-lg">Values</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <p className="text-text-body leading-relaxed">{valuesText}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              ) : (
+                // Desktop: Hover popover implementation
+                <>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <Button
+                            variant="outline"
+                            size="lg"
+                            className="flex items-center gap-3 px-8 py-4 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[200px]"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <Target className="w-6 h-6 text-accent" />
+                            Mission
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-96 p-6 bg-background border-accent/20 shadow-lg">
+                          <p className="text-text-body leading-relaxed">{missionText}</p>
+                        </PopoverContent>
+                      </Popover>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Hover to view our mission</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <Button
+                            variant="outline"
+                            size="lg"
+                            className="flex items-center gap-3 px-8 py-4 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[200px]"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <Heart className="w-6 h-6 text-accent" />
+                            Values
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-96 p-6 bg-background border-accent/20 shadow-lg">
+                          <p className="text-text-body leading-relaxed">{valuesText}</p>
+                        </PopoverContent>
+                      </Popover>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Hover to view our values</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </>
+              )}
+            </div>
+          </TooltipProvider>
+        </div>
+
+        {/* Meet Our Leadership Section */}
+        <div className="mt-16 sm:mt-20">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
+              Meet Our Leadership
+            </h3>
+            <p className="text-text-body text-lg max-w-2xl mx-auto">
+              Experienced leaders driving innovation and excellence in Oracle ERP solutions
+            </p>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-6xl mx-auto">
+            <div className="text-center group">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-6 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
+                <Users className="w-12 h-12 sm:w-14 sm:h-14 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
+              </div>
+              <h4 className="font-semibold text-text-primary mb-3 text-lg">Experienced Leadership</h4>
+              <p className="text-text-body leading-relaxed">
+                Our leadership team brings decades of combined experience in Oracle ERP, digital transformation, and enterprise solutions.
+              </p>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-6 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
+                <Globe className="w-12 h-12 sm:w-14 sm:h-14 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
+              </div>
+              <h4 className="font-semibold text-text-primary mb-3 text-lg">Global Perspective</h4>
+              <p className="text-text-body leading-relaxed">
+                With international experience and local expertise, our leaders understand diverse business needs and cultural contexts.
+              </p>
+            </div>
+            
+            <div className="text-center group sm:col-span-2 lg:col-span-1">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-6 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
+                <Zap className="w-12 h-12 sm:w-14 sm:h-14 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
+              </div>
+              <h4 className="font-semibold text-text-primary mb-3 text-lg">Innovation Focus</h4>
+              <p className="text-text-body leading-relaxed">
+                Committed to staying at the forefront of technology trends and delivering cutting-edge solutions to our clients.
+              </p>
             </div>
           </div>
         </div>
