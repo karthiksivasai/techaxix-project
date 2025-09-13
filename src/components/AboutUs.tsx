@@ -35,7 +35,7 @@ const AboutUs = () => {
       description: "Agile & customer-focused",
     },
     {
-      text: "End-to-end support from implementation to managed services",
+      text: "End to End Service from Implementation to Managed Services",
       icon: Shield,
       description: "Complete support",
     },
