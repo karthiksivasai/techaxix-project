@@ -281,10 +281,10 @@ const AboutUs = () => {
         <section className="section">
           <div className="container-responsive">
             <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-3xl font-bold mb-4" style={{ color: '#0B2545' }}>
               Why Choose Us?
             </h3>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+            <p className="text-lg max-w-3xl mx-auto" style={{ color: '#6C7A91' }}>
               We deliver exceptional value through our proven expertise and
               client-focused approach
             </p>
@@ -307,7 +307,7 @@ const AboutUs = () => {
 
                   {/* Text content */}
                   <div className="text-center">
-                    <p className="font-medium text-gray-300 leading-relaxed group-hover:text-accent transition-colors duration-300">
+                    <p className="font-medium leading-relaxed group-hover:text-accent transition-colors duration-300" style={{ color: '#2E3A59' }}>
                       {item.text}
                     </p>
                   </div>
