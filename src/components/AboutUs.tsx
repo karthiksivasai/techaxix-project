@@ -279,7 +279,7 @@ const AboutUs = () => {
         {/* Why Choose Us Section */}
         <section className="section">
           <div className="container-responsive">
-          <div className="text-center mb-12">
+            <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">
               Why Choose Us?
             </h3>
