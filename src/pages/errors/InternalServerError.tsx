@@ -6,35 +6,35 @@ const InternalServerError = () => {
       {/* Server Rack */}
       <div className="absolute inset-0 flex flex-col items-center">
         {/* Server Units */}
-        <div className="w-32 h-8 bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] rounded-t-lg mb-1 relative">
+        <div className="w-32 h-8 bg-gradient-to-r from-accent to-brand-blue-light rounded-t-lg mb-1 relative">
           <div className="absolute top-1 left-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
           <div className="absolute top-1 right-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
         </div>
 
-        <div className="w-32 h-8 bg-gradient-to-r from-[#5AB1FF] to-[#2E86FF] mb-1 relative">
+        <div className="w-32 h-8 bg-gradient-to-r from-brand-blue-light to-accent mb-1 relative">
           <div className="absolute top-1 left-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
           <div className="absolute top-1 right-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
         </div>
 
-        <div className="w-32 h-8 bg-gradient-to-r from-[#FF4D4D] to-[#FF6B6B] mb-1 relative">
+        <div className="w-32 h-8 bg-gradient-to-r from-accent to-accent/80 mb-1 relative">
           <div className="absolute top-1 left-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
           <div className="absolute top-1 right-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
         </div>
 
-        <div className="w-32 h-8 bg-gradient-to-r from-[#5AB1FF] to-[#2E86FF] mb-1 relative">
+        <div className="w-32 h-8 bg-gradient-to-r from-brand-blue-light to-accent mb-1 relative">
           <div className="absolute top-1 left-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
           <div className="absolute top-1 right-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
         </div>
 
-        <div className="w-32 h-8 bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] relative">
+        <div className="w-32 h-8 bg-gradient-to-r from-accent to-brand-blue-light relative">
           <div className="absolute top-1 left-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
           <div className="absolute top-1 right-2 w-2 h-2 bg-white rounded-full opacity-60"></div>
         </div>
       </div>
 
       {/* Error Indicator */}
-      <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#FF4D4D] rounded-full flex items-center justify-center animate-pulse">
-        <span className="text-text-primary text-xs font-bold">!</span>
+      <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full flex items-center justify-center animate-pulse">
+        <span className="text-white text-xs font-bold">!</span>
       </div>
     </div>
   );

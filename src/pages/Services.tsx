@@ -69,16 +69,8 @@ const Services = () => {
     <div className="min-h-screen">
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-text-primary mb-6">
-            Our Service Offerings
-          </h1>
-          <p className="text-xl text-text-body max-w-3xl mx-auto">
-            With a blend of domain expertise, technology excellence, and a
-            client-first approach, we partner with organizations to drive
-            sustainable business success.
-          </p>
         </div>
       </section>
 

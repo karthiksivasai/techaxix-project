@@ -14,43 +14,31 @@ const Industries = () => {
   const industries = [
     {
       title: "Manufacturing",
-      description:
-        "Digital transformation solutions for manufacturing companies, optimizing operations and supply chain management with Oracle ERP expertise.",
       icon: Building2,
       color: "text-brand-blue-light",
     },
     {
       title: "Financial Services",
-      description:
-        "Oracle ERP solutions for banks, insurance companies, and financial institutions with compliance, security, and regulatory expertise.",
       icon: Banknote,
       color: "text-green-400",
     },
     {
       title: "Healthcare",
-      description:
-        "Technology solutions for healthcare providers, improving patient care and operational efficiency with Oracle HCM and modern systems.",
       icon: HeartHandshake,
       color: "text-purple-400",
     },
     {
       title: "Retail & E-commerce",
-      description:
-        "Digital transformation solutions for retail businesses and e-commerce platforms with Oracle SCM and modern commerce technologies.",
       icon: ShoppingCart,
       color: "text-orange-400",
     },
     {
-      title: "Government",
-      description:
-        "Secure government solutions for public sector organizations and agencies with Oracle EBS and compliance focus.",
+      title: "Public Sector and Government",
       icon: Shield,
       color: "text-red-400",
     },
     {
       title: "Education",
-      description:
-        "Educational technology solutions for schools, universities, and online learning platforms with Oracle HCM and modern learning systems.",
       icon: GraduationCap,
       color: "text-indigo-400",
     },
@@ -92,14 +80,9 @@ const Industries = () => {
                 </div>
 
                 {/* Title with reduced size */}
-                <h3 className="text-fluid-lg sm:text-fluid-xl md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl font-bold mb-4 group-hover:text-accent transition-colors duration-300" style={{ color: '#0B2545' }}>
+                <h3 className="text-fluid-lg sm:text-fluid-xl md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl font-bold group-hover:text-accent transition-colors duration-300" style={{ color: '#0B2545' }}>
                   {industry.title}
                 </h3>
-
-                {/* Description with proper spacing */}
-                <p className="text-fluid-sm sm:text-fluid-base leading-relaxed text-left" style={{ color: '#6C7A91' }}>
-                  {industry.description}
-                </p>
               </CardContent>
 
               {/* Clean glow effect on hover */}

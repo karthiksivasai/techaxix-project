@@ -55,8 +55,8 @@ const Hero = () => {
           }
         }}
       >
-        <div className="w-5 h-8 sm:w-6 sm:h-10 md:w-8 md:h-12 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-2 sm:h-3 md:h-4 bg-white rounded-full mt-2 sm:mt-3 md:mt-4 animate-pulse"></div>
+        <div className="w-5 h-8 sm:w-6 sm:h-10 md:w-8 md:h-12 border-2 border-black rounded-full flex justify-center">
+          <div className="w-1 h-2 sm:h-3 md:h-4 bg-black rounded-full mt-2 sm:mt-3 md:mt-4 animate-pulse"></div>
         </div>
       </div>
     </section>

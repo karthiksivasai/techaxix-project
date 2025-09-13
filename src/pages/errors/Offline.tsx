@@ -33,22 +33,22 @@ const Offline = () => {
         <div className="w-24 h-24 relative">
           {/* Outer Wave */}
           <div
-            className={`absolute inset-0 border-4 border-[#FF4D4D] rounded-full ${isOnline ? "animate-pulse" : ""}`}
+            className={`absolute inset-0 border-4 border-accent rounded-full ${isOnline ? "animate-pulse" : ""}`}
           ></div>
 
           {/* Middle Wave */}
           <div
-            className={`absolute inset-2 border-4 border-[#FF6B6B] rounded-full ${isOnline ? "animate-pulse delay-75" : ""}`}
+            className={`absolute inset-2 border-4 border-accent/80 rounded-full ${isOnline ? "animate-pulse delay-75" : ""}`}
           ></div>
 
           {/* Inner Wave */}
           <div
-            className={`absolute inset-4 border-4 border-[#FF8E8E] rounded-full ${isOnline ? "animate-pulse delay-150" : ""}`}
+            className={`absolute inset-4 border-4 border-accent/60 rounded-full ${isOnline ? "animate-pulse delay-150" : ""}`}
           ></div>
 
           {/* Center Dot */}
           <div
-            className={`absolute inset-8 w-8 h-8 bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] rounded-full flex items-center justify-center ${isOnline ? "animate-bounce" : ""}`}
+            className={`absolute inset-8 w-8 h-8 bg-gradient-to-r from-accent to-brand-blue-light rounded-full flex items-center justify-center ${isOnline ? "animate-bounce" : ""}`}
           >
             <div className="w-2 h-2 bg-white rounded-full"></div>
           </div>
@@ -56,19 +56,19 @@ const Offline = () => {
 
         {/* Connection Status */}
         <div
-          className={`mt-4 text-sm font-semibold ${isOnline ? "text-[#5AB1FF]" : "text-[#FF4D4D]"}`}
+          className={`mt-4 text-sm font-semibold ${isOnline ? "text-brand-blue-light" : "text-accent"}`}
         >
           {isOnline ? "Connection Restored!" : "No Connection"}
         </div>
       </div>
 
       {/* Network Icons */}
-      <div className="absolute top-2 left-2 w-6 h-6 bg-[#2E86FF] rounded-full flex items-center justify-center opacity-60">
-        <span className="text-text-primary text-xs">📶</span>
+      <div className="absolute top-2 left-2 w-6 h-6 bg-accent rounded-full flex items-center justify-center opacity-60">
+        <span className="text-white text-xs">📶</span>
       </div>
 
-      <div className="absolute top-2 right-2 w-6 h-6 bg-[#5AB1FF] rounded-full flex items-center justify-center opacity-60">
-        <span className="text-text-primary text-xs">🌐</span>
+      <div className="absolute top-2 right-2 w-6 h-6 bg-brand-blue-light rounded-full flex items-center justify-center opacity-60">
+        <span className="text-white text-xs">🌐</span>
       </div>
     </div>
   );

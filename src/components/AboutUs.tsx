@@ -232,45 +232,59 @@ const AboutUs = () => {
         </section>
 
         {/* Meet Our Leadership Section */}
-        <section className="section">
+        <section id="leadership" className="section">
           <div className="container-responsive">
           <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6">
               Meet Our Leadership
             </h3>
-            <p className="text-text-body text-lg max-w-2xl mx-auto">
-              Experienced leaders driving innovation and excellence in Oracle ERP solutions
+            <p className="text-text-body text-lg max-w-4xl mx-auto leading-relaxed mb-8">
+              At Techaxis Consulting, our leaders drive growth and strategic objectives by leading from the front—supporting our customers, partners, and organization. They play a vital role in preserving our rich culture while upholding our unwavering commitment to core values.
             </p>
+            
+            {/* Know More Button */}
+            <div className="mb-12">
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-8 py-3 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 font-semibold rounded-full"
+              >
+                Know More
+              </Button>
+            </div>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-6xl mx-auto">
+          {/* Leadership Profiles */}
+          <div className="grid sm:grid-cols-2 gap-8 sm:gap-12 max-w-4xl mx-auto">
+            {/* Naseem Ahmed Profile */}
             <div className="text-center group">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-6 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
-                <Users className="w-12 h-12 sm:w-14 sm:h-14 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
+              <div className="mb-6">
+                <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300">
+                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-brand-blue-light/20 flex items-center justify-center">
+                    <Users className="w-16 h-16 sm:w-20 sm:h-20 text-accent/60" />
+                  </div>
+                </div>
               </div>
-              <h4 className="font-semibold text-text-primary mb-3 text-lg">Experienced Leadership</h4>
-              <p className="text-text-body leading-relaxed">
-                Our leadership team brings decades of combined experience in Oracle ERP, digital transformation, and enterprise solutions.
+              <h4 className="font-bold text-text-primary mb-2 text-xl">Naseem Ahmed</h4>
+              <p className="text-accent font-semibold mb-4">Leadership Role</p>
+              <p className="text-text-body leading-relaxed text-sm">
+                Experienced leader with deep expertise in Oracle ERP solutions and digital transformation, driving strategic growth and client success.
               </p>
             </div>
             
+            {/* Tareni Mohanti Profile */}
             <div className="text-center group">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-6 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
-                <Globe className="w-12 h-12 sm:w-14 sm:h-14 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
+              <div className="mb-6">
+                <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300">
+                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-brand-blue-light/20 flex items-center justify-center">
+                    <Users className="w-16 h-16 sm:w-20 sm:h-20 text-accent/60" />
+                  </div>
+                </div>
               </div>
-              <h4 className="font-semibold text-text-primary mb-3 text-lg">Global Perspective</h4>
-              <p className="text-text-body leading-relaxed">
-                With international experience and local expertise, our leaders understand diverse business needs and cultural contexts.
-              </p>
-            </div>
-            
-            <div className="text-center group sm:col-span-2 lg:col-span-1">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-6 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full flex items-center justify-center group-hover:from-accent/30 group-hover:to-brand-blue-light/30 transition-all duration-300">
-                <Zap className="w-12 h-12 sm:w-14 sm:h-14 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
-              </div>
-              <h4 className="font-semibold text-text-primary mb-3 text-lg">Innovation Focus</h4>
-              <p className="text-text-body leading-relaxed">
-                Committed to staying at the forefront of technology trends and delivering cutting-edge solutions to our clients.
+              <h4 className="font-bold text-text-primary mb-2 text-xl">Tareni Mohanti</h4>
+              <p className="text-accent font-semibold mb-4">Leadership Role</p>
+              <p className="text-text-body leading-relaxed text-sm">
+                Strategic leader focused on innovation and excellence, committed to delivering cutting-edge solutions and maintaining our core values.
               </p>
             </div>
           </div>

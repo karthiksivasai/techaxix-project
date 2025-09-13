@@ -5,46 +5,46 @@ const Timeout = () => {
     <div className="w-48 h-48 relative">
       {/* Clock Face */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-32 h-32 border-4 border-[#2E86FF] rounded-full relative bg-gradient-to-br from-[#0B1A30] to-[#1a2a40]">
+        <div className="w-32 h-32 border-4 border-accent rounded-full relative bg-gradient-to-br from-background to-secondary/20">
           {/* Clock Numbers */}
-          <div className="absolute top-2 left-1/2 transform -translate-x-1/2 text-[#5AB1FF] text-xs font-bold">
+          <div className="absolute top-2 left-1/2 transform -translate-x-1/2 text-brand-blue-light text-xs font-bold">
             12
           </div>
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-[#5AB1FF] text-xs font-bold">
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-brand-blue-light text-xs font-bold">
             6
           </div>
-          <div className="absolute left-2 top-1/2 transform -translate-y-1/2 text-[#5AB1FF] text-xs font-bold">
+          <div className="absolute left-2 top-1/2 transform -translate-y-1/2 text-brand-blue-light text-xs font-bold">
             9
           </div>
-          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 text-[#5AB1FF] text-xs font-bold">
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 text-brand-blue-light text-xs font-bold">
             3
           </div>
 
           {/* Clock Hands */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             {/* Hour Hand */}
-            <div className="w-1 h-8 bg-[#FF4D4D] rounded-full origin-bottom transform rotate-45"></div>
+            <div className="w-1 h-8 bg-accent rounded-full origin-bottom transform rotate-45"></div>
             {/* Minute Hand */}
-            <div className="w-0.5 h-12 bg-[#5AB1FF] rounded-full origin-bottom transform -rotate-30 absolute top-0 left-1/2 transform -translate-x-1/2"></div>
+            <div className="w-0.5 h-12 bg-brand-blue-light rounded-full origin-bottom transform -rotate-30 absolute top-0 left-1/2 transform -translate-x-1/2"></div>
             {/* Second Hand */}
-            <div className="w-0.5 h-14 bg-[#FF6B6B] rounded-full origin-bottom transform rotate-60 absolute top-0 left-1/2 transform -translate-x-1/2"></div>
+            <div className="w-0.5 h-14 bg-accent/80 rounded-full origin-bottom transform rotate-60 absolute top-0 left-1/2 transform -translate-x-1/2"></div>
           </div>
 
           {/* Center Dot */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#FF4D4D] rounded-full"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-accent rounded-full"></div>
         </div>
       </div>
 
       {/* Timeout Indicator */}
-      <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#FF4D4D] rounded-full flex items-center justify-center animate-pulse">
-        <span className="text-text-primary text-xs font-bold">⏱</span>
+      <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full flex items-center justify-center animate-pulse">
+        <span className="text-white text-xs font-bold">⏱</span>
       </div>
 
       {/* Loading Dots */}
       <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
-        <div className="w-2 h-2 bg-[#2E86FF] rounded-full animate-bounce"></div>
-        <div className="w-2 h-2 bg-[#5AB1FF] rounded-full animate-bounce delay-75"></div>
-        <div className="w-2 h-2 bg-[#FF4D4D] rounded-full animate-bounce delay-150"></div>
+        <div className="w-2 h-2 bg-accent rounded-full animate-bounce"></div>
+        <div className="w-2 h-2 bg-brand-blue-light rounded-full animate-bounce delay-75"></div>
+        <div className="w-2 h-2 bg-accent/80 rounded-full animate-bounce delay-150"></div>
       </div>
     </div>
   );

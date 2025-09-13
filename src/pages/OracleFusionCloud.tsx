@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Cloud,
-  CheckCircle,
   ArrowRight,
-  Database,
-  Users,
-  Settings,
   BarChart3,
   Shield,
 } from "lucide-react";
@@ -16,23 +12,6 @@ import {
 import cloudIcon from "@/assets/cloud-icon.png";
 
 const OracleFusionCloud = () => {
-  const modules = [
-    "Human Capital Management (HCM)",
-    "Supply Chain Management (SCM)",
-    "Finance",
-    "Maintenance",
-    "Manufacturing",
-    "Enterprise Performance Management (EPM)",
-  ];
-
-  const services = [
-    "Implementation & Configuration",
-    "Data Migration & Integration",
-    "Customization & Development",
-    "Training & Change Management",
-    "Ongoing Support & Maintenance",
-    "Upgrade & Enhancement Services",
-  ];
 
   return (
     <div className="min-h-screen">
@@ -94,89 +73,6 @@ const OracleFusionCloud = () => {
               </CardContent>
             </Card>
 
-            {/* Modules Grid */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-text-primary mb-6">
-                    Core Modules
-                  </h3>
-                  <div className="space-y-4">
-                    {modules.map((module, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground">{module}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-text-primary mb-6">
-                    Our Services
-                  </h3>
-                  <div className="space-y-4">
-                    {services.map((service, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span className="text-muted-foreground">{service}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Implementation Process */}
-            <Card className="mb-12">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-text-primary mb-6">
-                  Implementation Process
-                </h3>
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Database className="w-7 h-7 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Discovery</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Requirements gathering and system analysis
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Settings className="w-7 h-7 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
-                      Configuration
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      System setup and customization
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="w-7 h-7 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Testing</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Comprehensive testing and validation
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Shield className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Go-Live</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Production deployment and support
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
 
             {/* Benefits Section */}
             <Card className="mb-12">

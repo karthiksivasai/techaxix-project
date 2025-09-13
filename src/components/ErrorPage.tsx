@@ -39,11 +39,11 @@ const ErrorPage = ({
 
     const variantClasses = {
       primary:
-        "bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] text-white hover:from-[#1E76EF] hover:to-[#4AA1EF] shadow-lg hover:shadow-xl hover:shadow-[#2E86FF]/25",
+        "bg-gradient-to-r from-accent to-brand-blue-light text-white hover:from-accent/90 hover:to-brand-blue-light/90 shadow-lg hover:shadow-xl hover:shadow-accent/25",
       secondary:
         "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border",
       outline:
-        "border-2 border-[#2E86FF] text-[#2E86FF] hover:bg-[#2E86FF] hover:text-white",
+        "border-2 border-accent text-accent hover:bg-accent hover:text-white",
     };
 
     const classes = `${baseClasses} ${variantClasses[variant]}`;
@@ -68,11 +68,11 @@ const ErrorPage = ({
   };
 
   return (
-    <div className="min-h-screen bg-[#0B1A30] flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20 flex flex-col items-center justify-center p-4 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#2E86FF] to-[#5AB1FF] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#FF4D4D] to-[#FF6B6B] rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-accent/20 to-brand-blue-light/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-accent/20 to-brand-blue-light/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-2xl mx-auto text-center">
@@ -85,7 +85,7 @@ const ErrorPage = ({
 
         {/* Error Code */}
         <div className="mb-6">
-          <h1 className="text-8xl md:text-9xl font-bold text-transparent bg-gradient-to-r from-[#2E86FF] to-[#5AB1FF] bg-clip-text animate-pulse">
+          <h1 className="text-8xl md:text-9xl font-bold text-transparent bg-gradient-to-r from-accent to-brand-blue-light bg-clip-text animate-pulse">
             {errorCode}
           </h1>
         </div>
@@ -100,7 +100,7 @@ const ErrorPage = ({
 
         {/* Optional Description */}
         {description && (
-          <p className="text-text-muted mb-8 leading-relaxed">{description}</p>
+          <p className="text-text-body/80 mb-8 leading-relaxed">{description}</p>
         )}
 
         {/* Illustration */}
@@ -119,12 +119,12 @@ const ErrorPage = ({
         </div>
 
         {/* Additional Help */}
-        <div className="mt-8 text-text-disabled text-sm">
+        <div className="mt-8 text-text-body/60 text-sm">
           <p>
             Need help?{" "}
             <a
               href="/contact"
-              className="text-[#2E86FF] hover:text-[#5AB1FF] transition-colors"
+              className="text-accent hover:text-brand-blue-light transition-colors"
             >
               Contact our support team
             </a>
@@ -133,9 +133,9 @@ const ErrorPage = ({
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-20 w-2 h-2 bg-[#2E86FF] rounded-full animate-ping opacity-75"></div>
-      <div className="absolute bottom-20 right-20 w-3 h-3 bg-[#FF4D4D] rounded-full animate-pulse opacity-75"></div>
-      <div className="absolute top-1/2 left-10 w-1 h-1 bg-[#5AB1FF] rounded-full animate-bounce opacity-60"></div>
+      <div className="absolute top-20 left-20 w-2 h-2 bg-accent rounded-full animate-ping opacity-75"></div>
+      <div className="absolute bottom-20 right-20 w-3 h-3 bg-accent rounded-full animate-pulse opacity-75"></div>
+      <div className="absolute top-1/2 left-10 w-1 h-1 bg-brand-blue-light rounded-full animate-bounce opacity-60"></div>
     </div>
   );
 };
