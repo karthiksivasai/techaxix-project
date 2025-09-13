@@ -57,7 +57,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="section alt section-responsive" id="about">
+    <section className="section section-responsive" id="about">
       <div className="container-responsive">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
           {/* Image Side */}
@@ -120,7 +120,8 @@ const AboutUs = () => {
         </div>
 
         {/* Mission & Values Section */}
-        <div className="mt-16 sm:mt-20">
+        <section className="section">
+          <div className="container-responsive">
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
               Our Mission & Values
@@ -226,10 +227,12 @@ const AboutUs = () => {
               )}
             </div>
           </TooltipProvider>
-        </div>
+          </div>
+        </section>
 
         {/* Meet Our Leadership Section */}
-        <div className="mt-16 sm:mt-20">
+        <section className="section">
+          <div className="container-responsive">
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
               Meet Our Leadership
@@ -270,10 +273,12 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-        </div>
+          </div>
+        </section>
 
         {/* Why Choose Us Section */}
-        <div className="mt-20">
+        <section className="section">
+          <div className="container-responsive">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">
               Why Choose Us?
@@ -319,7 +324,8 @@ const AboutUs = () => {
               </Card>
             ))}
           </div>
-        </div>
+          </div>
+        </section>
       </div>
     </section>
   );
