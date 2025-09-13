@@ -1031,3 +1031,161 @@ All colors MUST be HSL.
     outline-offset: 2px;
   }
 }
+
+/* ===== GALAXY S22 & SMALL MOBILE OPTIMIZATION (≤480px) ===== */
+
+/* Mobile View (Galaxy S22 and similar devices) */
+@media (max-width: 480px) {
+  body { 
+    font-size: 14px; 
+  }
+  
+  h1 { 
+    font-size: 1.6rem; 
+  }
+  
+  h2 { 
+    font-size: 1.3rem; 
+  }
+  
+  p { 
+    font-size: 0.95rem; 
+    line-height: 1.5; 
+  }
+
+  .section { 
+    padding: 50px 15px; 
+  }
+  
+  .hero { 
+    text-align: center; 
+    padding: 40px 15px; 
+  }
+
+  .btn-primary, 
+  .btn-secondary {
+    width: 100%;              /* full-width buttons */
+    padding: 14px;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+
+  .grid, 
+  .cards, 
+  .leadership-grid, 
+  .services-grid, 
+  .industries-grid {
+    grid-template-columns: 1fr;  /* single column layout */
+    gap: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  nav ul { 
+    display: none;   /* hide desktop nav */
+  }
+  
+  .hamburger { 
+    display: block; /* show mobile menu */
+  }
+  
+  /* Galaxy S22 specific optimizations */
+  .container-responsive {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  /* Ensure no horizontal scrolling */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Optimize text for small screens */
+  .text-responsive {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.1rem;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 1.3rem;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 1.7rem;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 1.9rem;
+  }
+  
+  /* Card optimizations for small screens */
+  .card {
+    padding: 16px;
+    margin: 8px 0;
+  }
+  
+  /* Button optimizations */
+  .btn-responsive {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+  
+  .btn-responsive-lg {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+  
+  /* Navigation optimizations */
+  .mobile-menu {
+    padding: 16px;
+  }
+  
+  /* Form optimizations */
+  input, 
+  textarea, 
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px;
+  }
+  
+  /* Spacing optimizations */
+  .section-responsive {
+    padding: 40px 0;
+  }
+  
+  .section-sm-responsive {
+    padding: 30px 0;
+  }
+  
+  /* Grid gap optimizations */
+  .grid-responsive {
+    gap: 16px;
+  }
+  
+  .grid-cards-responsive,
+  .grid-cards-2-responsive {
+    gap: 16px;
+  }
+  
+  /* Footer optimizations */
+  .footer-grid-responsive {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}
