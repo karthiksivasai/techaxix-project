@@ -1,0 +1,268 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Techaxis Consulting Logo Techaxis Consulting Private Limited ...AXIS OF POSSIBILITIES" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img "Techaxis Consulting Logo" [ref=e9] [cursor=pointer]
+        - generic [ref=e10] [cursor=pointer]:
+          - heading "Techaxis Consulting Private Limited" [level=1] [ref=e11] [cursor=pointer]
+          - paragraph [ref=e13] [cursor=pointer]: ...AXIS OF POSSIBILITIES
+      - button "Toggle mobile menu" [ref=e14] [cursor=pointer]:
+        - img
+  - main [ref=e15]:
+    - region "Hero Section - Transform Your Business" [ref=e16]:
+      - img "Hero background showing business transformation concept" [ref=e17]
+      - generic [ref=e20]:
+        - heading "TRANSFORM YOUR BUSINESS WITH TECHAXIS CONSULTING AND UNLOCK THE AXIS OF POSSIBILITIES." [level=1] [ref=e22]:
+          - text: TRANSFORM YOUR BUSINESS WITH
+          - generic [ref=e23]: TECHAXIS
+          - generic [ref=e24]: CONSULTING
+          - text: AND UNLOCK THE
+          - generic [ref=e25]: AXIS OF
+          - generic [ref=e26]: POSSIBILITIES.
+        - paragraph [ref=e27]: Next-generation IT solutions and consulting company committed to driving innovation, efficiency, and growth with Oracle ERP expertise.
+      - button "Scroll down to explore more content" [ref=e28] [cursor=pointer]
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - img "Techaxis Consulting Team" [ref=e35]
+          - generic [ref=e37]:
+            - generic [ref=e38]: 25+
+            - generic [ref=e39]: years
+            - generic [ref=e40]: experience
+        - generic [ref=e41]:
+          - paragraph [ref=e43]: WHO WE ARE
+          - generic [ref=e44]:
+            - paragraph [ref=e45]: Next-generation IT solutions and consulting company committed to driving innovation, efficiency, and growth with Oracle ERP expertise.
+            - paragraph [ref=e46]: Techaxis Consulting Private Limited is a next-generation IT solutions and consulting company committed to driving innovation, efficiency, and growth. With deep expertise across industries, we help organizations embrace digital transformation and achieve business excellence.
+            - paragraph [ref=e47]: With a blend of domain expertise, technology excellence, and a client-first approach, we partner with organizations to drive sustainable business success.
+          - generic [ref=e49]:
+            - heading "Mission" [level=3] [ref=e51]:
+              - button "Mission" [ref=e52] [cursor=pointer]:
+                - generic [ref=e53] [cursor=pointer]:
+                  - img [ref=e54] [cursor=pointer]
+                  - generic [ref=e58] [cursor=pointer]: Mission
+                - img [ref=e59] [cursor=pointer]
+            - heading "Values" [level=3] [ref=e62]:
+              - button "Values" [ref=e63] [cursor=pointer]:
+                - generic [ref=e64] [cursor=pointer]:
+                  - img [ref=e65] [cursor=pointer]
+                  - generic [ref=e67] [cursor=pointer]: Values
+                - img [ref=e68] [cursor=pointer]
+          - generic [ref=e70]:
+            - heading "Meet Our Leadership" [level=3] [ref=e71]
+            - generic [ref=e72]:
+              - generic [ref=e73]:
+                - img [ref=e75]
+                - heading "Experienced Leadership" [level=4] [ref=e80]
+                - paragraph [ref=e81]: Our leadership team brings decades of combined experience in Oracle ERP, digital transformation, and enterprise solutions.
+              - generic [ref=e82]:
+                - img [ref=e84]
+                - heading "Global Perspective" [level=4] [ref=e87]
+                - paragraph [ref=e88]: With international experience and local expertise, our leaders understand diverse business needs and cultural contexts.
+              - generic [ref=e89]:
+                - img [ref=e91]
+                - heading "Innovation Focus" [level=4] [ref=e93]
+                - paragraph [ref=e94]: Committed to staying at the forefront of technology trends and delivering cutting-edge solutions to our clients.
+          - link "Our Services" [ref=e96] [cursor=pointer]:
+            - /url: /services
+            - button "Our Services" [ref=e97] [cursor=pointer]
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - heading "Why Choose Us?" [level=3] [ref=e100]
+          - paragraph [ref=e101]: We deliver exceptional value through our proven expertise and client-focused approach
+        - generic [ref=e102]:
+          - generic [ref=e104] [cursor=pointer]:
+            - img [ref=e107] [cursor=pointer]
+            - paragraph [ref=e112] [cursor=pointer]: Strong expertise in Oracle ERP & Cloud technologies
+          - generic [ref=e116] [cursor=pointer]:
+            - img [ref=e119] [cursor=pointer]
+            - paragraph [ref=e125] [cursor=pointer]: Agile delivery methodology with customer-first approach
+          - generic [ref=e129] [cursor=pointer]:
+            - img [ref=e132] [cursor=pointer]
+            - paragraph [ref=e135] [cursor=pointer]: End-to-end support from implementation to managed services
+          - generic [ref=e139] [cursor=pointer]:
+            - img [ref=e142] [cursor=pointer]
+            - paragraph [ref=e146] [cursor=pointer]: Proven experience across industries
+          - generic [ref=e150] [cursor=pointer]:
+            - img [ref=e153] [cursor=pointer]
+            - paragraph [ref=e156] [cursor=pointer]: Focus on innovation and digital excellence
+          - generic [ref=e160] [cursor=pointer]:
+            - img [ref=e163] [cursor=pointer]
+            - paragraph [ref=e167] [cursor=pointer]: 24/7 dedicated support and maintenance services
+    - generic [ref=e171]:
+      - generic [ref=e172]:
+        - paragraph [ref=e173]: WHAT WE PROVIDE
+        - heading "Our Service Offerings" [level=2] [ref=e174]
+      - generic [ref=e175]:
+        - generic [ref=e177] [cursor=pointer]:
+          - img "Digital Transformation Projects" [ref=e180] [cursor=pointer]
+          - heading "Digital Transformation Projects" [level=3] [ref=e181] [cursor=pointer]
+          - paragraph [ref=e182] [cursor=pointer]: We help organizations modernize their business processes and IT landscapes through end-to-end digital transformation initiatives. Our approach ensures streamlined workflows, increased productivity, and improved customer experience.
+          - link "Read More" [ref=e184] [cursor=pointer]:
+            - /url: /services/digital-transformation
+            - text: Read More
+            - img
+        - generic [ref=e186] [cursor=pointer]:
+          - img "Oracle Fusion Cloud Implementation & Support" [ref=e189] [cursor=pointer]
+          - heading "Oracle Fusion Cloud Implementation & Support" [level=3] [ref=e190] [cursor=pointer]
+          - paragraph [ref=e191] [cursor=pointer]: We provide comprehensive Oracle Fusion Cloud services, covering full lifecycle implementation, post-go-live support, and continuous optimization across HCM, SCM, Finance, Maintenance, Manufacturing & EPM modules.
+          - link "Read More" [ref=e193] [cursor=pointer]:
+            - /url: /services/oracle-fusion-cloud
+            - text: Read More
+            - img
+        - generic [ref=e195] [cursor=pointer]:
+          - img "Oracle E-Business Suite (EBS) Implementation & Support" [ref=e198] [cursor=pointer]
+          - heading "Oracle E-Business Suite (EBS) Implementation & Support" [level=3] [ref=e199] [cursor=pointer]
+          - paragraph [ref=e200] [cursor=pointer]: Our expertise extends to Oracle EBS Suite, where we deliver implementation, customization, and managed support services for HCM, SCM, Finance, Maintenance, Manufacturing & Hyperion modules.
+          - link "Read More" [ref=e202] [cursor=pointer]:
+            - /url: /services/oracle-ebs
+            - text: Read More
+            - img
+        - generic [ref=e204] [cursor=pointer]:
+          - img "Custom Cloud Solutions" [ref=e207] [cursor=pointer]
+          - heading "Custom Cloud Solutions" [level=3] [ref=e208] [cursor=pointer]
+          - paragraph [ref=e209] [cursor=pointer]: We design and develop customized applications and solutions based on client-specific needs, leveraging leading cloud platforms including OCI, Azure & Google Cloud.
+          - link "Read More" [ref=e211] [cursor=pointer]:
+            - /url: /services/custom-cloud
+            - text: Read More
+            - img
+        - generic [ref=e213] [cursor=pointer]:
+          - img "Mobile Application Development" [ref=e216] [cursor=pointer]
+          - heading "Mobile Application Development" [level=3] [ref=e217] [cursor=pointer]
+          - paragraph [ref=e218] [cursor=pointer]: Our skilled team builds intuitive and scalable mobile applications that enhance customer engagement and business mobility across iOS and Android platforms.
+          - link "Read More" [ref=e220] [cursor=pointer]:
+            - /url: /services/mobile-development
+            - text: Read More
+            - img
+        - generic [ref=e222] [cursor=pointer]:
+          - img "Staff Augmentation" [ref=e225] [cursor=pointer]
+          - heading "Staff Augmentation" [level=3] [ref=e226] [cursor=pointer]
+          - paragraph [ref=e227] [cursor=pointer]: We provide flexible IT staffing solutions, offering skilled professionals who can seamlessly integrate into your teams to meet short-term and long-term project requirements.
+          - link "Read More" [ref=e229] [cursor=pointer]:
+            - /url: /services/staff-augmentation
+            - text: Read More
+            - img
+      - link "View All Services" [ref=e231] [cursor=pointer]:
+        - /url: /services
+        - text: View All Services
+        - img
+    - generic [ref=e233]:
+      - generic [ref=e234]:
+        - paragraph [ref=e235]: INDUSTRIES WE SERVE
+        - heading "Specialized Solutions" [level=2] [ref=e236]
+        - paragraph [ref=e237]: We deliver tailored Oracle ERP solutions and digital transformation across diverse industries, understanding unique challenges and regulatory requirements with our deep domain expertise.
+      - generic [ref=e238]:
+        - generic [ref=e240] [cursor=pointer]:
+          - img [ref=e244] [cursor=pointer]
+          - heading "Manufacturing" [level=3] [ref=e248] [cursor=pointer]
+          - paragraph [ref=e249] [cursor=pointer]: Digital transformation solutions for manufacturing companies, optimizing operations and supply chain management with Oracle ERP expertise.
+        - generic [ref=e251] [cursor=pointer]:
+          - img [ref=e255] [cursor=pointer]
+          - heading "Financial Services" [level=3] [ref=e258] [cursor=pointer]
+          - paragraph [ref=e259] [cursor=pointer]: Oracle ERP solutions for banks, insurance companies, and financial institutions with compliance, security, and regulatory expertise.
+        - generic [ref=e261] [cursor=pointer]:
+          - img [ref=e265] [cursor=pointer]
+          - heading "Healthcare" [level=3] [ref=e270] [cursor=pointer]
+          - paragraph [ref=e271] [cursor=pointer]: Technology solutions for healthcare providers, improving patient care and operational efficiency with Oracle HCM and modern systems.
+        - generic [ref=e273] [cursor=pointer]:
+          - img [ref=e277] [cursor=pointer]
+          - heading "Retail & E-commerce" [level=3] [ref=e281] [cursor=pointer]
+          - paragraph [ref=e282] [cursor=pointer]: Digital transformation solutions for retail businesses and e-commerce platforms with Oracle SCM and modern commerce technologies.
+        - generic [ref=e284] [cursor=pointer]:
+          - img [ref=e288] [cursor=pointer]
+          - heading "Government" [level=3] [ref=e290] [cursor=pointer]
+          - paragraph [ref=e291] [cursor=pointer]: Secure government solutions for public sector organizations and agencies with Oracle EBS and compliance focus.
+        - generic [ref=e293] [cursor=pointer]:
+          - img [ref=e297] [cursor=pointer]
+          - heading "Education" [level=3] [ref=e300] [cursor=pointer]
+          - paragraph [ref=e301] [cursor=pointer]: Educational technology solutions for schools, universities, and online learning platforms with Oracle HCM and modern learning systems.
+      - link "Learn more about industries we serve" [ref=e303] [cursor=pointer]:
+        - /url: /industries
+        - text: KNOW MORE
+  - contentinfo [ref=e305]:
+    - generic [ref=e306]:
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - link "Techaxis Consulting Logo Techaxis Consulting Private Limited ...AXIS OF POSSIBILITIES" [ref=e309] [cursor=pointer]:
+            - /url: /
+            - img "Techaxis Consulting Logo" [ref=e311] [cursor=pointer]
+            - generic [ref=e312] [cursor=pointer]:
+              - heading "Techaxis Consulting Private Limited" [level=1] [ref=e313] [cursor=pointer]
+              - paragraph [ref=e315] [cursor=pointer]: ...AXIS OF POSSIBILITIES
+          - paragraph [ref=e316]: Leading IT solutions and consulting company specializing in digital transformation, Oracle services, and cloud solutions. We drive innovation and business excellence across industries.
+          - generic [ref=e317]:
+            - link "LinkedIn" [ref=e318] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/techaxis-consulting
+              - img
+            - link "Twitter" [ref=e319] [cursor=pointer]:
+              - /url: https://twitter.com/techaxis_consult
+              - img
+            - link "Facebook" [ref=e320] [cursor=pointer]:
+              - /url: https://facebook.com/techaxisconsulting
+              - img
+        - generic [ref=e321]:
+          - heading "Quick Links" [level=4] [ref=e322]
+          - list [ref=e323]:
+            - listitem [ref=e324]:
+              - link "Home" [ref=e325] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e326]:
+              - link "About Us" [ref=e327] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e328]:
+              - link "Services" [ref=e329] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e330]:
+              - link "Industries" [ref=e331] [cursor=pointer]:
+                - /url: /industries
+            - listitem [ref=e332]:
+              - link "Contact" [ref=e333] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e334]:
+          - heading "Services" [level=4] [ref=e335]
+          - list [ref=e336]:
+            - listitem [ref=e337]:
+              - link "Digital Transformation" [ref=e338] [cursor=pointer]:
+                - /url: /services/digital-transformation
+            - listitem [ref=e339]:
+              - link "Oracle Fusion Cloud" [ref=e340] [cursor=pointer]:
+                - /url: /services/oracle-fusion-cloud
+            - listitem [ref=e341]:
+              - link "Oracle EBS" [ref=e342] [cursor=pointer]:
+                - /url: /services/oracle-ebs
+            - listitem [ref=e343]:
+              - link "Custom Cloud Solutions" [ref=e344] [cursor=pointer]:
+                - /url: /services/custom-cloud
+            - listitem [ref=e345]:
+              - link "Mobile Development" [ref=e346] [cursor=pointer]:
+                - /url: /services/mobile-development
+            - listitem [ref=e347]:
+              - link "Staff Augmentation" [ref=e348] [cursor=pointer]:
+                - /url: /services/staff-augmentation
+            - listitem [ref=e349]:
+              - link "Project Management" [ref=e350] [cursor=pointer]:
+                - /url: /services/project-management
+        - generic [ref=e351]:
+          - heading "Get In Touch" [level=4] [ref=e352]
+          - generic [ref=e353]:
+            - generic [ref=e354]:
+              - img [ref=e355]
+              - paragraph [ref=e358]: admin@techaxisconsulting.com
+            - generic [ref=e359]:
+              - img [ref=e360]
+              - paragraph [ref=e362]: +91 9937033526
+      - generic [ref=e364]:
+        - paragraph [ref=e365]: © 2024 Techaxis Consulting Private Limited. All rights reserved.
+        - generic [ref=e366]:
+          - link "Privacy Policy" [ref=e367] [cursor=pointer]:
+            - /url: /privacy-policy
+          - link "Terms of Service" [ref=e368] [cursor=pointer]:
+            - /url: /terms-and-conditions
+```
