@@ -264,12 +264,14 @@ All colors MUST be HSL.
   /* Specific grid classes for different sections */
   .leadership-grid {
     @apply grid gap-6 sm:gap-8 md:gap-10;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
   
   .services-grid {
     @apply grid gap-6 sm:gap-8 md:gap-10;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .industries-grid {
@@ -913,6 +915,12 @@ All colors MUST be HSL.
   .industries-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  
+  /* Mobile services grid adjustments */
+  .services-grid {
+    max-width: 100%;
+    padding: 0 10px;
   }
 
   nav ul { 

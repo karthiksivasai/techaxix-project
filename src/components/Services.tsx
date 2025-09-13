@@ -77,48 +77,49 @@ const Services = () => {
           {services.slice(0, 6).map((service, index) => (
             <Card
               key={index}
-              className="card group relative overflow-hidden hover:shadow-elegant transition-all duration-500 ease-out hover:scale-105 cursor-pointer"
+              className="card group relative overflow-hidden hover:shadow-2xl hover:shadow-brand-blue-light/20 transition-all duration-500 ease-out hover:scale-[1.02] cursor-pointer border border-border/50 hover:border-accent/30"
             >
-              <CardContent className="relative p-6 sm:p-8 text-center">
-                {/* Icon with proper spacing and reduced size */}
-                <div className="mb-6 flex justify-center">
-                  <div className="service-card-icon rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+              <CardContent className="relative p-5 sm:p-6 md:p-7 lg:p-8 h-full flex flex-col">
+                {/* Icon with enhanced styling */}
+                <div className="mb-5 flex justify-center">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 rounded-2xl bg-gradient-to-br from-accent/10 to-brand-blue-light/10 flex items-center justify-center group-hover:from-accent/20 group-hover:to-brand-blue-light/20 transition-all duration-300 shadow-lg group-hover:shadow-xl">
                     <img
                       src={service.icon}
                       alt={service.title}
-                      className="service-card-icon img object-contain rounded-full"
+                      className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain filter group-hover:brightness-110 transition-all duration-300"
                     />
                   </div>
                 </div>
 
-                {/* Title with reduced size */}
-                <h3 className="text-fluid-lg sm:text-fluid-xl md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl font-bold text-text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                {/* Title with improved typography */}
+                <h3 className="text-fluid-base sm:text-fluid-lg md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl font-bold text-text-primary mb-3 group-hover:text-accent transition-colors duration-300 text-center leading-tight">
                   {service.title}
                 </h3>
 
-                {/* Description with proper spacing */}
-                <p className="text-text-body text-fluid-sm sm:text-fluid-base leading-relaxed mb-6 text-left">
+                {/* Description with better spacing and alignment */}
+                <p className="text-text-body text-fluid-sm sm:text-fluid-base leading-relaxed mb-4 text-center flex-grow">
                   {service.description}
                 </p>
 
-                {/* Button with proper spacing */}
-                <div className="pt-2">
+                {/* Button with enhanced styling */}
+                <div className="mt-auto pt-3">
                   <Button
                     variant="brand-outline"
-                    className="group-hover:bg-brand-blue-light group-hover:text-primary-foreground transition-all duration-300 btn-responsive w-full"
+                    className="group-hover:bg-gradient-to-r group-hover:from-brand-blue-light group-hover:to-accent group-hover:text-white group-hover:border-transparent transition-all duration-300 btn-responsive w-full font-semibold shadow-md group-hover:shadow-lg py-2"
                     asChild
                   >
-                    <Link to={service.link}>
-                      Read More
-                      <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <Link to={service.link} className="flex items-center justify-center">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </Button>
                 </div>
               </CardContent>
 
-              {/* Clean glow effect on hover */}
+              {/* Enhanced glow effect on hover */}
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-brand-blue-light/10 to-accent/10 rounded-2xl blur-sm"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-brand-blue-light/5 rounded-2xl"></div>
               </div>
             </Card>
           ))}
@@ -129,12 +130,12 @@ const Services = () => {
           <Button
             variant="brand"
             size="lg"
-            className="btn-responsive-lg px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/30 transform hover:scale-105 transition-all duration-300"
+            className="btn-responsive-lg px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/40 transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-brand-blue-light to-accent hover:from-accent hover:to-brand-blue-light"
             asChild
           >
-            <Link to="/services">
+            <Link to="/services" className="flex items-center justify-center">
               View All Services
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
+              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </Button>
         </div>
