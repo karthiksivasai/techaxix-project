@@ -40,11 +40,6 @@ const Hero = () => {
             </h1>
           </div>
 
-          <p className="text-fluid-base sm:text-fluid-lg md:text-fluid-xl lg:text-fluid-xl xl:text-fluid-2xl text-text-body mb-6 sm:mb-8 md:mb-10 max-w-2xl sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed px-4 sm:px-0 text-right">
-            Next-generation IT solutions and consulting company committed to
-            driving innovation, efficiency, and growth with Oracle ERP
-            expertise.
-          </p>
         </div>
       </div>
 
