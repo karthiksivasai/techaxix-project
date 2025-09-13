@@ -61,7 +61,7 @@ const Industries = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+        <div className="industries-grid">
           {industries.map((industry, index) => (
             <Card
               key={index}

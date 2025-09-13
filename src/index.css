@@ -253,12 +253,28 @@ All colors MUST be HSL.
 
   .grid-cards-responsive {
     @apply grid gap-4 sm:gap-6 md:gap-8;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   .grid-cards-2-responsive {
     @apply grid gap-4 sm:gap-6 md:gap-8;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  /* Specific grid classes for different sections */
+  .leadership-grid {
+    @apply grid gap-6 sm:gap-8 md:gap-10;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .services-grid {
+    @apply grid gap-6 sm:gap-8 md:gap-10;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .industries-grid {
+    @apply grid gap-6 sm:gap-8 md:gap-10;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   /* Responsive spacing utilities */
@@ -806,5 +822,212 @@ All colors MUST be HSL.
     @media (min-width: 1280px) { 
       justify-content: flex-end; 
     } 
+  }
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Tablet View (768px - 1024px) */
+@media (max-width: 1024px) {
+  h1 { 
+    font-size: 2rem; 
+  }
+  
+  .hero { 
+    padding: 60px 20px; 
+  }
+  
+  .section { 
+    padding: 60px 20px; 
+  }
+  
+  .card { 
+    margin: 20px auto; 
+    max-width: 90%; 
+  }
+  
+  nav ul { 
+    flex-direction: column; 
+    gap: 10px; 
+  }
+  
+  /* Tablet-specific grid adjustments */
+  .leadership-grid, 
+  .services-grid, 
+  .industries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Tablet button adjustments */
+  .btn-primary, 
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+  
+  /* Tablet navigation adjustments */
+  .nav-responsive {
+    display: none;
+  }
+  
+  .nav-mobile {
+    display: block;
+  }
+}
+
+/* Mobile View (< 768px) */
+@media (max-width: 768px) {
+  h1 { 
+    font-size: 1.6rem; 
+  }
+  
+  h2 { 
+    font-size: 1.3rem; 
+  }
+  
+  p { 
+    font-size: 0.95rem; 
+    line-height: 1.5; 
+  }
+
+  .hero { 
+    padding: 40px 15px; 
+    text-align: center; 
+  }
+  
+  .section { 
+    padding: 50px 15px; 
+  }
+
+  .btn-primary, 
+  .btn-secondary {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    min-height: 44px; /* Apple guideline for touch targets */
+  }
+
+  .leadership-grid, 
+  .services-grid, 
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  nav ul { 
+    display: none; 
+  }
+  
+  .hamburger { 
+    display: block; 
+  }
+  
+  /* Mobile-specific adjustments */
+  .container-responsive {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Mobile card adjustments */
+  .card {
+    margin: 10px auto;
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  /* Mobile image adjustments */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Mobile form adjustments */
+  input, 
+  textarea, 
+  select {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Mobile button hover states for accessibility */
+  .btn-primary:hover, 
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-primary:focus, 
+  .btn-secondary:focus {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
+  }
+  
+  /* Mobile navigation menu */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(var(--card));
+    z-index: 50;
+    padding: 20px;
+  }
+  
+  /* Mobile text adjustments */
+  .text-responsive {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.1rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 2.25rem;
+  }
+}
+
+/* Touch target improvements for all interactive elements */
+@media (max-width: 768px) {
+  button, 
+  a, 
+  input, 
+  select, 
+  textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Ensure proper cursor for touch devices */
+  button, 
+  a {
+    cursor: pointer;
+  }
+  
+  /* Improved focus states for accessibility */
+  button:focus, 
+  a:focus {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
   }
 }

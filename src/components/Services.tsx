@@ -73,7 +73,7 @@ const Services = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mb-12 sm:mb-16 md:mb-20">
+        <div className="services-grid mb-12 sm:mb-16 md:mb-20">
           {services.slice(0, 6).map((service, index) => (
             <Card
               key={index}

@@ -59,7 +59,7 @@ const AboutUs = () => {
   return (
     <section className="section section-responsive" id="about">
       <div className="container-responsive">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
           {/* Image Side */}
           <div className="relative order-2 lg:order-1">
             <img
@@ -255,7 +255,7 @@ const AboutUs = () => {
           </div>
           
           {/* Leadership Profiles */}
-          <div className="grid sm:grid-cols-2 gap-8 sm:gap-12 max-w-4xl mx-auto">
+          <div className="leadership-grid max-w-4xl mx-auto">
             {/* Naseem Ahmed Profile */}
             <div className="text-center group">
               <div className="mb-6">
@@ -304,7 +304,7 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((item, index) => (
               <Card
                 key={index}

@@ -99,7 +99,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-foreground hover:text-brand-blue-light hover:bg-secondary/20 h-10 w-10 sm:h-12 sm:w-12"
+            className="lg:hidden text-foreground hover:text-brand-blue-light hover:bg-secondary/20 h-12 w-12 sm:h-14 sm:w-14 hamburger"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
