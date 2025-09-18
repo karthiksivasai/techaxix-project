@@ -127,20 +127,20 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="space-y-6 text-muted-foreground leading-relaxed">
-                  <p>
+                <div className="space-y-6 text-muted-foreground leading-relaxed text-left">
+                  <p className="text-left">
                     Techaxis Consulting Private Limited is a next-generation IT
                     solutions and consulting company committed to driving
                     innovation, efficiency, and growth. With deep expertise across
                     industries, we help organizations embrace digital
                     transformation and achieve business excellence.
                   </p>
-                  <p>
+                  <p className="text-left">
                     With a blend of domain expertise, technology excellence, and a
                     client-first approach, we partner with organizations to drive
                     sustainable business success.
                   </p>
-                  <p>
+                  <p className="text-left">
                     ✨ With a blend of domain expertise, technology excellence,
                     and a client-first approach, we partner with organizations to
                     drive sustainable business success.

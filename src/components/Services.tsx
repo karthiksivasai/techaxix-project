@@ -64,7 +64,7 @@ const Services = () => {
   return (
     <section className="section-responsive bg-background" id="services">
       <div className="container-responsive">
-        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 animate-fade-in-up animate-delay-100">
           <p className="text-accent font-semibold mb-2 sm:mb-3 tracking-wider text-fluid-base sm:text-fluid-lg">
             WHAT WE PROVIDE
           </p>
@@ -77,7 +77,7 @@ const Services = () => {
           {services.slice(0, 6).map((service, index) => (
             <Card
               key={index}
-              className="card group relative overflow-hidden hover:shadow-2xl hover:shadow-brand-blue-light/20 transition-all duration-500 ease-out hover:scale-[1.02] cursor-pointer border border-border/50 hover:border-accent/30"
+              className={`card group relative overflow-hidden hover:shadow-2xl hover:shadow-brand-blue-light/20 transition-all duration-500 ease-out hover:scale-[1.02] cursor-pointer border border-border/50 hover:border-accent/30 animate-fade-in-up animate-delay-${(index + 1) * 100}`}
             >
               <CardContent className="relative p-5 sm:p-6 md:p-7 lg:p-8 h-full flex flex-col">
                 {/* Icon with enhanced styling */}

@@ -59,8 +59,8 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-lg">
-      <div className="container-responsive">
+    <header className="header-gradient backdrop-blur-sm border-b border-border sticky top-0 z-50 header-shadow animate-slide-in-down">
+      <div className="container-responsive relative z-10">
         <div className="flex items-center justify-between py-3 sm:py-4 md:py-5 lg:py-6">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -73,8 +73,8 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-fluid-sm xl:text-fluid-base font-medium transition-colors duration-200 hover:text-brand-blue-light whitespace-nowrap ${
-                  item.active ? "text-accent font-semibold" : "text-foreground"
+                className={`text-fluid-sm xl:text-fluid-base font-medium transition-colors duration-200 hover:text-blue-700 whitespace-nowrap ${
+                  item.active ? "text-blue-800 font-semibold" : "text-slate-800"
                 }`}
               >
                 {item.name}
@@ -99,7 +99,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-foreground hover:text-brand-blue-light hover:bg-secondary/20 h-12 w-12 sm:h-14 sm:w-14 hamburger"
+            className="lg:hidden text-slate-800 hover:text-blue-700 hover:bg-blue-100/50 h-12 w-12 sm:h-14 sm:w-14 hamburger"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
@@ -115,11 +115,11 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden">
+          <div className="lg:hidden relative z-10">
             <div 
               ref={mobileMenuRef}
               id="mobile-menu"
-              className="absolute top-full left-0 right-0 bg-card/95 backdrop-blur-sm border-t border-border shadow-xl"
+              className="absolute top-full left-0 right-0 bg-gradient-to-b from-blue-100/95 to-blue-200/95 backdrop-blur-sm border-t border-border shadow-xl"
             >
               <nav className="py-4 px-4 sm:px-6 md:px-8">
                 <div className="flex flex-col space-y-2 sm:space-y-3 md:space-y-4">
@@ -128,10 +128,10 @@ const Header = () => {
                       key={item.name}
                       to={item.href}
                       onClick={closeMobileMenu}
-                      className={`text-left justify-start text-fluid-base sm:text-fluid-lg md:text-fluid-xl font-medium transition-colors duration-200 hover:text-brand-blue-light p-3 sm:p-4 md:p-5 rounded-lg hover:bg-secondary/20 ${
+                      className={`text-left justify-start text-fluid-base sm:text-fluid-lg md:text-fluid-xl font-medium transition-colors duration-200 hover:text-blue-700 p-3 sm:p-4 md:p-5 rounded-lg hover:bg-blue-100/50 ${
                         item.active
-                          ? "text-accent font-semibold bg-secondary/30"
-                          : "text-foreground"
+                          ? "text-blue-800 font-semibold bg-blue-200/50"
+                          : "text-slate-800"
                       }`}
                     >
                       {item.name}

@@ -69,19 +69,6 @@ const Industries = () => {
   return (
     <div className="min-h-screen">
 
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-text-primary mb-6">
-            Industries We Serve
-          </h1>
-          <p className="text-xl text-text-body max-w-3xl mx-auto">
-            Our expertise spans across various industries, delivering tailored
-            technology solutions that address unique challenges and regulatory
-            requirements.
-          </p>
-        </div>
-      </section>
 
       {/* Industries Grid */}
       <section className="py-20 bg-background">

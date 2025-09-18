@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Linkedin, Twitter, Facebook } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "./Logo";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -26,48 +23,9 @@ const Footer = () => {
     >
       <div className="container-responsive">
         {/* Main Footer Content */}
-        <div className="py-8 sm:py-12 md:py-16 footer-grid-responsive">
-          {/* Company Info */}
-          <div className="space-y-4 sm:space-y-6">
-            <Logo variant="footer" />
-            <p className="text-fluid-sm sm:text-fluid-base text-white/80 leading-relaxed">
-              Leading IT solutions and consulting company specializing in
-              digital transformation, Oracle services, and cloud solutions. We
-              drive innovation and business excellence across industries.
-            </p>
-            <div className="flex space-x-4 sm:space-x-6 pt-2 sm:pt-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-white hover:text-accent hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
-                asChild
-              >
-                <a href="https://www.linkedin.com/company/techaxis-consulting" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-white hover:text-accent hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
-                asChild
-              >
-                <a href="https://twitter.com/techaxis_consult" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                  <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-white hover:text-accent hover:bg-secondary/20 h-8 w-8 sm:h-10 sm:w-10"
-                asChild
-              >
-                <a href="https://facebook.com/techaxisconsulting" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
+        <div className="py-8 sm:py-12 md:py-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 text-center md:text-left">
 
           {/* Industries */}
           <div className="space-y-4 sm:space-y-6">
@@ -169,27 +127,31 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 py-4 sm:py-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p className="text-fluid-sm sm:text-fluid-base text-white/60 text-center sm:text-left">
-              © 2025 Techaxis Consulting Private Limited. All rights reserved.
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
-              <Link
-                to="/privacy-policy"
-                className="p-0 h-auto text-white/60 hover:text-accent text-fluid-sm sm:text-fluid-base transition-colors duration-200"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                to="/terms-and-conditions"
-                className="p-0 h-auto text-white/60 hover:text-accent text-fluid-sm sm:text-fluid-base transition-colors duration-200"
-              >
-                Terms of Service
-              </Link>
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:justify-between">
+              <p className="text-fluid-sm sm:text-fluid-base text-white/60 text-center">
+                © 2025 Techaxis Consulting Private Limited. All rights reserved.
+              </p>
+              <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-center">
+                <Link
+                  to="/privacy-policy"
+                  className="p-0 h-auto text-white/60 hover:text-accent text-fluid-sm sm:text-fluid-base transition-colors duration-200"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  to="/terms-and-conditions"
+                  className="p-0 h-auto text-white/60 hover:text-accent text-fluid-sm sm:text-fluid-base transition-colors duration-200"
+                >
+                  Terms of Service
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -84,20 +84,20 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="text-text-body text-fluid-base sm:text-fluid-lg leading-relaxed space-y-3 sm:space-y-4">
-              <p className="font-semibold text-text-primary">
+            <div className="text-text-body text-fluid-base sm:text-fluid-lg leading-relaxed space-y-3 sm:space-y-4 text-left">
+              <p className="font-semibold text-text-primary text-left">
                 Next-generation IT solutions and consulting company committed to
                 driving innovation, efficiency, and growth with Oracle ERP
                 expertise.
               </p>
-              <p>
+              <p className="text-left">
                 Techaxis Consulting Private Limited is a next-generation IT
                 solutions and consulting company committed to driving
                 innovation, efficiency, and growth. With deep expertise across
                 industries, we help organizations embrace digital transformation
                 and achieve business excellence.
               </p>
-              <p>
+              <p className="text-left">
                 With a blend of domain expertise, technology excellence, and a
                 client-first approach, we partner with organizations to drive
                 sustainable business success.
@@ -123,7 +123,7 @@ const AboutUs = () => {
         {/* Mission & Values Section */}
         <section className="section">
           <div className="container-responsive">
-          <div className="text-center mb-8 sm:mb-12">
+          <div className="text-center mb-8 sm:mb-12 animate-fade-in-up animate-delay-100">
             <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
               Our Mission & Values
             </h3>
@@ -133,7 +133,7 @@ const AboutUs = () => {
           </div>
           
           <TooltipProvider>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-4xl mx-auto animate-fade-in-up animate-delay-300">
               {isMobile ? (
                 // Mobile: Accordion implementation
                 <Accordion type="single" collapsible className="w-full">
@@ -171,57 +171,43 @@ const AboutUs = () => {
                   </AccordionItem>
                 </Accordion>
               ) : (
-                // Desktop: Hover popover implementation
+                // Desktop: Hover tooltip implementation
                 <>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <Button
-                            variant="outline"
-                            size="lg"
-                            className="flex items-center gap-3 px-8 py-4 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[200px]"
-                            role="button"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <Target className="w-6 h-6 text-accent" />
-                            Mission
-                          </Button>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-96 p-6 bg-background border-accent/20 shadow-lg">
-                          <p className="text-text-body leading-relaxed">{missionText}</p>
-                        </PopoverContent>
-                      </Popover>
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="flex items-center gap-3 px-8 py-4 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[200px] group relative"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <Target className="w-6 h-6 text-accent" />
+                        Mission
+                      </Button>
                     </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Hover to view our mission</p>
+                    <TooltipContent className="w-96 p-6 bg-background border-accent/20 shadow-lg max-w-md">
+                      <p className="text-text-body leading-relaxed">{missionText}</p>
                     </TooltipContent>
                   </Tooltip>
 
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <Button
-                            variant="outline"
-                            size="lg"
-                            className="flex items-center gap-3 px-8 py-4 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[200px]"
-                            role="button"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <Heart className="w-6 h-6 text-accent" />
-                            Values
-                          </Button>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-96 p-6 bg-background border-accent/20 shadow-lg">
-                          <p className="text-text-body leading-relaxed">{valuesText}</p>
-                        </PopoverContent>
-                      </Popover>
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="flex items-center gap-3 px-8 py-4 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[200px] group relative"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <Heart className="w-6 h-6 text-accent" />
+                        Values
+                      </Button>
                     </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Hover to view our values</p>
+                    <TooltipContent className="w-96 p-6 bg-background border-accent/20 shadow-lg max-w-md">
+                      <p className="text-text-body leading-relaxed">{valuesText}</p>
                     </TooltipContent>
                   </Tooltip>
                 </>
