@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Link } from "react-router-dom";
 import teamImage from "@/assets/team-image.jpg";
+import nasimPhoto from "@/assets/NasimAhmed_Photo.jpg";
 import { Database, Users, Shield, Globe, Zap, Clock, Target, Heart } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -246,15 +247,18 @@ const AboutUs = () => {
             <div className="text-center group">
               <div className="mb-6">
                 <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300">
-                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-brand-blue-light/20 flex items-center justify-center">
-                    <Users className="w-16 h-16 sm:w-20 sm:h-20 text-accent/60" />
-                  </div>
+                  <img 
+                    src={nasimPhoto} 
+                    alt="Nasim Ahmad - Director" 
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: '70% 30%' }}
+                  />
                 </div>
               </div>
-              <h4 className="font-bold text-text-primary mb-2 text-xl">Naseem Ahmed</h4>
-              <p className="text-accent font-semibold mb-4">Leadership Role</p>
+              <h4 className="font-bold text-text-primary mb-2 text-xl">Nasim Ahmad</h4>
+              <p className="text-accent font-semibold mb-4">Director</p>
               <p className="text-text-body leading-relaxed text-sm">
-                Experienced leader with deep expertise in Oracle ERP solutions and digital transformation, driving strategic growth and client success.
+                Nasim is a forward-thinking leader who believes in cultivating authentic, long-term relationships built on trust and respect. With deep expertise in the banking and financial services domain, he helps clients design and implement customer-centric solutions that enable impactful digital transformations. His innovative approach blends industry knowledge with technology, empowering clients to modernize operations, enhance customer experiences, and maintain compliance in a rapidly evolving landscape. Nasim also values sustainable business practices and fosters a culture of healthy collaboration—both within internal teams and in close partnership with clients—to ensure lasting success.
               </p>
             </div>
             
