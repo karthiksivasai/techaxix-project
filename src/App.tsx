@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Directors from "./pages/Directors";
 import Services from "./pages/Services";
+import WhyChooseUs from "./pages/WhyChooseUs";
 import Industries from "./pages/Industries";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
@@ -52,6 +53,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/directors" element={<Directors />} />
+                <Route path="/why-choose-us" element={<WhyChooseUs />} />
                 <Route path="/services" element={<Services />} />
                 <Route
                   path="/services/web-technology"

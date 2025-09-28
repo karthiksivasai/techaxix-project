@@ -54,16 +54,16 @@ const Logo = ({
       </div>
 
       {/* Company Name and Tagline */}
-      <div className="flex flex-col">
+      <div className="flex flex-col -ml-1">
         <h1
-          className={`company-name font-bold ${isHeader ? "text-sm md:text-base lg:text-lg xl:text-xl text-foreground" : "text-base md:text-lg lg:text-xl text-primary-foreground"}`}
+          className={`company-name font-bold ${isHeader ? "text-xs md:text-sm lg:text-base xl:text-lg text-foreground" : "text-base md:text-lg lg:text-xl text-primary-foreground"}`}
         >
           Techaxis Consulting Private Limited
         </h1>
         {showTagline && (
-          <div className="flex justify-end mt-1">
+          <div className="flex justify-start mt-1">
             <p
-              className={`company-tagline text-xs md:text-xs lg:text-sm leading-tight ${isHeader ? "text-gradient-brand font-semibold" : "text-accent"}`}
+              className={`company-tagline text-xs md:text-xs lg:text-xs leading-tight ${isHeader ? "text-gradient-brand font-semibold" : "text-accent"}`}
             >
               ...AXIS OF POSSIBILITIES
             </p>
@@ -77,7 +77,7 @@ const Logo = ({
     return (
       <Link
         to="/"
-        className={`techaxis-logo ${isHeader ? "flex items-center space-x-2" : "flex flex-col items-center"} ${className}`}
+        className={`techaxis-logo ${isHeader ? "flex items-center space-x-1" : "flex flex-col items-center"} ${className}`}
       >
         {logoContent}
       </Link>
@@ -86,7 +86,7 @@ const Logo = ({
 
   return (
     <div
-      className={`techaxis-logo ${isHeader ? "flex items-center space-x-2" : "flex flex-col items-center"} ${className}`}
+      className={`techaxis-logo ${isHeader ? "flex items-center space-x-1" : "flex flex-col items-center"} ${className}`}
     >
       {logoContent}
     </div>

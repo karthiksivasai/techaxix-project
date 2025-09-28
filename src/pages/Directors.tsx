@@ -1,10 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import BackButton from "@/components/BackButton";
 import nasimPhoto from "@/assets/NasimAhmed_Photo.jpg";
-import { Users } from "lucide-react";
+import tareniPhoto from "@/assets/director2TA.png";
+import { Users, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const Directors = () => {
+  const [showNasimProfile, setShowNasimProfile] = useState(false);
+  const [showTareniProfile, setShowTareniProfile] = useState(false);
+  
   // Directors page-specific schema
   const directorsSchema = {
     "@context": "https://schema.org",
@@ -92,27 +98,47 @@ const Directors = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-text-primary">Nasim Ahmad</h3>
                 <p className="text-accent font-semibold mb-6 text-lg">Director</p>
-                <div className="text-text-body leading-relaxed space-y-4">
-                  <p>
-                    Nasim is a forward-thinking leader who believes in cultivating authentic, 
-                    long-term relationships built on trust and respect.
-                  </p>
-                  <p>
-                    With deep expertise in the banking and financial services domain, he helps 
-                    clients design and implement customer-centric solutions that enable impactful 
-                    digital transformations.
-                  </p>
-                  <p>
-                    His innovative approach blends industry knowledge with technology, empowering 
-                    clients to modernize operations, enhance customer experiences, and maintain 
-                    compliance in a rapidly evolving landscape.
-                  </p>
-                  <p>
-                    Nasim also values sustainable business practices and fosters a culture of 
-                    healthy collaboration—both within internal teams and in close partnership 
-                    with clients—to ensure lasting success.
-                  </p>
+                
+                {/* Know More Button */}
+                <div className="mb-6 flex justify-center">
+                  <Button
+                    onClick={() => setShowNasimProfile(!showNasimProfile)}
+                    variant="outline"
+                    className="group/btn flex items-center gap-2 px-6 py-2 text-text-primary border-accent/30 hover:border-accent hover:bg-accent/5 transition-all duration-300"
+                  >
+                    Know More
+                    {showNasimProfile ? (
+                      <ChevronUp className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                    )}
+                  </Button>
                 </div>
+
+                {/* Profile Details - Conditionally Rendered */}
+                {showNasimProfile && (
+                  <div className="text-text-body leading-relaxed space-y-4 animate-in slide-in-from-top-2 duration-300">
+                    <p>
+                      Nasim is a forward-thinking leader who believes in cultivating authentic, 
+                      long-term relationships built on trust and respect.
+                    </p>
+                    <p>
+                      With deep expertise in the banking and financial services domain, he helps 
+                      clients design and implement customer-centric solutions that enable impactful 
+                      digital transformations.
+                    </p>
+                    <p>
+                      His innovative approach blends industry knowledge with technology, empowering 
+                      clients to modernize operations, enhance customer experiences, and maintain 
+                      compliance in a rapidly evolving landscape.
+                    </p>
+                    <p>
+                      Nasim also values sustainable business practices and fosters a culture of 
+                      healthy collaboration—both within internal teams and in close partnership 
+                      with clients—to ensure lasting success.
+                    </p>
+                  </div>
+                )}
               </CardContent>
             </Card>
 
@@ -121,35 +147,57 @@ const Directors = () => {
               <CardContent className="p-8 text-center">
                 <div className="mb-8">
                   <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300">
-                    <div className="w-full h-full bg-gradient-to-br from-accent/20 to-brand-blue-light/20 flex items-center justify-center">
-                      <Users className="w-20 h-20 text-accent/60" />
-                    </div>
+                    <img 
+                      src={tareniPhoto} 
+                      alt="Tareni Prasad Mohanti - Director" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-text-primary">Tareni Prasad Mohanti</h3>
                 <p className="text-accent font-semibold mb-6 text-lg">Director</p>
-                <div className="text-text-body leading-relaxed space-y-4">
-                  <p>
-                    Tareni Prasad Mohanti is the Director of Techaxis Consulting Private Limited, 
-                    bringing over 15 years of expertise in the IT consulting and insurance domain. 
-                    With a strong foundation in business development, client relationship management, 
-                    and strategic growth initiatives, he has successfully driven IT transformation 
-                    programs across industries.
-                  </p>
-                  <p>
-                    Specializing in the insurance sector, Tareni has played a pivotal role in helping 
-                    organizations modernize their technology landscape, enhance operational efficiency, 
-                    and adopt digital-first solutions. His proven ability to identify opportunities, 
-                    build long-term client partnerships, and deliver measurable business value has been 
-                    a key driver of Techaxis Consulting's growth.
-                  </p>
-                  <p>
-                    As a visionary leader, Tareni combines deep domain knowledge with an entrepreneurial 
-                    mindset, guiding Techaxis Consulting towards becoming a trusted partner for digital 
-                    transformation in HCM, Finance, SCM, Cloud, and emerging technologies. His leadership 
-                    reflects the company's core value—"Axis of Possibilities."
-                  </p>
+                
+                {/* Know More Button */}
+                <div className="mb-6 flex justify-center">
+                  <Button
+                    onClick={() => setShowTareniProfile(!showTareniProfile)}
+                    variant="outline"
+                    className="group/btn flex items-center gap-2 px-6 py-2 text-text-primary border-accent/30 hover:border-accent hover:bg-accent/5 transition-all duration-300"
+                  >
+                    Know More
+                    {showTareniProfile ? (
+                      <ChevronUp className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                    )}
+                  </Button>
                 </div>
+
+                {/* Profile Details - Conditionally Rendered */}
+                {showTareniProfile && (
+                  <div className="text-text-body leading-relaxed space-y-4 animate-in slide-in-from-top-2 duration-300">
+                    <p>
+                      Tareni Prasad Mohanti is the Director of Techaxis Consulting Private Limited, 
+                      bringing over 15 years of expertise in the IT consulting and insurance domain. 
+                      With a strong foundation in business development, client relationship management, 
+                      and strategic growth initiatives, he has successfully driven IT transformation 
+                      programs across industries.
+                    </p>
+                    <p>
+                      Specializing in the insurance sector, Tareni has played a pivotal role in helping 
+                      organizations modernize their technology landscape, enhance operational efficiency, 
+                      and adopt digital-first solutions. His proven ability to identify opportunities, 
+                      build long-term client partnerships, and deliver measurable business value has been 
+                      a key driver of Techaxis Consulting's growth.
+                    </p>
+                    <p>
+                      As a visionary leader, Tareni combines deep domain knowledge with an entrepreneurial 
+                      mindset, guiding Techaxis Consulting towards becoming a trusted partner for digital 
+                      transformation in HCM, Finance, SCM, Cloud, and emerging technologies. His leadership 
+                      reflects the company's core value—"Axis of Possibilities."
+                    </p>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>

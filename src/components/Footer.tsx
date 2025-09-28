@@ -109,7 +109,8 @@ const Footer = () => {
             <h4 className="text-fluid-lg sm:text-fluid-xl font-semibold text-white">Company</h4>
             <ul className="space-y-2 sm:space-y-3 md:space-y-4">
               {[
-                { name: "About Techaxis", href: "/", isExternal: false },
+                { name: "About Techaxis", href: "/about", isExternal: false },
+                { name: "Why Choose Us", href: "/why-choose-us", isExternal: false },
                 { name: "Leadership", href: "/", isExternal: false, isLeadership: true },
               ].map((link) => (
                 <li key={link.name}>

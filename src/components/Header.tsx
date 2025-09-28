@@ -13,6 +13,7 @@ const Header = () => {
     { name: "HOME", href: "/", active: location.pathname === "/" },
     { name: "ABOUT", href: "/about", active: location.pathname === "/about" },
     { name: "DIRECTORS", href: "/directors", active: location.pathname === "/directors" },
+    { name: "WHY CHOOSE US", href: "/why-choose-us", active: location.pathname === "/why-choose-us" },
     { name: "SERVICES", href: "/services", active: location.pathname === "/services" },
     { name: "INDUSTRIES", href: "/industries", active: location.pathname === "/industries" },
   ];
