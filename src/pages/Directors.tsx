@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import BackButton from "@/components/BackButton";
 import nasimPhoto from "@/assets/NasimAhmed_Photo.jpg";
 import tareniPhoto from "@/assets/director2TA.png";
 import { Users, ChevronDown, ChevronUp } from "lucide-react";
@@ -45,17 +44,6 @@ const Directors = () => {
       {/* Hero Section */}
       <section className="section bg-gradient-to-br from-background to-accent/5">
         <div className="container-responsive">
-          {/* Back Button */}
-          <div className="mb-8">
-            <BackButton 
-              fallbackPath="/about"
-              variant="outline"
-              className="text-text-primary hover:text-text-primary-foreground hover:bg-text-primary"
-            >
-              Back to About
-            </BackButton>
-          </div>
-          
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-text-primary">
               Our <span className="text-accent">Leadership Team</span>
@@ -117,7 +105,7 @@ const Directors = () => {
 
                 {/* Profile Details - Conditionally Rendered */}
                 {showNasimProfile && (
-                  <div className="text-text-body leading-relaxed space-y-4 animate-in slide-in-from-top-2 duration-300">
+                  <div className="text-text-body leading-relaxed space-y-4 animate-in slide-in-from-top-2 duration-300 text-left">
                     <p>
                       Nasim is a forward-thinking leader who believes in cultivating authentic, 
                       long-term relationships built on trust and respect.
@@ -175,7 +163,7 @@ const Directors = () => {
 
                 {/* Profile Details - Conditionally Rendered */}
                 {showTareniProfile && (
-                  <div className="text-text-body leading-relaxed space-y-4 animate-in slide-in-from-top-2 duration-300">
+                  <div className="text-text-body leading-relaxed space-y-4 animate-in slide-in-from-top-2 duration-300 text-left">
                     <p>
                       Tareni Prasad Mohanti is the Director of Techaxis Consulting Private Limited, 
                       bringing over 15 years of expertise in the IT consulting and insurance domain. 

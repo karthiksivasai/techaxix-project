@@ -54,16 +54,16 @@ const Logo = ({
       </div>
 
       {/* Company Name and Tagline */}
-      <div className="flex flex-col -ml-1">
+      <div className="flex flex-col -ml-1 w-full">
         <h1
-          className={`company-name font-bold ${isHeader ? "text-xs md:text-sm lg:text-base xl:text-lg text-foreground" : "text-base md:text-lg lg:text-xl text-primary-foreground"}`}
+          className={`company-name font-bold ${isHeader ? "text-base md:text-lg lg:text-xl xl:text-2xl text-foreground" : "text-base md:text-lg lg:text-xl text-primary-foreground"}`}
         >
           Techaxis Consulting Private Limited
         </h1>
         {showTagline && (
-          <div className="flex justify-start mt-1">
+          <div className="flex justify-end mt-1 w-full">
             <p
-              className={`company-tagline text-xs md:text-xs lg:text-xs leading-tight ${isHeader ? "text-gradient-brand font-semibold" : "text-accent"}`}
+              className={`company-tagline text-base md:text-base lg:text-base leading-tight ${isHeader ? "text-gradient-brand font-semibold" : "text-accent"}`}
             >
               ...AXIS OF POSSIBILITIES
             </p>
