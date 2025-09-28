@@ -126,21 +126,28 @@ const Directors = () => {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-text-primary">Tareni Mohanti</h3>
+                <h3 className="text-2xl font-bold mb-3 text-text-primary">Tareni Prasad Mohanti</h3>
                 <p className="text-accent font-semibold mb-6 text-lg">Director</p>
                 <div className="text-text-body leading-relaxed space-y-4">
                   <p>
-                    Strategic leader focused on innovation and excellence, committed to delivering 
-                    cutting-edge solutions and maintaining our core values.
+                    Tareni Prasad Mohanti is the Director of Techaxis Consulting Private Limited, 
+                    bringing over 15 years of expertise in the IT consulting and insurance domain. 
+                    With a strong foundation in business development, client relationship management, 
+                    and strategic growth initiatives, he has successfully driven IT transformation 
+                    programs across industries.
                   </p>
                   <p>
-                    With extensive experience in technology leadership and business development, 
-                    Tareni drives our strategic initiatives and ensures operational excellence 
-                    across all our service offerings.
+                    Specializing in the insurance sector, Tareni has played a pivotal role in helping 
+                    organizations modernize their technology landscape, enhance operational efficiency, 
+                    and adopt digital-first solutions. His proven ability to identify opportunities, 
+                    build long-term client partnerships, and deliver measurable business value has been 
+                    a key driver of Techaxis Consulting's growth.
                   </p>
                   <p>
-                    Her leadership philosophy centers on empowering teams, fostering innovation, 
-                    and building strong client relationships that drive mutual success.
+                    As a visionary leader, Tareni combines deep domain knowledge with an entrepreneurial 
+                    mindset, guiding Techaxis Consulting towards becoming a trusted partner for digital 
+                    transformation in HCM, Finance, SCM, Cloud, and emerging technologies. His leadership 
+                    reflects the company's core value—"Axis of Possibilities."
                   </p>
                 </div>
               </CardContent>
