@@ -1,54 +1,71 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cloud, CheckCircle, ArrowRight } from "lucide-react";
+import {
+  Database,
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  Bot,
+  Brain,
+  Zap,
+  Target,
+  TrendingUp,
+  Shield,
+  Settings,
+  Users,
+} from "lucide-react";
 
-const CloudComputing = () => {
-  const services = [
-    "Cloud Migration Strategy",
-    "Cloud-Native Development",
-    "Multi-Cloud Management",
-    "Infrastructure as a Service (IaaS)",
-    "Platform as a Service (PaaS)",
-    "Software as a Service (SaaS)",
-    "Cloud Security & Compliance",
-    "DevOps & CI/CD Pipeline",
+// Import consulting icon
+import consultingIcon from "@/assets/consulting-icon.png";
+
+const DataAutomationAI = () => {
+  const expertise = [
+    "Data Analytics & Business Intelligence",
+    "Robotic Process Automation (RPA)",
+    "Machine Learning & AI Models",
+    "Predictive Analytics",
+    "Workflow Optimization",
+    "End-to-End Integration",
   ];
 
-  const platforms = [
-    "Amazon Web Services (AWS)",
-    "Microsoft Azure",
-    "Google Cloud Platform (GCP)",
-    "IBM Cloud",
-    "Oracle Cloud",
-    "Private Cloud Solutions",
-    "Hybrid Cloud Architecture",
-    "Container Orchestration (Kubernetes)",
+  const benefits = [
+    "Boost productivity and reduce manual effort",
+    "Improve customer engagement with AI-driven personalization",
+    "Gain competitive advantage with predictive insights",
+    "Accelerate digital transformation with intelligent automation",
+    "Real-time decision-making capabilities",
+    "Cost reduction through process automation",
   ];
 
   return (
     <div className="min-h-screen">
-
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="py-20 bg-gradient-to-br from-accent/20 via-brand-blue-light/20 to-accent/20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Cloud className="w-8 h-8 text-accent" />
+                  <Brain className="w-8 h-8 text-accent" />
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-primary">
-                  Cloud Computing
+                <h1 className="text-4xl lg:text-5xl font-bold text-text-primary">
+                  Data, Automation & AI
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Cloud Computing would definitely redefine the prevailing
-                business trends & processes by providing scalable, flexible and
-                cost-effective solutions.
+                In a rapidly evolving digital world, data is the new currency. At Techaxis Consulting, we harness the potential of Data, Automation, and AI to help organizations stay ahead of the curve.
               </p>
             </div>
-            <div className="bg-gradient-primary opacity-20 rounded-2xl h-80"></div>
+            <div className="flex items-center justify-center">
+              <div className="relative w-80 h-80 flex items-center justify-center">
+                <img
+                  src={consultingIcon}
+                  alt="Data, Automation & AI"
+                  className="w-full h-full object-contain drop-shadow-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -60,36 +77,30 @@ const CloudComputing = () => {
             <Card className="mb-12">
               <CardContent className="p-8">
                 <h2 className="text-3xl font-bold text-text-primary mb-6">
-                  Our Cloud Computing Expertise
+                  Our Data, Automation & AI Expertise
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our cloud services include cloud migration, cloud-native
-                  development, and multi-cloud management. We help businesses
-                  leverage the power of cloud computing to reduce costs and
-                  increase agility.
+                  We help businesses unlock the power of data-driven intelligence. By combining automation with artificial intelligence, we transform complex challenges into smart, scalable solutions. From predictive analytics to robotic process automation, our services empower organizations to make faster decisions, reduce costs, and deliver exceptional customer experiences.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Whether you're looking to migrate existing applications to the
-                  cloud or build new cloud-native solutions, our team provides
-                  comprehensive cloud services that align with your business
-                  objectives.
+                  With Data, Automation & AI, Techaxis Consulting enables enterprises to transform into smart, agile, and future-ready businesses.
                 </p>
               </CardContent>
             </Card>
 
-            {/* Services Grid */}
+            {/* Expertise Grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
                 <CardContent className="relative p-8">
                   <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Cloud Services
+                    Our Expertise
                   </h3>
                   <div className="space-y-4">
-                    {services.map((service, index) => (
+                    {expertise.map((item, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                         <span className="text-muted-foreground text-sm leading-relaxed">
-                          {service}
+                          {item}
                         </span>
                       </div>
                     ))}
@@ -105,14 +116,14 @@ const CloudComputing = () => {
               <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
                 <CardContent className="relative p-8">
                   <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Cloud Platforms
+                    Business Impact
                   </h3>
                   <div className="space-y-4">
-                    {platforms.map((platform, index) => (
+                    {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-accent rounded-full"></div>
                         <span className="text-muted-foreground text-sm leading-relaxed">
-                          {platform}
+                          {benefit}
                         </span>
                       </div>
                     ))}
@@ -126,64 +137,49 @@ const CloudComputing = () => {
               </Card>
             </div>
 
-            {/* Migration Process */}
+            {/* Process Section */}
             <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
               <CardContent className="relative p-8">
                 <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Cloud Migration Process
+                  Our Data, Automation & AI Process
                 </h3>
-                <div className="grid md:grid-cols-5 gap-6">
+                <div className="grid md:grid-cols-4 gap-6">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">1</span>
+                      <Database className="w-8 h-8 text-accent" />
                     </div>
                     <h4 className="font-semibold text-text-muted mb-2">
-                      Assessment
+                      Data Assessment
                     </h4>
                     <p className="text-sm text-text-body">
-                      Evaluate current infrastructure
+                      Analyze existing data sources and identify opportunities
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">2</span>
+                      <Bot className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Planning
-                    </h4>
+                    <h4 className="font-semibold text-text-muted mb-2">Automation Design</h4>
                     <p className="text-sm text-text-body">
-                      Design migration strategy
+                      Design and implement RPA and workflow automation
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">3</span>
+                      <Brain className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Migration
-                    </h4>
+                    <h4 className="font-semibold text-text-muted mb-2">AI Implementation</h4>
                     <p className="text-sm text-text-body">
-                      Execute migration plan
+                      Deploy machine learning models and AI solutions
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">4</span>
+                      <BarChart3 className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Testing</h4>
+                    <h4 className="font-semibold text-text-muted mb-2">Optimization</h4>
                     <p className="text-sm text-text-body">
-                      Validate and test systems
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">5</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Optimization
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Optimize performance
+                      Monitor performance and continuously improve solutions
                     </p>
                   </div>
                 </div>
@@ -195,42 +191,44 @@ const CloudComputing = () => {
               </div>
             </Card>
 
-            {/* Benefits Section */}
+            {/* Why Choose Us Section */}
             <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
               <CardContent className="relative p-8">
                 <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Benefits of Cloud Computing
+                  Why Choose Our Data, Automation & AI Solutions?
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Cloud className="w-6 h-6 text-accent" />
+                      <TrendingUp className="w-6 h-6 text-accent" />
                     </div>
                     <h4 className="font-semibold text-text-muted mb-2">
-                      Cost Efficiency
+                      Proven Results
                     </h4>
                     <p className="text-sm text-text-body">
-                      Reduce infrastructure costs and operational expenses
+                      Track record of successful AI and automation implementations
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-6 h-6 text-accent" />
+                      <Zap className="w-6 h-6 text-accent" />
                     </div>
                     <h4 className="font-semibold text-text-muted mb-2">
-                      Scalability
+                      Rapid Deployment
                     </h4>
                     <p className="text-sm text-text-body">
-                      Scale resources up or down based on demand
+                      Quick implementation with minimal business disruption
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <ArrowRight className="w-6 h-6 text-accent" />
+                      <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Agility</h4>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Secure & Compliant
+                    </h4>
                     <p className="text-sm text-text-body">
-                      Faster deployment and time-to-market
+                      Enterprise-grade security and regulatory compliance
                     </p>
                   </div>
                 </div>
@@ -246,7 +244,7 @@ const CloudComputing = () => {
             <div className="text-center">
               <Button variant="cta" size="lg" asChild>
                 <Link to="/contact">
-                  Start Cloud Journey
+                  Transform Your Business with Data, Automation & AI
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -254,26 +252,8 @@ const CloudComputing = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Move to the Cloud?
-          </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Let us help you harness the power of cloud computing to transform
-            your business operations and drive growth.
-          </p>
-          <Button variant="secondary" size="lg">
-            Start Cloud Journey
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div>
-      </section>
-
     </div>
   );
 };
 
-export default CloudComputing;
+export default DataAutomationAI;

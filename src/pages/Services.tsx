@@ -10,6 +10,7 @@ import {
   Briefcase,
   TrendingUp,
   Settings,
+  Brain,
 } from "lucide-react";
 
 const Services = () => {
@@ -63,6 +64,13 @@ const Services = () => {
       icon: Briefcase,
       link: "/services/project-management",
     },
+    {
+      title: "Data, Automation & AI",
+      description:
+        "At Techaxis Consulting, we help businesses unlock the power of data-driven intelligence. By combining automation with artificial intelligence, we transform complex challenges into smart, scalable solutions.",
+      icon: Brain,
+      link: "/services/data-automation-ai",
+    },
   ];
 
   return (
@@ -75,7 +83,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
         <div className="container mx-auto px-4">
           <div className="space-y-20">
             {services.map((service, index) => (
@@ -136,6 +144,9 @@ const Services = () => {
                           {service.title ===
                             "Program & Project Management Consultancy" && (
                             <Briefcase className="w-24 h-24 text-accent" />
+                          )}
+                          {service.title === "Data, Automation & AI" && (
+                            <Brain className="w-24 h-24 text-brand-blue-light" />
                           )}
                         </div>
                       </div>

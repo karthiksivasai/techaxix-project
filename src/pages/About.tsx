@@ -111,7 +111,7 @@ const About = () => {
         </section>
 
         {/* Company Overview Section */}
-        <section className="py-20 bg-background" aria-label="Company Overview">
+        <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" aria-label="Company Overview">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -200,7 +200,7 @@ const About = () => {
         </section>
 
         {/* Service Offerings Section */}
-        <section className="py-20 bg-background" aria-label="Our Service Offerings">
+        <section className="py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50" aria-label="Our Service Offerings">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-text-primary mb-6">

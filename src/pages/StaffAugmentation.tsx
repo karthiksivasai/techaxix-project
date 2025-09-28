@@ -95,43 +95,57 @@ const StaffAugmentation = () => {
 
             {/* Roles Grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Available Roles
                   </h3>
                   <div className="space-y-4">
                     {roles.map((role, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground">{role}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {role}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
 
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Key Benefits
                   </h3>
                   <div className="space-y-4">
                     {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span className="text-muted-foreground">{benefit}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {benefit}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
             </div>
 
             {/* Process Section */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Staff Augmentation Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -139,10 +153,10 @@ const StaffAugmentation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Database className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Assessment
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Evaluate your staffing needs and requirements
                     </p>
                   </div>
@@ -150,8 +164,8 @@ const StaffAugmentation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users2 className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Matching</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-text-muted mb-2">Matching</h4>
+                    <p className="text-sm text-text-body">
                       Find the right professionals for your team
                     </p>
                   </div>
@@ -159,10 +173,10 @@ const StaffAugmentation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Settings className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Integration
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Seamlessly integrate with your existing team
                     </p>
                   </div>
@@ -170,19 +184,24 @@ const StaffAugmentation = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Support</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-text-muted mb-2">Support</h4>
+                    <p className="text-sm text-text-body">
                       Ongoing support and performance monitoring
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
 
             {/* Why Choose Us Section */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Why Choose Our Staff Augmentation?
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -190,10 +209,10 @@ const StaffAugmentation = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Expert Team
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Skilled professionals with proven track records
                     </p>
                   </div>
@@ -201,10 +220,10 @@ const StaffAugmentation = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Flexible Scaling
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Scale up or down based on project needs
                     </p>
                   </div>
@@ -212,15 +231,20 @@ const StaffAugmentation = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Quality Assurance
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Rigorous screening and quality standards
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
 
             {/* CTA Section */}

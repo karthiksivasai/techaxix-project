@@ -6,6 +6,7 @@ import {
   ArrowRight,
   BarChart3,
   Shield,
+  CheckCircle,
 } from "lucide-react";
 
 // Import cloud icon
@@ -54,7 +55,7 @@ const OracleFusionCloud = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
-              <CardContent className="p-6">
+              <CardContent className="p-8">
                 <h2 className="text-3xl font-bold text-text-primary mb-6">
                   Our Oracle Fusion Cloud Expertise
                 </h2>
@@ -73,11 +74,117 @@ const OracleFusionCloud = () => {
               </CardContent>
             </Card>
 
+            {/* Modules Grid */}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
+                    Core Modules
+                  </h3>
+                  <div className="space-y-4">
+                    {["HCM", "SCM", "Finance", "Maintenance", "Manufacturing", "EPM"].map((module, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {module}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
+              </Card>
+
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
+                    Our Services
+                  </h3>
+                  <div className="space-y-4">
+                    {["Implementation & Configuration", "Customization & Development", "Data Migration & Integration", "Training & Change Management", "Ongoing Support & Maintenance", "Upgrade & Enhancement Services"].map((service, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-accent rounded-full"></div>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {service}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
+              </Card>
+            </div>
+
+            {/* Implementation Process */}
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
+                  Implementation Process
+                </h3>
+                <div className="grid md:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Cloud className="w-8 h-8 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Analysis
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Business requirements and system analysis
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <BarChart3 className="w-8 h-8 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">Design</h4>
+                    <p className="text-sm text-text-body">
+                      System design and configuration
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Shield className="w-8 h-8 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Development
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Customization and development
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <ArrowRight className="w-8 h-8 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Deployment
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Testing and production deployment
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
+            </Card>
 
             {/* Benefits Section */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Why Oracle Fusion Cloud?
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -85,10 +192,10 @@ const OracleFusionCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Cloud className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Cloud-Native
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Built for the cloud with automatic updates and scalability
                     </p>
                   </div>
@@ -96,10 +203,10 @@ const OracleFusionCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       AI-Powered
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Built-in AI and machine learning capabilities
                     </p>
                   </div>
@@ -107,15 +214,20 @@ const OracleFusionCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Enterprise Security
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       World-class security and compliance features
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
 
             {/* CTA Section */}

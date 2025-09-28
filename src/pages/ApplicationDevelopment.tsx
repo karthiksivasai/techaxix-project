@@ -32,9 +32,9 @@ const ApplicationDevelopment = () => {
       <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-fade-in-up">
               <div className="flex items-center space-x-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                   <Smartphone className="w-8 h-8 text-accent" />
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-primary">
@@ -58,8 +58,8 @@ const ApplicationDevelopment = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-primary mb-6">
-                  Comprehensive Development Services
+                <h2 className="text-3xl font-bold text-text-primary mb-6">
+                  Our Application Development Expertise
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Our application development services cover the entire software
@@ -79,108 +79,190 @@ const ApplicationDevelopment = () => {
 
             {/* Services Grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Development Services
                   </h3>
                   <div className="space-y-4">
                     {services.map((service, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground">{service}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {service}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
 
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Technologies We Use
                   </h3>
                   <div className="space-y-4">
                     {technologies.map((tech, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-muted-foreground">{tech}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {tech}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
             </div>
 
             {/* Process Section */}
-            <Card>
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Our Development Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">1</span>
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-accent font-bold text-xl">1</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Analysis
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Requirements gathering and system analysis
                     </p>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">2</span>
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-accent font-bold text-xl">2</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Design</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-text-muted mb-2">Design</h4>
+                    <p className="text-sm text-text-body">
                       Architecture design and planning
                     </p>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">3</span>
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-accent font-bold text-xl">3</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Development
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Agile development and testing
                     </p>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">4</span>
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-accent font-bold text-xl">4</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Deployment
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Deployment and ongoing support
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
+
+            {/* Benefits Section */}
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
+                  Why Choose Our Application Development Services?
+                </h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Smartphone className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Custom Solutions
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Tailored applications for your specific business needs
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Quality Assurance
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Rigorous testing and quality control processes
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <ArrowRight className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Ongoing Support
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Continuous maintenance and support services
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
+            </Card>
+
+            {/* CTA Section */}
+            <div className="text-center">
+              <Button variant="cta" size="lg" asChild>
+                <Link to="/contact">
+                  Start Your Project
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary text-primary-foreground">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">
             Ready to Build Your Next Application?
           </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Let's discuss your application development needs and create a
             solution that drives your business forward.
           </p>
-          <Button variant="secondary" size="lg">
+          <Button 
+            variant="secondary" 
+            size="lg" 
+            className="group hover:scale-105 hover:shadow-2xl transition-all duration-300 rounded-2xl px-8 py-4 text-lg font-semibold"
+          >
             Start Your Project
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
         </div>
       </section>

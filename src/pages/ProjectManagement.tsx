@@ -97,43 +97,57 @@ const ProjectManagement = () => {
 
             {/* Services Grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Our Services Include
                   </h3>
                   <div className="space-y-4">
                     {services.map((service, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground">{service}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {service}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
 
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Key Benefits
                   </h3>
                   <div className="space-y-4">
                     {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span className="text-muted-foreground">{benefit}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {benefit}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
             </div>
 
             {/* Process Section */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Our Project Management Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -141,10 +155,10 @@ const ProjectManagement = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Target className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Initiation
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Project definition and stakeholder alignment
                     </p>
                   </div>
@@ -152,8 +166,8 @@ const ProjectManagement = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Settings className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Planning</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-text-muted mb-2">Planning</h4>
+                    <p className="text-sm text-text-body">
                       Comprehensive project planning and scheduling
                     </p>
                   </div>
@@ -161,8 +175,8 @@ const ProjectManagement = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Execution</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-text-muted mb-2">Execution</h4>
+                    <p className="text-sm text-text-body">
                       Project delivery and stakeholder management
                     </p>
                   </div>
@@ -170,21 +184,26 @@ const ProjectManagement = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Monitoring
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Progress tracking and quality control
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
 
             {/* Why Choose Us Section */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Why Choose Our Project Management?
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -192,10 +211,10 @@ const ProjectManagement = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Briefcase className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Certified Consultants
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       PMP, PRINCE2, and Agile certified professionals
                     </p>
                   </div>
@@ -203,10 +222,10 @@ const ProjectManagement = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Proven Track Record
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Successful delivery of complex projects
                     </p>
                   </div>
@@ -214,15 +233,20 @@ const ProjectManagement = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Risk Management
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Proactive risk identification and mitigation
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
 
             {/* CTA Section */}

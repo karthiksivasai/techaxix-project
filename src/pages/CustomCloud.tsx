@@ -92,45 +92,57 @@ const CustomCloud = () => {
 
             {/* Platforms Grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Cloud Platforms
                   </h3>
                   <div className="space-y-4">
                     {platforms.map((platform, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground">
+                        <span className="text-muted-foreground text-sm leading-relaxed">
                           {platform}
                         </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
 
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Our Services
                   </h3>
                   <div className="space-y-4">
                     {services.map((service, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span className="text-muted-foreground">{service}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {service}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
             </div>
 
             {/* Implementation Process */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Cloud Implementation Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -138,10 +150,10 @@ const CustomCloud = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Database className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Assessment
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Current state analysis and cloud readiness
                     </p>
                   </div>
@@ -149,8 +161,8 @@ const CustomCloud = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Settings className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Design</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-text-muted mb-2">Design</h4>
+                    <p className="text-sm text-text-body">
                       Cloud architecture and solution design
                     </p>
                   </div>
@@ -158,10 +170,10 @@ const CustomCloud = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Implementation
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Deployment and configuration
                     </p>
                   </div>
@@ -169,21 +181,26 @@ const CustomCloud = () => {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-8 h-8 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Optimization
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Performance tuning and monitoring
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
 
             {/* Benefits Section */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-3xl font-bold text-text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Benefits of Custom Cloud Solutions
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -191,10 +208,10 @@ const CustomCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Cloud className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Scalability
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Flexible resources that grow with your business
                     </p>
                   </div>
@@ -202,10 +219,10 @@ const CustomCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Cost Efficiency
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Pay-as-you-use model reduces infrastructure costs
                     </p>
                   </div>
@@ -213,13 +230,18 @@ const CustomCloud = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-text-primary mb-2">Security</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-text-muted mb-2">Security</h4>
+                    <p className="text-sm text-text-body">
                       Enterprise-grade security and compliance
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
 
             {/* CTA Section */}

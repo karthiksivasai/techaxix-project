@@ -59,8 +59,8 @@ const TestingServices = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-primary mb-6">
-                  Comprehensive Quality Assurance
+                <h2 className="text-3xl font-bold text-text-primary mb-6">
+                  Our Testing Services Expertise
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Our comprehensive testing services include functional testing,
@@ -78,135 +78,169 @@ const TestingServices = () => {
 
             {/* Testing Types Grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Testing Services
                   </h3>
                   <div className="space-y-4">
                     {testingTypes.map((type, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground">{type}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {type}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
 
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6">
+              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+                <CardContent className="relative p-8">
+                  <h3 className="text-xl font-bold text-text-primary mb-6">
                     Testing Tools & Frameworks
                   </h3>
                   <div className="space-y-4">
                     {tools.map((tool, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-muted-foreground">{tool}</span>
+                        <span className="text-muted-foreground text-sm leading-relaxed">
+                          {tool}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
+
+                {/* Clean glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                </div>
               </Card>
             </div>
 
-            {/* Benefits Section */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">
-                  Benefits of Our Testing Services
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-accent">⚡</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Faster Time-to-Market
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Accelerated testing cycles through automation
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-accent">💰</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Cost Reduction
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Lower project costs through efficient testing
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-accent">🛡️</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Higher Quality
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Superior software quality and reliability
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Process Section */}
-            <Card>
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
                   Our Testing Process
                 </h3>
                 <div className="grid md:grid-cols-4 gap-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">1</span>
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-accent font-bold text-xl">1</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Planning
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Test strategy and planning
                     </p>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">2</span>
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-accent font-bold text-xl">2</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Design</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-text-muted mb-2">Design</h4>
+                    <p className="text-sm text-text-body">
                       Test case design and preparation
                     </p>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">3</span>
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-accent font-bold text-xl">3</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Execution
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Test execution and automation
                     </p>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">4</span>
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-accent font-bold text-xl">4</span>
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">
+                    <h4 className="font-semibold text-text-muted mb-2">
                       Reporting
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-text-body">
                       Results analysis and reporting
                     </p>
                   </div>
                 </div>
               </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
             </Card>
+
+            {/* Benefits Section */}
+            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
+              <CardContent className="relative p-8">
+                <h3 className="text-xl font-bold text-text-primary mb-6">
+                  Benefits of Our Testing Services
+                </h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <TestTube className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Faster Time-to-Market
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Accelerated testing cycles through automation
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Cost Reduction
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Lower project costs through efficient testing
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <ArrowRight className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-text-muted mb-2">
+                      Higher Quality
+                    </h4>
+                    <p className="text-sm text-text-body">
+                      Superior software quality and reliability
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+
+              {/* Clean glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              </div>
+            </Card>
+
+            {/* CTA Section */}
+            <div className="text-center">
+              <Button variant="cta" size="lg" asChild>
+                <Link to="/contact">
+                  Get Testing Services
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

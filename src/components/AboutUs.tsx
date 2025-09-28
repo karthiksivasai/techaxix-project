@@ -5,7 +5,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Link } from "react-router-dom";
 import teamImage from "@/assets/team-image.jpg";
-import nasimPhoto from "@/assets/NasimAhmed_Photo.jpg";
 import { Database, Users, Shield, Globe, Zap, Clock, Target, Heart } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -58,72 +57,70 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="section section-responsive" id="about">
-      <div className="container-responsive">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
-          {/* Image Side */}
-          <div className="relative order-2 lg:order-1">
-            <img
-              src={teamImage}
-              alt="Techaxis Consulting Team"
-              className="rounded-2xl shadow-card-custom w-full h-auto object-cover"
-            />
-            <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 bg-accent text-accent-foreground rounded-2xl p-4 sm:p-6 md:p-8 shadow-elegant">
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold">25+</div>
-                <div className="text-sm sm:text-base font-medium">years</div>
-                <div className="text-xs sm:text-sm mt-1">experience</div>
+    <>
+      <section className="section section-responsive" id="about">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+            {/* Image Side */}
+            <div className="relative order-2 lg:order-1">
+              <img
+                src={teamImage}
+                alt="Techaxis Consulting Team"
+                className="rounded-2xl shadow-card-custom w-full h-auto object-cover"
+              />
+            </div>
+
+            {/* Content Side */}
+            <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
+              <div>
+                <p className="text-accent font-semibold mb-2 sm:mb-3 tracking-wider text-fluid-base sm:text-fluid-lg">
+                  WHO WE ARE
+                </p>
+              </div>
+
+              <div className="text-text-body text-fluid-base sm:text-fluid-lg leading-relaxed space-y-3 sm:space-y-4 text-left">
+                <p className="font-semibold text-text-primary text-left">
+                  Next-generation IT solutions and consulting company committed to
+                  driving innovation, efficiency, and growth with Oracle ERP
+                  expertise.
+                </p>
+                <p className="text-left">
+                  Techaxis Consulting Private Limited is a next-generation IT
+                  solutions and consulting company committed to driving
+                  innovation, efficiency, and growth. With deep expertise across
+                  industries, we help organizations embrace digital transformation
+                  and achieve business excellence.
+                </p>
+                <p className="text-left">
+                  With a blend of domain expertise, technology excellence, and a
+                  client-first approach, we partner with organizations to drive
+                  sustainable business success.
+                </p>
+              </div>
+
+              {/* Our Services Button with proper spacing to avoid overlap */}
+              <div className="pt-4 sm:pt-6">
+                <Link to="/services">
+                  <Button
+                    variant="brand"
+                    size="lg"
+                    className="btn-responsive-lg px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/30 transform hover:scale-105 transition-all duration-300"
+                  >
+                    Our Services
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
-
-          {/* Content Side */}
-          <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
-            <div>
-              <p className="text-accent font-semibold mb-2 sm:mb-3 tracking-wider text-fluid-base sm:text-fluid-lg">
-                WHO WE ARE
-              </p>
-            </div>
-
-            <div className="text-text-body text-fluid-base sm:text-fluid-lg leading-relaxed space-y-3 sm:space-y-4 text-left">
-              <p className="font-semibold text-text-primary text-left">
-                Next-generation IT solutions and consulting company committed to
-                driving innovation, efficiency, and growth with Oracle ERP
-                expertise.
-              </p>
-              <p className="text-left">
-                Techaxis Consulting Private Limited is a next-generation IT
-                solutions and consulting company committed to driving
-                innovation, efficiency, and growth. With deep expertise across
-                industries, we help organizations embrace digital transformation
-                and achieve business excellence.
-              </p>
-              <p className="text-left">
-                With a blend of domain expertise, technology excellence, and a
-                client-first approach, we partner with organizations to drive
-                sustainable business success.
-              </p>
-            </div>
-
-
-            {/* Our Services Button with proper spacing to avoid overlap */}
-            <div className="pt-4 sm:pt-6">
-              <Link to="/services">
-                <Button
-                  variant="brand"
-                  size="lg"
-                  className="btn-responsive-lg px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/30 transform hover:scale-105 transition-all duration-300"
-                >
-                  Our Services
-                </Button>
-              </Link>
-            </div>
-          </div>
         </div>
+      </section>
 
-        {/* Mission & Values Section */}
-        <section className="section">
-          <div className="container-responsive">
+      {/* Mission & Values Section - Separate section with distinct background */}
+      <section id="mission-values" className="w-full" style={{ backgroundColor: '#f5f7fa' }}>
+        {/* Subtle divider shadow */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+        
+        <div className="container-responsive" style={{ padding: '60px 20px' }}>
           <div className="text-center mb-8 sm:mb-12 animate-fade-in-up animate-delay-100">
             <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
               Our Mission & Values
@@ -215,12 +212,12 @@ const AboutUs = () => {
               )}
             </div>
           </TooltipProvider>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Meet Our Leadership Section */}
-        <section id="leadership" className="section">
-          <div className="container-responsive">
+      {/* Meet Our Leadership Section */}
+      <section id="leadership" className="section">
+        <div className="container-responsive">
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6">
               Meet Our Leadership
@@ -231,60 +228,24 @@ const AboutUs = () => {
             
             {/* Know More Button */}
             <div className="mb-12">
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-3 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 font-semibold rounded-full"
-              >
-                Know More
-              </Button>
+              <Link to="/directors">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-3 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 font-semibold rounded-full"
+                >
+                  Know More
+                </Button>
+              </Link>
             </div>
           </div>
-          
-          {/* Leadership Profiles */}
-          <div className="leadership-grid max-w-4xl mx-auto">
-            {/* Naseem Ahmed Profile */}
-            <div className="text-center group">
-              <div className="mb-6">
-                <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300">
-                  <img 
-                    src={nasimPhoto} 
-                    alt="Nasim Ahmad - Director" 
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: '70% 30%' }}
-                  />
-                </div>
-              </div>
-              <h4 className="font-bold text-text-primary mb-2 text-xl">Nasim Ahmad</h4>
-              <p className="text-accent font-semibold mb-4">Director</p>
-              <p className="text-text-body leading-relaxed text-sm">
-                Nasim is a forward-thinking leader who believes in cultivating authentic, long-term relationships built on trust and respect. With deep expertise in the banking and financial services domain, he helps clients design and implement customer-centric solutions that enable impactful digital transformations. His innovative approach blends industry knowledge with technology, empowering clients to modernize operations, enhance customer experiences, and maintain compliance in a rapidly evolving landscape. Nasim also values sustainable business practices and fosters a culture of healthy collaboration—both within internal teams and in close partnership with clients—to ensure lasting success.
-              </p>
-            </div>
-            
-            {/* Tareni Mohanti Profile */}
-            <div className="text-center group">
-              <div className="mb-6">
-                <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300">
-                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-brand-blue-light/20 flex items-center justify-center">
-                    <Users className="w-16 h-16 sm:w-20 sm:h-20 text-accent/60" />
-                  </div>
-                </div>
-              </div>
-              <h4 className="font-bold text-text-primary mb-2 text-xl">Tareni Mohanti</h4>
-              <p className="text-accent font-semibold mb-4">Leadership Role</p>
-              <p className="text-text-body leading-relaxed text-sm">
-                Strategic leader focused on innovation and excellence, committed to delivering cutting-edge solutions and maintaining our core values.
-              </p>
-            </div>
-          </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Why Choose Us Section */}
-        <section className="section">
-          <div className="container-responsive">
-            <div className="text-center mb-12">
+      {/* Why Choose Us Section */}
+      <section id="why-choose-us" className="section">
+        <div className="container-responsive">
+          <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4" style={{ color: '#0B2545' }}>
               Why Choose Us?
             </h3>
@@ -329,10 +290,9 @@ const AboutUs = () => {
               </Card>
             ))}
           </div>
-          </div>
-        </section>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 };
 

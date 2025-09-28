@@ -8,6 +8,7 @@ import Layout from "./components/Layout";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Index from "./pages/Index";
 import About from "./pages/About";
+import Directors from "./pages/Directors";
 import Services from "./pages/Services";
 import Industries from "./pages/Industries";
 import Careers from "./pages/Careers";
@@ -24,6 +25,7 @@ import CustomCloud from "./pages/CustomCloud";
 import MobileDevelopment from "./pages/MobileDevelopment";
 import StaffAugmentation from "./pages/StaffAugmentation";
 import ProjectManagement from "./pages/ProjectManagement";
+import DataAutomationAI from "./pages/DataAutomationAI";
 import NotFound from "./pages/errors/NotFound";
 import InternalServerError from "./pages/errors/InternalServerError";
 import Forbidden from "./pages/errors/Forbidden";
@@ -49,6 +51,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/directors" element={<Directors />} />
                 <Route path="/services" element={<Services />} />
                 <Route
                   path="/services/web-technology"
@@ -88,6 +91,10 @@ const App = () => (
                 <Route
                   path="/services/project-management"
                   element={<ProjectManagement />}
+                />
+                <Route
+                  path="/services/data-automation-ai"
+                  element={<DataAutomationAI />}
                 />
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/careers" element={<Careers />} />

@@ -7,13 +7,18 @@ const Footer = () => {
     e.preventDefault();
     // Navigate to home page first
     navigate('/');
-    // Then scroll to leadership section after a short delay
+    // Then scroll to mission & values section after a longer delay to ensure page is loaded
     setTimeout(() => {
-      const element = document.getElementById('leadership');
+      const element = document.getElementById('mission-values');
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        // Add some offset to account for any fixed headers
+        const elementPosition = element.offsetTop - 100;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
       }
-    }, 100);
+    }, 500);
   };
 
   return (
@@ -32,24 +37,21 @@ const Footer = () => {
             <h4 className="text-fluid-lg sm:text-fluid-xl font-semibold text-white">Industries</h4>
             <ul className="space-y-2 sm:space-y-3 md:space-y-4">
               {[
-                { name: "Insurance", href: "/industries" },
-                { name: "Financial Services", href: "/industries" },
-                { name: "Manufacturing", href: "/industries" },
-                { name: "Telecommunications", href: "/industries" },
-                { name: "Retail & E-commerce", href: "/industries" },
-                { name: "Energy & Utilities", href: "/industries" },
-                { name: "Healthcare", href: "/industries" },
-                { name: "Education", href: "/industries" },
-                { name: "Public Sector", href: "/industries" },
-                { name: "Transportation & Logistics", href: "/industries" },
+                "Insurance",
+                "Financial Services",
+                "Manufacturing",
+                "Telecommunications",
+                "Retail & E-commerce",
+                "Energy & Utilities",
+                "Healthcare",
+                "Education",
+                "Public Sector",
+                "Transportation & Logistics",
               ].map((industry) => (
-                <li key={industry.name}>
-                  <Link
-                    to={industry.href}
-                    className="p-0 h-auto text-white/80 hover:text-accent text-left transition-colors duration-200 block text-fluid-sm sm:text-fluid-base"
-                  >
-                    {industry.name}
-                  </Link>
+                <li key={industry}>
+                  <span className="text-white/80 text-left block text-fluid-sm sm:text-fluid-base">
+                    {industry}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -85,6 +87,10 @@ const Footer = () => {
                   name: "Project Management",
                   href: "/services/project-management",
                 },
+                {
+                  name: "Data, Automation & AI",
+                  href: "/services/data-automation-ai",
+                },
               ].map((service) => (
                 <li key={service.name}>
                   <Link
@@ -103,18 +109,17 @@ const Footer = () => {
             <h4 className="text-fluid-lg sm:text-fluid-xl font-semibold text-white">Company</h4>
             <ul className="space-y-2 sm:space-y-3 md:space-y-4">
               {[
-                { name: "About Techaxis", href: "/about", isExternal: false },
-                { name: "Leadership", href: "/#leadership", isExternal: true },
+                { name: "About Techaxis", href: "/", isExternal: false },
+                { name: "Leadership", href: "/", isExternal: false, isLeadership: true },
               ].map((link) => (
                 <li key={link.name}>
-                  {link.isExternal ? (
-                    <a
-                      href={link.href}
-                      onClick={link.name === 'Leadership' ? handleLeadershipClick : undefined}
+                  {link.isLeadership ? (
+                    <button
+                      onClick={handleLeadershipClick}
                       className="p-0 h-auto text-white/80 hover:text-accent text-left transition-colors duration-200 block text-fluid-sm sm:text-fluid-base cursor-pointer"
                     >
                       {link.name}
-                    </a>
+                    </button>
                   ) : (
                     <Link
                       to={link.href}

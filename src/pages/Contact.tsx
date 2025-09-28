@@ -310,7 +310,7 @@ const Contact = () => {
       </section>
 
       {/* Quick Contact Shortcuts */}
-      <section className="py-12 bg-background border-b border-border/50">
+      <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {quickContactActions.map((action, index) => (
@@ -330,7 +330,7 @@ const Contact = () => {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
