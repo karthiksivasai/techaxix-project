@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import {
   Building2,
   HeartHandshake,
@@ -67,28 +68,37 @@ const Industries = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="Industries We Serve - Techaxis Consulting | Oracle ERP Solutions"
+        description="Techaxis Consulting serves diverse industries including Insurance, Financial Services, Manufacturing, Healthcare, Education, and more. Get tailored Oracle ERP solutions for your industry."
+        keywords="Oracle ERP Industries, Insurance Solutions, Financial Services, Manufacturing ERP, Healthcare Technology, Education Solutions, Public Sector, Techaxis Consulting"
+        canonical="/industries"
+      />
+      <div className="min-h-screen">
 
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+            Industries We Serve
+          </h1>
+          <p className="text-xl text-text-body max-w-3xl mx-auto leading-relaxed">
+            Our expertise spans across various industries, delivering tailored technology solutions 
+            that address unique challenges and regulatory requirements.
+          </p>
+        </div>
+      </section>
 
       {/* Industries Grid */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-text-primary mb-6">
-              Industries We Serve
-            </h2>
-            <p className="text-xl text-text-body max-w-3xl mx-auto">
-              Our expertise spans across various industries, delivering tailored
-              technology solutions that address unique challenges and regulatory
-              requirements.
-            </p>
-          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {industries.map((industry, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden hover:shadow-elegant transition-all duration-500 ease-out hover:scale-105 cursor-pointer rounded-2xl border border-gradient-to-r from-accent via-brand-blue-light to-accent"
+                className="group relative overflow-hidden hover:shadow-elegant transition-all duration-500 ease-out hover:scale-105 cursor-default rounded-2xl border border-gradient-to-r from-accent via-brand-blue-light to-accent"
               >
                 <CardContent className="relative p-6 sm:p-8 text-center">
                   {/* Icon with proper spacing and reduced size - no more overlapping */}
@@ -174,6 +184,7 @@ const Industries = () => {
       </section>
 
     </div>
+    </>
   );
 };
 

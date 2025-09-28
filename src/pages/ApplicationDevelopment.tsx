@@ -4,27 +4,6 @@ import { Link } from "react-router-dom";
 import { Smartphone, CheckCircle, ArrowRight } from "lucide-react";
 
 const ApplicationDevelopment = () => {
-  const services = [
-    "Requirements Analysis & Design",
-    "Enterprise Application Development",
-    "Mobile Application Development",
-    "Desktop Application Development",
-    "Web Application Development",
-    "Application Maintenance & Support",
-    "Legacy Application Modernization",
-    "System Integration Services",
-  ];
-
-  const technologies = [
-    "Java & Spring Framework",
-    "Microsoft .NET",
-    "React & Angular",
-    "Node.js & Express",
-    "Python & Django",
-    "Mobile Development (iOS/Android)",
-    "Database Technologies",
-    "Cloud Platforms",
-  ];
 
   return (
     <div className="min-h-screen">
@@ -53,185 +32,70 @@ const ApplicationDevelopment = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
+      <section className="py-20 header-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-text-primary mb-6">
-                  Our Application Development Expertise
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our application development services cover the entire software
-                  development lifecycle from requirements analysis to deployment
-                  and maintenance. We specialize in creating enterprise-grade
-                  applications that drive business growth and operational
-                  efficiency.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Whether you need a new application from scratch or want to
-                  modernize your existing systems, our experienced team delivers
-                  solutions that are scalable, secure, and aligned with your
-                  business objectives.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Services Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Development Services
-                  </h3>
-                  <div className="space-y-4">
-                    {services.map((service, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {service}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-                </div>
-              </Card>
-
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Technologies We Use
-                  </h3>
-                  <div className="space-y-4">
-                    {technologies.map((tech, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {tech}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-                </div>
-              </Card>
+            {/* Expertise Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+                Our Application Development Expertise
+              </h2>
+              <p className="text-slate-700 leading-relaxed mb-6 text-lg">
+                Our application development services cover the entire software
+                development lifecycle from requirements analysis to deployment
+                and maintenance. We specialize in creating enterprise-grade
+                applications that drive business growth and operational
+                efficiency.
+              </p>
+              <p className="text-slate-700 leading-relaxed text-lg">
+                Whether you need a new application from scratch or want to
+                modernize your existing systems, our experienced team delivers
+                solutions that are scalable, secure, and aligned with your
+                business objectives.
+              </p>
             </div>
 
-            {/* Process Section */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Our Development Process
-                </h3>
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">1</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Analysis
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Requirements gathering and system analysis
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">2</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Design</h4>
-                    <p className="text-sm text-text-body">
-                      Architecture design and planning
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">3</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Development
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Agile development and testing
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">4</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Deployment
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Deployment and ongoing support
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-              </div>
-            </Card>
-
             {/* Benefits Section */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Why Choose Our Application Development Services?
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Smartphone className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Custom Solutions
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Tailored applications for your specific business needs
-                    </p>
+            <div className="mb-20">
+              <h3 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+                Why Choose Our Application Development Services?
+              </h3>
+              <div className="grid md:grid-cols-3 gap-12">
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Smartphone className="w-10 h-10 text-slate-700" />
                   </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Quality Assurance
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Rigorous testing and quality control processes
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <ArrowRight className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Ongoing Support
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Continuous maintenance and support services
-                    </p>
-                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Custom Solutions
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Tailored applications for your specific business needs
+                  </p>
                 </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <CheckCircle className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Quality Assurance
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Rigorous testing and quality control processes
+                  </p>
+                </div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <ArrowRight className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Ongoing Support
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Continuous maintenance and support services
+                  </p>
+                </div>
               </div>
-            </Card>
+            </div>
 
             {/* CTA Section */}
             <div className="text-center">

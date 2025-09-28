@@ -1,30 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cloud, CheckCircle, ArrowRight } from "lucide-react";
+import { Cloud, ArrowRight, CheckCircle } from "lucide-react";
 
 const CloudComputing = () => {
-  const services = [
-    "Cloud Migration Strategy",
-    "Cloud-Native Development",
-    "Multi-Cloud Management",
-    "Infrastructure as a Service (IaaS)",
-    "Platform as a Service (PaaS)",
-    "Software as a Service (SaaS)",
-    "Cloud Security & Compliance",
-    "DevOps & CI/CD Pipeline",
-  ];
-
-  const platforms = [
-    "Amazon Web Services (AWS)",
-    "Microsoft Azure",
-    "Google Cloud Platform (GCP)",
-    "IBM Cloud",
-    "Oracle Cloud",
-    "Private Cloud Solutions",
-    "Hybrid Cloud Architecture",
-    "Container Orchestration (Kubernetes)",
-  ];
 
   return (
     <div className="min-h-screen">
@@ -54,193 +33,67 @@ const CloudComputing = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
+      <section className="py-20 header-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-text-primary mb-6">
-                  Our Cloud Computing Expertise
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our cloud services include cloud migration, cloud-native
-                  development, and multi-cloud management. We help businesses
-                  leverage the power of cloud computing to reduce costs and
-                  increase agility.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Whether you're looking to migrate existing applications to the
-                  cloud or build new cloud-native solutions, our team provides
-                  comprehensive cloud services that align with your business
-                  objectives.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Services Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Cloud Services
-                  </h3>
-                  <div className="space-y-4">
-                    {services.map((service, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {service}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-                </div>
-              </Card>
-
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Cloud Platforms
-                  </h3>
-                  <div className="space-y-4">
-                    {platforms.map((platform, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {platform}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-                </div>
-              </Card>
+            {/* Expertise Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+                Our Cloud Computing Expertise
+              </h2>
+              <p className="text-slate-700 leading-relaxed mb-6 text-lg">
+                Our cloud services include cloud migration, cloud-native
+                development, and multi-cloud management. We help businesses
+                leverage the power of cloud computing to reduce costs and
+                increase agility.
+              </p>
+              <p className="text-slate-700 leading-relaxed text-lg">
+                Whether you're looking to migrate existing applications to the
+                cloud or build new cloud-native solutions, our team provides
+                comprehensive cloud services that align with your business
+                objectives.
+              </p>
             </div>
 
-            {/* Migration Process */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Cloud Migration Process
-                </h3>
-                <div className="grid md:grid-cols-5 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">1</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Assessment
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Evaluate current infrastructure
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">2</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Planning
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Design migration strategy
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">3</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Migration
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Execute migration plan
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">4</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Testing</h4>
-                    <p className="text-sm text-text-body">
-                      Validate and test systems
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold text-xl">5</span>
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Optimization
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Optimize performance
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-              </div>
-            </Card>
-
             {/* Benefits Section */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Benefits of Cloud Computing
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Cloud className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Cost Efficiency
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Reduce infrastructure costs and operational expenses
-                    </p>
+            <div className="mb-20">
+              <h3 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+                Benefits of Cloud Computing
+              </h3>
+              <div className="grid md:grid-cols-3 gap-12">
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Cloud className="w-10 h-10 text-slate-700" />
                   </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Scalability
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Scale resources up or down based on demand
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <ArrowRight className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Agility</h4>
-                    <p className="text-sm text-text-body">
-                      Faster deployment and time-to-market
-                    </p>
-                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Cost Efficiency
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Reduce infrastructure costs and operational expenses
+                  </p>
                 </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <CheckCircle className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Scalability
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Scale resources up or down based on demand
+                  </p>
+                </div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <ArrowRight className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">Agility</h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Faster deployment and time-to-market
+                  </p>
+                </div>
               </div>
-            </Card>
+            </div>
 
             {/* CTA Section */}
             <div className="text-center">

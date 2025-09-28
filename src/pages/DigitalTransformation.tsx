@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Users,
-  CheckCircle,
   ArrowRight,
   TrendingUp,
-  Target,
   Zap,
 } from "lucide-react";
 
@@ -14,25 +12,6 @@ import {
 import consultingIcon from "@/assets/consulting-icon.png";
 
 const DigitalTransformation = () => {
-  const features = [
-    "Process Optimization & Automation",
-    "Business Model Innovation",
-    "Technology Integration",
-    "Change Management",
-    "Digital Strategy Development",
-    "Data Analytics & Insights",
-    "Customer Experience Enhancement",
-    "Operational Efficiency Improvement",
-  ];
-
-  const benefits = [
-    "Streamlined workflows",
-    "Increased productivity",
-    "Improved customer experience",
-    "Enhanced operational efficiency",
-    "Competitive advantage",
-    "Sustainable business growth",
-  ];
 
   return (
     <div className="min-h-screen">
@@ -71,184 +50,69 @@ const DigitalTransformation = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
+      <section className="py-20 header-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-text-primary mb-6">
-                  Our Digital Transformation Expertise
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  We help organizations embrace digital transformation by
-                  reimagining business processes, implementing modern
-                  technologies, and creating innovative solutions that drive
-                  growth and operational efficiency.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our digital transformation services are designed to help
-                  businesses adapt to the rapidly changing digital landscape,
-                  improve customer engagement, and create sustainable
-                  competitive advantages.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Features Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Our Services Include
-                  </h3>
-                  <div className="space-y-4">
-                    {features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-                </div>
-              </Card>
-
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Key Benefits
-                  </h3>
-                  <div className="space-y-4">
-                    {benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {benefit}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-                </div>
-              </Card>
+            {/* Expertise Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+                Our Digital Transformation Expertise
+              </h2>
+              <p className="text-slate-700 leading-relaxed mb-6 text-lg">
+                We help organizations embrace digital transformation by
+                reimagining business processes, implementing modern
+                technologies, and creating innovative solutions that drive
+                growth and operational efficiency.
+              </p>
+              <p className="text-slate-700 leading-relaxed text-lg">
+                Our digital transformation services are designed to help
+                businesses adapt to the rapidly changing digital landscape,
+                improve customer engagement, and create sustainable
+                competitive advantages.
+              </p>
             </div>
 
-            {/* Process Section */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Our Digital Transformation Process
-                </h3>
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Target className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Assessment
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Evaluate current state and identify transformation opportunities
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Strategy</h4>
-                    <p className="text-sm text-text-body">
-                      Develop comprehensive digital transformation roadmap
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Zap className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Implementation
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Execute transformation initiatives with agile methodology
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Optimization
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Continuous improvement and performance monitoring
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-              </div>
-            </Card>
-
             {/* Benefits Section */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Why Choose Our Digital Transformation Services?
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Proven Results
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Track record of successful digital transformations
-                    </p>
+            <div className="mb-20">
+              <h3 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+                Why Choose Our Digital Transformation Services?
+              </h3>
+              <div className="grid md:grid-cols-3 gap-12">
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <TrendingUp className="w-10 h-10 text-slate-700" />
                   </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Zap className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Rapid Implementation
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Agile methodology for faster time-to-value
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Expert Team
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Experienced professionals with deep domain knowledge
-                    </p>
-                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Proven Results
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Track record of successful digital transformations
+                  </p>
                 </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Zap className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Rapid Implementation
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Agile methodology for faster time-to-value
+                  </p>
+                </div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Users className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Expert Team
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Experienced professionals with deep domain knowledge
+                  </p>
+                </div>
               </div>
-            </Card>
+            </div>
 
             {/* CTA Section */}
             <div className="text-center">

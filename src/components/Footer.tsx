@@ -1,30 +1,40 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleAboutTechaxisClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // If already on home page, scroll to about section
+    if (location.pathname === '/') {
+      document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If on different page, navigate to home page
+      navigate('/');
+    }
+  };
 
   const handleLeadershipClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    // Navigate to home page first
-    navigate('/');
-    // Then scroll to mission & values section after a longer delay to ensure page is loaded
-    setTimeout(() => {
-      const element = document.getElementById('mission-values');
-      if (element) {
-        // Add some offset to account for any fixed headers
-        const elementPosition = element.offsetTop - 100;
-        window.scrollTo({
-          top: elementPosition,
-          behavior: 'smooth'
-        });
-      }
-    }, 500);
+    // If already on home page, scroll to leadership section
+    if (location.pathname === '/') {
+      document.getElementById('leadership')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Navigate to home page first
+      navigate('/');
+      // Then scroll to leadership section after a delay to ensure page is loaded
+      setTimeout(() => {
+        document.getElementById('leadership')?.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    }
   };
 
   return (
     <footer
       id="contact"
       className="text-white border-t border-primary/20"
+      style={{ backgroundColor: '#1A73E8' }}
     >
       <div className="container-responsive">
         {/* Main Footer Content */}
@@ -109,7 +119,7 @@ const Footer = () => {
             <h4 className="text-fluid-lg sm:text-fluid-xl font-semibold text-white">Company</h4>
             <ul className="space-y-2 sm:space-y-3 md:space-y-4">
               {[
-                { name: "About Techaxis", href: "/", isExternal: false },
+                { name: "About Techaxis", href: "/", isExternal: false, isAboutTechaxis: true },
                 { name: "Why Choose Us", href: "/why-choose-us", isExternal: false },
                 { name: "Leadership", href: "/", isExternal: false, isLeadership: true },
               ].map((link) => (
@@ -117,6 +127,13 @@ const Footer = () => {
                   {link.isLeadership ? (
                     <button
                       onClick={handleLeadershipClick}
+                      className="p-0 h-auto text-white/80 hover:text-accent text-left transition-colors duration-200 block text-fluid-sm sm:text-fluid-base cursor-pointer"
+                    >
+                      {link.name}
+                    </button>
+                  ) : link.isAboutTechaxis ? (
+                    <button
+                      onClick={handleAboutTechaxisClick}
                       className="p-0 h-auto text-white/80 hover:text-accent text-left transition-colors duration-200 block text-fluid-sm sm:text-fluid-base cursor-pointer"
                     >
                       {link.name}

@@ -1,19 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
-    { name: "HOME", href: "/", active: location.pathname === "/" },
+    { name: "ABOUT US", href: "/", active: location.pathname === "/", scrollTo: "about" },
     { name: "SERVICES", href: "/services", active: location.pathname === "/services" },
     { name: "INDUSTRIES", href: "/industries", active: location.pathname === "/industries" },
   ];
+
+  const handleNavClick = (item: any, e: React.MouseEvent) => {
+    e.preventDefault();
+    if (item.name === "ABOUT US" && location.pathname === "/") {
+      // For "About Us" on homepage, scroll to about section
+      const element = document.getElementById(item.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // For all other navigation items, navigate to the page
+      navigate(item.href);
+    }
+  };
 
 
   const closeMobileMenu = () => {
@@ -70,15 +85,15 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                to={item.href}
+                onClick={(e) => handleNavClick(item, e)}
                 className={`text-fluid-sm xl:text-fluid-base font-medium transition-colors duration-200 hover:text-blue-700 whitespace-nowrap ${
                   item.active ? "text-blue-800 font-semibold" : "text-slate-800"
                 }`}
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
           </nav>
 
@@ -124,10 +139,12 @@ const Header = () => {
               <nav className="py-4 px-4 sm:px-6 md:px-8">
                 <div className="flex flex-col space-y-2 sm:space-y-3 md:space-y-4">
                   {navItems.map((item) => (
-                    <Link
+                    <button
                       key={item.name}
-                      to={item.href}
-                      onClick={closeMobileMenu}
+                      onClick={(e) => {
+                        handleNavClick(item, e);
+                        closeMobileMenu();
+                      }}
                       className={`text-left justify-start text-fluid-base sm:text-fluid-lg md:text-fluid-xl font-medium transition-colors duration-200 hover:text-blue-700 p-3 sm:p-4 md:p-5 rounded-lg hover:bg-blue-100/50 ${
                         item.active
                           ? "text-blue-800 font-semibold bg-blue-200/50"
@@ -135,7 +152,7 @@ const Header = () => {
                       }`}
                     >
                       {item.name}
-                    </Link>
+                    </button>
                   ))}
                   <div className="pt-2 sm:pt-4 md:pt-6 border-t border-border/50">
                     <Link to="/contact" onClick={closeMobileMenu}>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import {
   ArrowRight,
   Users,
@@ -28,6 +29,13 @@ const Services = () => {
         "We provide comprehensive Oracle Fusion Cloud services, covering full lifecycle implementation, post-go-live support, and continuous optimization across HCM, SCM, Finance, Maintenance, Manufacturing & EPM modules.",
       icon: Cloud,
       link: "/services/oracle-fusion-cloud",
+    },
+    {
+      title: "Data, Automation & AI",
+      description:
+        "At Techaxis Consulting, we help businesses unlock the power of data-driven intelligence. By combining automation with artificial intelligence, we transform complex challenges into smart, scalable solutions.",
+      icon: Brain,
+      link: "/services/data-automation-ai",
     },
     {
       title: "Oracle E-Business Suite (EBS) Implementation & Support",
@@ -64,21 +72,28 @@ const Services = () => {
       icon: Briefcase,
       link: "/services/project-management",
     },
-    {
-      title: "Data, Automation & AI",
-      description:
-        "At Techaxis Consulting, we help businesses unlock the power of data-driven intelligence. By combining automation with artificial intelligence, we transform complex challenges into smart, scalable solutions.",
-      icon: Brain,
-      link: "/services/data-automation-ai",
-    },
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="Our Services - Techaxis Consulting | Oracle ERP & Digital Transformation"
+        description="Comprehensive IT solutions and consulting services including Oracle ERP, digital transformation, cloud solutions, mobile development, and more. Transform your business with our expertise."
+        keywords="Oracle ERP, Digital Transformation, Cloud Solutions, Mobile Development, Staff Augmentation, Project Management, Data Automation AI, Techaxis Consulting"
+        canonical="/services"
+      />
+      <div className="min-h-screen">
 
       {/* Hero Section */}
-      <section>
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
         <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+            Our Service Offerings
+          </h1>
+          <p className="text-xl text-text-body max-w-3xl mx-auto leading-relaxed">
+            Comprehensive IT solutions and consulting services designed to transform your business 
+            and drive sustainable growth through technology innovation.
+          </p>
         </div>
       </section>
 
@@ -181,6 +196,7 @@ const Services = () => {
       </section>
 
     </div>
+    </>
   );
 };
 

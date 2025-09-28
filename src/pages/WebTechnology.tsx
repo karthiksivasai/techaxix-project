@@ -1,28 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, CheckCircle, ArrowRight } from "lucide-react";
+import { Code, ArrowRight, CheckCircle } from "lucide-react";
 
 const WebTechnology = () => {
-  const features = [
-    "Web Portals Development",
-    "Social Networking Sites",
-    "Customer Relationship Management (CRM)",
-    "Content Management Systems (CMS)",
-    "Workflow Solutions",
-    "eLearning Portals",
-    "eCommerce Storefronts",
-    "Back-end Application Integration",
-  ];
-
-  const industries = [
-    "Insurance",
-    "Financial Services",
-    "Manufacturing",
-    "Telecommunications",
-    "Retail",
-    "Energy and Utilities",
-  ];
 
   return (
     <div className="min-h-screen">
@@ -54,185 +35,70 @@ const WebTechnology = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
+      <section className="py-20 header-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-text-primary mb-6">
-                  Our Web Technology Expertise
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  A right partner — one with proven expertise can help your
-                  business in streamlining processes & integrating operations,
-                  resulting in savings & sustainable competitive
-                  differentiation. We provide high-performance eBusiness and
-                  eCommerce solutions to our clients.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our web technology solutions are designed to enhance your
-                  digital presence, improve customer engagement, and drive
-                  business growth through innovative web-based applications and
-                  platforms.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Features Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Our Services Include
-                  </h3>
-                  <div className="space-y-4">
-                    {features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-                </div>
-              </Card>
-
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Industries We Serve
-                  </h3>
-                  <div className="space-y-4">
-                    {industries.map((industry, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {industry}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-                </div>
-              </Card>
+            {/* Expertise Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+                Our Web Technology Expertise
+              </h2>
+              <p className="text-slate-700 leading-relaxed mb-6 text-lg">
+                A right partner — one with proven expertise can help your
+                business in streamlining processes & integrating operations,
+                resulting in savings & sustainable competitive
+                differentiation. We provide high-performance eBusiness and
+                eCommerce solutions to our clients.
+              </p>
+              <p className="text-slate-700 leading-relaxed text-lg">
+                Our web technology solutions are designed to enhance your
+                digital presence, improve customer engagement, and drive
+                business growth through innovative web-based applications and
+                platforms.
+              </p>
             </div>
 
-            {/* Process Section */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Our Web Development Process
-                </h3>
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Code className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Analysis
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Requirements gathering and technical analysis
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Design</h4>
-                    <p className="text-sm text-text-body">
-                      UI/UX design and architecture planning
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <ArrowRight className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Development
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Coding and feature implementation
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Code className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Deployment
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Testing, deployment and maintenance
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
-              </div>
-            </Card>
-
             {/* Benefits Section */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Why Choose Our Web Technology Solutions?
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Code className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Modern Technologies
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Latest web technologies and frameworks
-                    </p>
+            <div className="mb-20">
+              <h3 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+                Why Choose Our Web Technology Solutions?
+              </h3>
+              <div className="grid md:grid-cols-3 gap-12">
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Code className="w-10 h-10 text-slate-700" />
                   </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Scalable Solutions
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Built to grow with your business needs
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <ArrowRight className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Performance Focused
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Optimized for speed and user experience
-                    </p>
-                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Modern Technologies
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Latest web technologies and frameworks
+                  </p>
                 </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <CheckCircle className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Scalable Solutions
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Built to grow with your business needs
+                  </p>
+                </div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <ArrowRight className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Performance Focused
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Optimized for speed and user experience
+                  </p>
+                </div>
               </div>
-            </Card>
+            </div>
 
             {/* CTA Section */}
             <div className="text-center">

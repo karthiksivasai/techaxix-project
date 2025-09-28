@@ -303,7 +303,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 text-center relative z-10">
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We'd love to hear from you. Whether you're exploring digital
-            transformation, Oracle services, or need skilled professionals for
+            transformation, Oracle ERP services, Data, Automation & AI services or need skilled professionals for
             your project, our team is here to help.
           </p>
         </div>

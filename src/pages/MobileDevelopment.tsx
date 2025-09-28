@@ -68,131 +68,109 @@ const MobileDevelopment = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
+      <section className="py-20 header-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-text-primary mb-6">
-                  Our Mobile Development Expertise
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  We develop high-performance mobile applications using the
-                  latest technologies and best practices, ensuring excellent
-                  user experience, scalability, and cross-platform
-                  compatibility.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our mobile development team combines technical expertise with
-                  creative design to create engaging, intuitive, and
-                  feature-rich applications that drive user engagement and
-                  business growth.
-                </p>
-              </CardContent>
-            </Card>
+            {/* Expertise Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+                Our Mobile Development Expertise
+              </h2>
+              <p className="text-slate-700 leading-relaxed mb-6 text-lg">
+                We develop high-performance mobile applications using the
+                latest technologies and best practices, ensuring excellent
+                user experience, scalability, and cross-platform
+                compatibility.
+              </p>
+              <p className="text-slate-700 leading-relaxed text-lg">
+                Our mobile development team combines technical expertise with
+                creative design to create engaging, intuitive, and
+                feature-rich applications that drive user engagement and
+                business growth.
+              </p>
+            </div>
 
             {/* Platforms Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Development Platforms
-                  </h3>
-                  <div className="space-y-4">
-                    {platforms.map((platform, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {platform}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">
+                  Development Platforms
+                </h3>
+                <div className="space-y-4">
+                  {platforms.map((platform, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-slate-700 flex-shrink-0" />
+                      <span className="text-slate-700 text-sm leading-relaxed">
+                        {platform}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              </Card>
+              </div>
 
-              <Card className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-                <CardContent className="relative p-8">
-                  <h3 className="text-xl font-bold text-text-primary mb-6">
-                    Our Services
-                  </h3>
-                  <div className="space-y-4">
-                    {services.map((service, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-accent rounded-full"></div>
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {service}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                {/* Clean glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+              <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">
+                  Our Services
+                </h3>
+                <div className="space-y-4">
+                  {services.map((service, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-slate-700 rounded-full"></div>
+                      <span className="text-slate-700 text-sm leading-relaxed">
+                        {service}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              </Card>
+              </div>
             </div>
 
             {/* Development Process */}
-            <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">
-              <CardContent className="relative p-8">
-                <h3 className="text-xl font-bold text-text-primary mb-6">
-                  Mobile Development Process
-                </h3>
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Discovery</h4>
-                    <p className="text-sm text-text-body">
-                      Requirements gathering and user research
-                    </p>
+            <div className="mb-20">
+              <h3 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+                Mobile Development Process
+              </h3>
+              <div className="grid md:grid-cols-4 gap-12">
+                <div className="text-center px-4 py-6">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Users className="w-10 h-10 text-slate-700" />
                   </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Settings className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Design</h4>
-                    <p className="text-sm text-text-body">
-                      UI/UX design and prototyping
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Code className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">
-                      Development
-                    </h4>
-                    <p className="text-sm text-text-body">
-                      Coding and feature implementation
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Shield className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-text-muted mb-2">Testing</h4>
-                    <p className="text-sm text-text-body">
-                      Quality assurance and testing
-                    </p>
-                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">Discovery</h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Requirements gathering and user research
+                  </p>
                 </div>
-              </CardContent>
-
-              {/* Clean glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-brand-blue-light/20 rounded-2xl blur-xl"></div>
+                <div className="text-center px-4 py-6">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Settings className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">Design</h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    UI/UX design and prototyping
+                  </p>
+                </div>
+                <div className="text-center px-4 py-6">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Code className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Development
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Coding and feature implementation
+                  </p>
+                </div>
+                <div className="text-center px-4 py-6">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Shield className="w-10 h-10 text-slate-700" />
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">Testing</h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Quality assurance and testing
+                  </p>
+                </div>
               </div>
-            </Card>
+            </div>
 
             {/* Benefits Section */}
             <Card className="group relative overflow-hidden mb-12 hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl">

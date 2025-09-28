@@ -1,30 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, CheckCircle, ArrowRight } from "lucide-react";
+import { Users, ArrowRight } from "lucide-react";
 
 const ConsultingServices = () => {
-  const services = [
-    "Digital Transformation Strategy",
-    "Technology Roadmap Planning",
-    "System Architecture Design",
-    "Process Optimization",
-    "Technology Assessment",
-    "IT Strategy Development",
-    "Change Management",
-    "Project Management Consulting",
-  ];
-
-  const expertise = [
-    "Enterprise Architecture",
-    "Cloud Strategy",
-    "DevOps Implementation",
-    "Agile Transformation",
-    "Data Analytics Strategy",
-    "Cybersecurity Planning",
-    "Legacy System Modernization",
-    "Technology Vendor Selection",
-  ];
 
   return (
     <div className="min-h-screen">
@@ -54,161 +33,69 @@ const ConsultingServices = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
+      <section className="py-20 header-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-primary mb-6">
-                  Strategic Technology Guidance
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our consulting services help organizations align their
-                  technology strategy with business objectives. We provide
-                  expert guidance on digital transformation, technology
-                  roadmaps, and architectural decisions.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  With our systematic approach to technology consulting, we help
-                  businesses navigate complex technology decisions and implement
-                  solutions that drive growth and efficiency.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Services Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6">
-                    Consulting Services
-                  </h3>
-                  <div className="space-y-4">
-                    {services.map((service, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span className="text-muted-foreground">{service}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6">
-                    Areas of Expertise
-                  </h3>
-                  <div className="space-y-4">
-                    {expertise.map((area, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-muted-foreground">{area}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+            {/* Expertise Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+                Strategic Technology Guidance
+              </h2>
+              <p className="text-slate-700 leading-relaxed mb-6 text-lg">
+                Our consulting services help organizations align their
+                technology strategy with business objectives. We provide
+                expert guidance on digital transformation, technology
+                roadmaps, and architectural decisions.
+              </p>
+              <p className="text-slate-700 leading-relaxed text-lg">
+                With our systematic approach to technology consulting, we help
+                businesses navigate complex technology decisions and implement
+                solutions that drive growth and efficiency.
+              </p>
             </div>
 
             {/* Value Proposition */}
-            <Card className="mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">
-                  Why Choose Our Consulting Services
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-accent">🎯</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Strategic Focus
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Align technology with business goals
-                    </p>
+            <div className="mb-20">
+              <h3 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+                Why Choose Our Consulting Services
+              </h3>
+              <div className="grid md:grid-cols-3 gap-12">
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <span className="text-3xl font-bold text-slate-700">🎯</span>
                   </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-accent">🚀</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Innovation
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Drive digital transformation initiatives
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-accent">📊</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Measurable Results
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Deliver quantifiable business value
-                    </p>
-                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Strategic Focus
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Align technology with business goals
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <span className="text-3xl font-bold text-slate-700">🚀</span>
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Innovation
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Drive digital transformation initiatives
+                  </p>
+                </div>
+                <div className="text-center px-6 py-8">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <span className="text-3xl font-bold text-slate-700">📊</span>
+                  </div>
+                  <h4 className="font-bold text-slate-800 mb-4 text-xl">
+                    Measurable Results
+                  </h4>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Deliver quantifiable business value
+                  </p>
+                </div>
+              </div>
+            </div>
 
-            {/* Process Section */}
-            <Card>
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">
-                  Our Consulting Approach
-                </h3>
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">1</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Assessment
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Current state analysis and gap identification
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">2</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Strategy
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Develop comprehensive technology strategy
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">3</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Planning
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Create detailed implementation roadmap
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent font-bold">4</span>
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">
-                      Execution
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Guide implementation and change management
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

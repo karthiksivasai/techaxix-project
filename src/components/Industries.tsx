@@ -1,6 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import {
   Building2,
   HeartHandshake,
@@ -45,8 +43,9 @@ const Industries = () => {
   ];
 
   return (
-    <section className="section alt section-responsive" id="industries">
-      <div className="container-responsive">
+    <section className="full-screen-section" id="industries" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="full-screen-content">
+        <div className="container-responsive">
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <p className="text-red-500 font-semibold mb-2 sm:mb-3 tracking-wider text-fluid-base sm:text-fluid-lg">
             INDUSTRIES WE SERVE
@@ -65,7 +64,7 @@ const Industries = () => {
           {industries.map((industry, index) => (
             <Card
               key={index}
-              className="group relative overflow-hidden hover:shadow-elegant transition-all duration-500 ease-out hover:scale-105 cursor-pointer rounded-2xl border border-gradient-to-r from-accent via-brand-blue-light to-accent"
+              className="group relative overflow-hidden hover:shadow-elegant transition-all duration-500 ease-out hover:scale-105 cursor-default rounded-2xl border border-gradient-to-r from-accent via-brand-blue-light to-accent"
             >
               <CardContent className="relative p-6 sm:p-8 text-center">
                 {/* Icon with proper spacing and reduced size - no more overlapping */}
@@ -92,19 +91,6 @@ const Industries = () => {
             </Card>
           ))}
         </div>
-
-        {/* Know More Button */}
-        <div className="text-center mt-12 sm:mt-16 md:mt-20">
-          <Button
-            variant="brand"
-            size="lg"
-            className="btn-responsive-lg px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/30 transform hover:scale-105 transition-all duration-300"
-            asChild
-          >
-            <Link to="/industries" aria-label="Learn more about industries we serve">
-              KNOW MORE
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

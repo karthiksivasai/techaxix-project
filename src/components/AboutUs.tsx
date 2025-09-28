@@ -58,9 +58,34 @@ const AboutUs = () => {
 
   return (
     <>
-      <section className="section section-responsive" id="about">
-        <div className="container-responsive">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+      <section className="full-screen-section about-background" id="about">
+        {/* Animated Grid Background */}
+        <div className="animated-grid">
+          <div className="grid-lines"></div>
+        </div>
+        
+        {/* Floating Geometric Shapes */}
+        <div className="floating-shape shape-1"></div>
+        <div className="floating-shape shape-2"></div>
+        <div className="floating-shape shape-3"></div>
+        
+        {/* Subtle Particles */}
+        <div className="particle particle-1"></div>
+        <div className="particle particle-2"></div>
+        <div className="particle particle-3"></div>
+        
+        {/* Light Rays */}
+        <div className="light-ray ray-1"></div>
+        <div className="light-ray ray-2"></div>
+        
+        {/* Frosted Glass Panels */}
+        <div className="frosted-glass glass-panel-1"></div>
+        <div className="frosted-glass glass-panel-2"></div>
+        <div className="frosted-glass glass-panel-3"></div>
+        
+        <div className="full-screen-content section-content">
+          <div className="container-responsive">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center max-w-7xl mx-auto">
             {/* Image Side */}
             <div className="relative order-2 lg:order-1">
               <img
@@ -71,14 +96,14 @@ const AboutUs = () => {
             </div>
 
             {/* Content Side */}
-            <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
+            <div className="space-y-8 sm:space-y-10 order-1 lg:order-2">
               <div>
-                <p className="text-accent font-semibold mb-2 sm:mb-3 tracking-wider text-fluid-base sm:text-fluid-lg">
+                <p className="text-accent font-semibold mb-3 sm:mb-4 tracking-wider text-fluid-lg sm:text-fluid-xl">
                   WHO WE ARE
                 </p>
               </div>
 
-              <div className="text-text-body text-fluid-base sm:text-fluid-lg leading-relaxed space-y-3 sm:space-y-4 text-left">
+              <div className="text-text-body text-fluid-lg sm:text-fluid-xl leading-relaxed space-y-4 sm:space-y-6 text-left">
                 <p className="font-semibold text-text-primary text-left">
                   Next-generation IT solutions and consulting company committed to
                   driving innovation, efficiency, and growth with Oracle ERP
@@ -99,12 +124,12 @@ const AboutUs = () => {
               </div>
 
               {/* Our Services Button with proper spacing to avoid overlap */}
-              <div className="pt-4 sm:pt-6">
+              <div className="pt-6 sm:pt-8">
                 <Link to="/services">
                   <Button
                     variant="brand"
                     size="lg"
-                    className="btn-responsive-lg px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/30 transform hover:scale-105 transition-all duration-300"
+                    className="btn-responsive-lg px-10 sm:px-12 md:px-14 py-5 sm:py-6 md:py-7 font-semibold rounded-full shadow-2xl hover:shadow-brand-blue-light/30 transform hover:scale-105 transition-all duration-300"
                   >
                     Our Services
                   </Button>
@@ -112,59 +137,79 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
       {/* Mission & Values Section - Separate section with distinct background */}
-      <section id="mission-values" className="w-full" style={{ backgroundColor: '#f5f7fa' }}>
-        {/* Subtle divider shadow */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+      <section id="mission-values" className="full-screen-section mission-values-background">
+        {/* Animated Grid Background */}
+        <div className="animated-grid">
+          <div className="grid-lines"></div>
+        </div>
         
-        <div className="container-responsive" style={{ padding: '60px 20px' }}>
-          <div className="text-center mb-8 sm:mb-12 animate-fade-in-up animate-delay-100">
-            <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
+        {/* Floating Geometric Shapes */}
+        <div className="floating-shape shape-4"></div>
+        <div className="floating-shape shape-5"></div>
+        
+        {/* Subtle Particles */}
+        <div className="particle particle-1"></div>
+        <div className="particle particle-4"></div>
+        
+        {/* Light Rays */}
+        <div className="light-ray ray-3"></div>
+        
+        {/* Frosted Glass Panels */}
+        <div className="frosted-glass glass-panel-2"></div>
+        <div className="frosted-glass glass-panel-4"></div>
+        <div className="frosted-glass glass-panel-5"></div>
+        
+        <div className="full-screen-content section-content">
+          <div className="container-responsive">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20 animate-fade-in-up animate-delay-100">
+            <h3 className="text-fluid-3xl sm:text-fluid-4xl md:text-fluid-5xl lg:text-fluid-5xl xl:text-fluid-6xl font-bold text-text-primary mb-6 sm:mb-8">
               Our Mission & Values
             </h3>
-            <p className="text-text-body text-lg max-w-2xl mx-auto">
+            <p className="text-text-body text-fluid-lg sm:text-fluid-xl max-w-4xl mx-auto leading-relaxed">
               Discover what drives us and the principles that guide our work
             </p>
           </div>
           
           <TooltipProvider>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-4xl mx-auto animate-fade-in-up animate-delay-300">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-10 justify-center max-w-6xl mx-auto animate-fade-in-up animate-delay-300">
               {isMobile ? (
                 // Mobile: Accordion implementation
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="mission" className="border border-accent/20 rounded-lg">
                     <AccordionTrigger 
-                      className="px-6 py-4 text-left hover:no-underline"
+                      className="px-8 py-6 text-left hover:no-underline"
                       role="button"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <div className="flex items-center gap-3">
-                        <Target className="w-6 h-6 text-accent" />
-                        <span className="font-semibold text-text-primary text-lg">Mission</span>
+                      <div className="flex items-center gap-4">
+                        <Target className="w-8 h-8 text-accent" />
+                        <span className="font-semibold text-text-primary text-xl">Mission</span>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-6">
-                      <p className="text-text-body leading-relaxed">{missionText}</p>
+                    <AccordionContent className="px-8 pb-8">
+                      <p className="text-text-body leading-relaxed text-lg">{missionText}</p>
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="values" className="border border-accent/20 rounded-lg">
                     <AccordionTrigger 
-                      className="px-6 py-4 text-left hover:no-underline"
+                      className="px-8 py-6 text-left hover:no-underline"
                       role="button"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <div className="flex items-center gap-3">
-                        <Heart className="w-6 h-6 text-accent" />
-                        <span className="font-semibold text-text-primary text-lg">Values</span>
+                      <div className="flex items-center gap-4">
+                        <Heart className="w-8 h-8 text-accent" />
+                        <span className="font-semibold text-text-primary text-xl">Values</span>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-6">
-                      <p className="text-text-body leading-relaxed">{valuesText}</p>
+                    <AccordionContent className="px-8 pb-8">
+                      <p className="text-text-body leading-relaxed text-lg">{valuesText}</p>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -176,12 +221,12 @@ const AboutUs = () => {
                       <Button
                         variant="outline"
                         size="lg"
-                        className="flex items-center gap-3 px-8 py-4 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[200px] group relative"
+                        className="flex items-center gap-4 px-12 py-6 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[280px] group relative text-lg font-semibold"
                         role="button"
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
-                        <Target className="w-6 h-6 text-accent" />
+                        <Target className="w-8 h-8 text-accent" />
                         Mission
                       </Button>
                     </TooltipTrigger>
@@ -195,12 +240,12 @@ const AboutUs = () => {
                       <Button
                         variant="outline"
                         size="lg"
-                        className="flex items-center gap-3 px-8 py-4 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[200px] group relative"
+                        className="flex items-center gap-4 px-12 py-6 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 min-w-[280px] group relative text-lg font-semibold"
                         role="button"
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
-                        <Heart className="w-6 h-6 text-accent" />
+                        <Heart className="w-8 h-8 text-accent" />
                         Values
                       </Button>
                     </TooltipTrigger>
@@ -212,74 +257,125 @@ const AboutUs = () => {
               )}
             </div>
           </TooltipProvider>
+          </div>
         </div>
       </section>
 
       {/* Meet Our Leadership Section */}
-      <section id="leadership" className="section">
-        <div className="container-responsive">
-          <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6">
+      <section id="leadership" className="full-screen-section leadership-background">
+        {/* Animated Grid Background */}
+        <div className="animated-grid">
+          <div className="grid-lines"></div>
+        </div>
+        
+        {/* Floating Geometric Shapes */}
+        <div className="floating-shape shape-1"></div>
+        <div className="floating-shape shape-3"></div>
+        
+        {/* Subtle Particles */}
+        <div className="particle particle-2"></div>
+        <div className="particle particle-3"></div>
+        
+        {/* Light Rays */}
+        <div className="light-ray ray-1"></div>
+        <div className="light-ray ray-2"></div>
+        
+        {/* Frosted Glass Panels */}
+        <div className="frosted-glass glass-panel-1"></div>
+        <div className="frosted-glass glass-panel-3"></div>
+        <div className="frosted-glass glass-panel-5"></div>
+        
+        <div className="full-screen-content section-content">
+          <div className="container-responsive">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <h3 className="text-fluid-3xl sm:text-fluid-4xl md:text-fluid-5xl lg:text-fluid-5xl xl:text-fluid-6xl font-bold text-text-primary mb-8 sm:mb-10">
               Meet Our Leadership
             </h3>
-            <p className="text-text-body text-lg max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-text-body text-fluid-lg sm:text-fluid-xl max-w-6xl mx-auto leading-relaxed mb-12 sm:mb-16">
               At Techaxis Consulting, our leaders drive growth and strategic objectives by leading from the front—supporting our customers, partners, and organization. They play a vital role in preserving our rich culture while upholding our unwavering commitment to core values.
             </p>
             
             {/* Know More Button */}
-            <div className="mb-12">
+            <div className="mb-12 sm:mb-16">
               <Link to="/directors">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="px-8 py-3 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 font-semibold rounded-full"
+                  className="px-12 py-5 sm:py-6 border-accent/30 text-text-primary hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 font-semibold rounded-full text-lg sm:text-xl"
                 >
                   Know More
                 </Button>
               </Link>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-choose-us" className="section">
-        <div className="container-responsive">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4" style={{ color: '#0B2545' }}>
+      <section id="why-choose-us" className="full-screen-section why-choose-us-background">
+        {/* Animated Grid Background */}
+        <div className="animated-grid">
+          <div className="grid-lines"></div>
+        </div>
+        
+        {/* Floating Geometric Shapes */}
+        <div className="floating-shape shape-2"></div>
+        <div className="floating-shape shape-4"></div>
+        <div className="floating-shape shape-5"></div>
+        
+        {/* Subtle Particles */}
+        <div className="particle particle-1"></div>
+        <div className="particle particle-2"></div>
+        <div className="particle particle-4"></div>
+        
+        {/* Light Rays */}
+        <div className="light-ray ray-1"></div>
+        <div className="light-ray ray-3"></div>
+        
+        {/* Frosted Glass Panels */}
+        <div className="frosted-glass glass-panel-1"></div>
+        <div className="frosted-glass glass-panel-2"></div>
+        <div className="frosted-glass glass-panel-4"></div>
+        <div className="frosted-glass glass-panel-5"></div>
+        
+        <div className="full-screen-content section-content">
+          <div className="container-responsive">
+          <div className="text-center mb-16 sm:mb-20 md:mb-24">
+            <h3 className="text-fluid-3xl sm:text-fluid-4xl md:text-fluid-5xl lg:text-fluid-5xl xl:text-fluid-6xl font-bold mb-6 sm:mb-8" style={{ color: '#0B2545' }}>
               Why Choose Us?
             </h3>
-            <p className="text-lg max-w-3xl mx-auto" style={{ color: '#6C7A91' }}>
+            <p className="text-fluid-lg sm:text-fluid-xl max-w-5xl mx-auto leading-relaxed" style={{ color: '#6C7A91' }}>
               We deliver exceptional value through our proven expertise and
               client-focused approach
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {whyChooseUs.map((item, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden bg-card shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform hover:-translate-y-2 hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-2xl"
+                className="group relative overflow-hidden bg-card shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform hover:-translate-y-2 hover:scale-105 cursor-pointer border border-gradient-to-r from-accent via-brand-blue-light to-accent rounded-xl"
               >
                 {/* Content */}
-                <div className="relative p-6">
+                <div className="relative p-4 sm:p-5 md:p-6">
                   {/* Icon container with clean background */}
-                  <div className="mb-6 flex items-center justify-center">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/10 to-brand-blue-light/10 flex items-center justify-center group-hover:from-accent/20 group-hover:to-brand-blue-light/20 transition-all duration-300 group-hover:scale-110">
-                      <item.icon className="w-7 h-7 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-accent/10 to-brand-blue-light/10 flex items-center justify-center group-hover:from-accent/20 group-hover:to-brand-blue-light/20 transition-all duration-300 group-hover:scale-110">
+                      <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-accent group-hover:text-brand-blue-light transition-colors duration-300" />
                     </div>
                   </div>
 
                   {/* Text content */}
                   <div className="text-center">
-                    <p className="font-medium leading-relaxed group-hover:text-accent transition-colors duration-300" style={{ color: '#2E3A59' }}>
+                    <p className="font-medium leading-relaxed group-hover:text-accent transition-colors duration-300 text-sm sm:text-base" style={{ color: '#2E3A59' }}>
                       {item.text}
                     </p>
                   </div>
 
                   {/* Hover effect indicator */}
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <div className="w-8 h-1 bg-gradient-to-r from-accent to-brand-blue-light rounded-full"></div>
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <div className="w-6 h-1 bg-gradient-to-r from-accent to-brand-blue-light rounded-full"></div>
                   </div>
                 </div>
 
@@ -289,6 +385,7 @@ const AboutUs = () => {
                 </div>
               </Card>
             ))}
+          </div>
           </div>
         </div>
       </section>
