@@ -55,16 +55,16 @@ const DigitalTransformation = () => {
           <div className="max-w-4xl mx-auto">
             {/* Expertise Section */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+              <h2 className="text-3xl font-bold text-text-primary mb-6">
                 Our Digital Transformation Expertise
               </h2>
-              <p className="text-slate-700 leading-relaxed mb-6 text-lg">
+              <p className="text-text-body leading-relaxed mb-6">
                 We help organizations embrace digital transformation by
                 reimagining business processes, implementing modern
                 technologies, and creating innovative solutions that drive
                 growth and operational efficiency.
               </p>
-              <p className="text-slate-700 leading-relaxed text-lg">
+              <p className="text-text-body leading-relaxed">
                 Our digital transformation services are designed to help
                 businesses adapt to the rapidly changing digital landscape,
                 improve customer engagement, and create sustainable
