@@ -1,0 +1,90 @@
+# Netlify headers for proper MIME types
+# Set correct MIME type for JavaScript files
+/*.js
+  Content-Type: application/javascript
+
+# Set correct MIME type for CSS files
+/*.css
+  Content-Type: text/css
+
+# Set correct MIME type for JSON files
+/*.json
+  Content-Type: application/json
+
+# Set correct MIME type for manifest.json
+/manifest.json
+  Content-Type: application/json
+
+# Set correct MIME type for SVG files
+/*.svg
+  Content-Type: image/svg+xml
+
+# Set correct MIME type for PNG files
+/*.png
+  Content-Type: image/png
+
+# Set correct MIME type for JPG files
+/*.jpg
+  Content-Type: image/jpeg
+
+# Set correct MIME type for JPEG files
+/*.jpeg
+  Content-Type: image/jpeg
+
+# Set correct MIME type for ICO files
+/*.ico
+  Content-Type: image/x-icon
+
+# Set correct MIME type for WOFF files
+/*.woff
+  Content-Type: font/woff
+
+# Set correct MIME type for WOFF2 files
+/*.woff2
+  Content-Type: font/woff2
+
+# Set correct MIME type for TTF files
+/*.ttf
+  Content-Type: font/ttf
+
+# Set correct MIME type for EOT files
+/*.eot
+  Content-Type: application/vnd.ms-fontobject
+
+# Cache static assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache static files
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.eot
+  Cache-Control: public, max-age=31536000, immutable
