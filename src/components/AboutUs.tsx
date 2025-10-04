@@ -230,7 +230,7 @@ const AboutUs = () => {
                         Mission
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent className="w-96 p-6 bg-background border-accent/20 shadow-lg max-w-md">
+                    <TooltipContent side="bottom" className="w-96 p-6 bg-background border-accent/20 shadow-lg max-w-md">
                       <p className="text-text-body leading-relaxed">{missionText}</p>
                     </TooltipContent>
                   </Tooltip>
@@ -249,7 +249,7 @@ const AboutUs = () => {
                         Values
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent className="w-96 p-6 bg-background border-accent/20 shadow-lg max-w-md">
+                    <TooltipContent side="bottom" className="w-96 p-6 bg-background border-accent/20 shadow-lg max-w-md">
                       <p className="text-text-body leading-relaxed">{valuesText}</p>
                     </TooltipContent>
                   </Tooltip>
