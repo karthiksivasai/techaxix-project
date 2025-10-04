@@ -4,8 +4,22 @@ import Services from "@/components/Services";
 import Industries from "@/components/Industries";
 import Careers from "@/components/Careers";
 import SEO from "@/components/SEO";
+import ImagePreloader from "@/components/ImagePreloader";
+import LoadingIndicator from "@/components/LoadingIndicator";
+import { useState } from "react";
 
 const Index = () => {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  
+  // Critical images that should be preloaded for better UX
+  const criticalImages = [
+    "/logo.png",
+    "/favicon.ico",
+    "/assets/hero-background-kp9Yue3W.jpg",
+    "/assets/team-image-D53czmpF.jpg"
+  ];
+
   // Homepage-specific schema
   const homeSchema = {
     "@context": "https://schema.org",
@@ -91,6 +105,27 @@ const Index = () => {
         canonical="/"
         schema={homeSchema}
       />
+      
+      {/* Preload critical images */}
+      <ImagePreloader 
+        images={criticalImages}
+        onAllLoaded={() => setImagesLoaded(true)}
+        onProgress={(loaded, total) => {
+          const progress = (loaded / total) * 100;
+          setLoadingProgress(progress);
+          console.log(`Images loaded: ${loaded}/${total} (${Math.round(progress)}%)`);
+        }}
+      />
+      
+      {/* Show loading indicator while images are loading */}
+      {!imagesLoaded && (
+        <LoadingIndicator 
+          message="Loading images..."
+          showProgress={true}
+          progress={loadingProgress}
+        />
+      )}
+      
       <Hero />
       <AboutUs />
       <Services />
