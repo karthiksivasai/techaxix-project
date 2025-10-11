@@ -50,7 +50,7 @@ const Directors = () => {
             </h1>
             <p className="text-lg md:text-xl text-text-body leading-relaxed mb-8">
               Meet the visionary leaders who drive our success and guide our mission to deliver 
-              exceptional Oracle ERP solutions and digital transformation services.
+              exceptional Oracle ERP solutions, Data and Ai and digital transformation services.
             </p>
           </div>
         </div>
@@ -71,20 +71,20 @@ const Directors = () => {
           
           {/* Directors Grid */}
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-            {/* Nasim Ahmad Profile */}
+            {/* Nasim Ahamad Profile */}
             <Card className="group hover:shadow-elegant transition-all duration-300 border-0 bg-gradient-to-br from-background to-accent/5">
               <CardContent className="p-8 text-center">
                 <div className="mb-8">
                   <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300">
                     <img 
                       src={nasimPhoto} 
-                      alt="Nasim Ahmad - Director" 
+                      alt="Nasim Ahamad - Director" 
                       className="w-full h-full object-cover"
                       style={{ objectPosition: '70% 30%' }}
                     />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-text-primary">Nasim Ahmad</h3>
+                <h3 className="text-2xl font-bold mb-3 text-text-primary">Nasim Ahamad</h3>
                 <p className="text-accent font-semibold mb-6 text-lg">Director</p>
                 
                 {/* Know More Button */}
@@ -130,19 +130,19 @@ const Directors = () => {
               </CardContent>
             </Card>
 
-            {/* Tareni Mohanti Profile */}
+            {/* Tareni Mohanty Profile */}
             <Card className="group hover:shadow-elegant transition-all duration-300 border-0 bg-gradient-to-br from-background to-accent/5">
               <CardContent className="p-8 text-center">
                 <div className="mb-8">
                   <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300">
                     <img 
                       src={tareniPhoto} 
-                      alt="Tareni Prasad Mohanti - Director" 
+                      alt="Tareni Prasad Mohanty - Director" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-text-primary">Tareni Prasad Mohanti</h3>
+                <h3 className="text-2xl font-bold mb-3 text-text-primary">Tareni Prasad Mohanty</h3>
                 <p className="text-accent font-semibold mb-6 text-lg">Director</p>
                 
                 {/* Know More Button */}
@@ -165,7 +165,7 @@ const Directors = () => {
                 {showTareniProfile && (
                   <div className="text-text-body leading-relaxed space-y-4 animate-in slide-in-from-top-2 duration-300 text-left">
                     <p>
-                      Tareni Prasad Mohanti is the Director of Techaxis Consulting Private Limited, 
+                      Tareni Prasad Mohanty is the Director of Techaxis Consulting Private Limited, 
                       bringing over 15 years of expertise in the IT consulting and insurance domain. 
                       With a strong foundation in business development, client relationship management, 
                       and strategic growth initiatives, he has successfully driven IT transformation 

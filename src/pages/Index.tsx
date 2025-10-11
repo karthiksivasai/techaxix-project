@@ -6,7 +6,7 @@ import Careers from "@/components/Careers";
 import SEO from "@/components/SEO";
 import ImagePreloader from "@/components/ImagePreloader";
 import LoadingIndicator from "@/components/LoadingIndicator";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -16,9 +16,26 @@ const Index = () => {
   const criticalImages = [
     "/logo.png",
     "/favicon.ico",
-    "/assets/hero-background-kp9Yue3W.jpg",
-    "/assets/team-image-D53czmpF.jpg"
+    "/assets/hero-background.jpg",
+    "/assets/team-image.jpg"
   ];
+
+  // Fallback timeout to hide loading indicator after 10 seconds
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!imagesLoaded) {
+        console.warn('Loading timeout reached, hiding loading indicator');
+        setImagesLoaded(true);
+      }
+    }, 10000); // 10 seconds timeout
+
+    return () => clearTimeout(timeout);
+  }, [imagesLoaded]);
+
+  // Manual close function for loading indicator
+  const handleCloseLoading = () => {
+    setImagesLoaded(true);
+  };
 
   // Homepage-specific schema
   const homeSchema = {
@@ -123,6 +140,7 @@ const Index = () => {
           message="Loading images..."
           showProgress={true}
           progress={loadingProgress}
+          onClose={handleCloseLoading}
         />
       )}
       
