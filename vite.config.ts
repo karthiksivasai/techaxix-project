@@ -29,7 +29,7 @@ export default defineConfig({
       exclude: [/\.(br)$/, /\.(gz)$/],
     }),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       includeAssets: ['favicon.ico', 'favicon.png', 'logo.png', 'manifest.json'],
       manifest: {
         name: 'Techaxis Consulting',

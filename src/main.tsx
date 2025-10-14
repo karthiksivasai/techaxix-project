@@ -2,12 +2,12 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 
-// Service worker handling
-if ('serviceWorker' in navigator && import.meta.env.PROD) {
-  navigator.serviceWorker.getRegistrations().then(regs => {
-    regs.forEach(r => r.update());
-  });
-}
+// Service worker handling - temporarily disabled to prevent refresh issues
+// if ('serviceWorker' in navigator && import.meta.env.PROD) {
+//   navigator.serviceWorker.getRegistrations().then(regs => {
+//     regs.forEach(r => r.update());
+//   });
+// }
 
 // Performance monitoring
 if (process.env.NODE_ENV === 'production') {

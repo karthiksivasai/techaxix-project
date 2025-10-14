@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
-import SimpleMobileMenu from "./SimpleMobileMenu";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const location = useLocation();
@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header-gradient backdrop-blur-sm border-b border-border sticky top-0 z-50 header-shadow animate-slide-in-down">
+    <header className="header-gradient backdrop-blur-sm border-b border-border sticky top-0 z-30 header-shadow animate-slide-in-down">
       <div className="container-responsive relative z-10">
         <div className="flex items-center justify-between py-3 sm:py-4 md:py-5 lg:py-6">
           {/* Logo */}
@@ -35,7 +35,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <nav className="hidden xl:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -50,7 +50,7 @@ const Header = () => {
           </nav>
 
           {/* Contact Button */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Link to="/contact">
               <Button 
                 variant="brand" 
@@ -63,7 +63,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu */}
-          <SimpleMobileMenu />
+          <MobileMenu />
         </div>
       </div>
     </header>

@@ -1,0 +1,13 @@
+Copy this exact content into your .env file:
+
+# EmailJS Configuration
+# Your actual EmailJS credentials
+
+# Your EmailJS Public Key (from Account → API Keys)
+VITE_EMAILJS_PUBLIC_KEY=pQ7lgT49710BOqwhN
+
+# Your Email Service ID (from Email Services section)
+VITE_EMAILJS_SERVICE_ID=service_obthk9e
+
+# Your Email Template ID (from Email Templates section)
+VITE_EMAILJS_TEMPLATE_ID=template_6qm3rr5
