@@ -10,12 +10,17 @@ export default defineConfig({
   server: {
     host: "localhost",
     port: 5173,
-    strictPort: false,
+    strictPort: true,
     open: true,
     hmr: {
       port: 5174,
       protocol: "ws",
       host: "localhost",
+      overlay: false,
+    },
+    watch: {
+      usePolling: false,
+      interval: 1000,
     },
   },
   plugins: [

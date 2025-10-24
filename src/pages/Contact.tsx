@@ -58,20 +58,19 @@ const Contact = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    // You can also set this in your .env file as VITE_EMAILJS_PUBLIC_KEY
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY");
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
 
   const subjectOptions = [
     "General Inquiry",
     "Digital Transformation Services",
-    "Oracle Fusion Cloud / EBS Services",
+    "Oracle Fusion Cloud and EBS Services",
     "Custom Cloud Solutions",
     "Mobile Application Development",
-    "Staffing / Resource Augmentation",
+    "Staffing and Resource Augmentation",
     "Project Management Consultancy",
-    "Careers / Job Opportunities",
-    "Support / Assistance",
+    "Careers and Job Opportunities",
+    "Support and Assistance",
   ];
 
   const handleInputChange = (
@@ -216,18 +215,21 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      // Use the subject as-is since we've removed problematic characters
+      const cleanSubject = formData.subject;
+
       const result = await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.fullName,
           from_email: formData.email,
           from_phone: formData.phone,
-          subject: formData.subject,
+          subject: cleanSubject,
           message: formData.message,
           to_email: "admin@techaxisconsulting.com",
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY",
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
 
       if (result.status === 200) {
@@ -457,7 +459,8 @@ const Contact = () => {
                         <Textarea
                           id="message"
                           rows={6}
-                          placeholder="Tell us about your project or requirements..."
+                          maxLength={2000}
+                          placeholder="Tell us about your project or requirements... (max 2000 characters)"
                           value={formData.message}
                           onChange={(e) =>
                             handleInputChange("message", e.target.value)
@@ -465,6 +468,12 @@ const Contact = () => {
                           required
                           className="form-input-dark"
                         />
+                        <div className="flex justify-between items-center text-xs text-muted-foreground mt-1">
+                          <span>Share your project details, requirements, or any questions you have</span>
+                          <span className={formData.message.length > 1800 ? "text-orange-500" : "text-muted-foreground"}>
+                            {formData.message.length}/2000
+                          </span>
+                        </div>
                       </div>
 
                       <div className="text-center">
